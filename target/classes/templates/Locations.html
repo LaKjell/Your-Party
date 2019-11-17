@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YourParty</title>
+<!--  link href="css/bootstrap.min.css" rel="stylesheet"-->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header">
+					<br>
+					<h1>
+						YourParty <small>because Your Party must going on!</small>
+					</h1>
+					<br>
+				</div>
+			</div>
+			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+			<!-- 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark"
+					id='Nav_Bar'">
+					<a th:href="index.html(class='navbar-brand')">YourParty</a>
+					<button th:class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span th:text="Klick mich"></span>
+					</button>
+
+					<div  th:class="collapse navbar-collapse" th:id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active"><a th:class="nav-link"
+								href="location.html">Locations <span class="sr-only">(current)</span>
+							</a></li>
+
+
+							<li class="nav-item"><a class="nav-link disabled" href="#"
+								tabindex="-1" aria-disabled="true">Disabled</a></li>
+						</ul>
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item dropdown">
+								<div class="btn-group">
+									<a type="link" class="btn btn-primary" href="Profil.html">Profil</a>
+									<button type="button"
+										class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+										data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="Sign_In.html">Einloggen</a> <a
+											class="dropdown-item" href="Sign_Up.html">Registrieren</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav> -->
+			</div>
+			<div class="col-md-12" style="margin-top: 10px;">
+				<h2>Locations</h2>
+				<p style="text-align: justify" id='htext'>
+					Hier finden Sie alle möglichen Locations, die wir für Sie zur
+					Verfügung stellen. Darunter finden Sie eine gemischte Auswahl an
+					Locations, die für jeden Anlass, egal ob Geburtstag, Hochzeit oder
+					Partys, geeignet sind. Wir hoffen, dass Sie eine geeignete Location
+					für Ihren Anlass finden werden! <br>Viel Spaß beim
+					Durchstöbern.
+				</p>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3" id='loc'>
+
+					<form>
+						<br> Name: <br> <input type="text" name="name">
+						<br> <br> Stadt: <br> <select name="städte">
+							<option value="default">- - - - - - -</option>
+							<option value="ravensburg">Ravensburg</option>
+							<option value="biberach">Biberach</option>
+							<option value="bad waldsee">Bad Waldsee</option>
+							<option value="bad saulgau">Bad Saulgau</option>
+						</select> <br> <br> Kosten: <br> <select name="kosten">
+							<option value="default">- - - - - - -</option>
+							<option value="< 100">< 100 €</option>
+							<option value="100-300">100 €-300 €</option>
+							<option value=">300">> 300 €</option>
+						</select> <br> <br> Größe: <br> <select name="groessen">
+							<option value="default">- - - - - - -</option>
+							<option value="<50">< 50 m²</option>
+							<option value="50-150">50-150 m²</option>
+							<option value=">150">> 150 m²</option>
+						</select> <br> <br>
+						<button id="filtern">Filtern</button>
+						<br> <br>
+					</form>
+					<form role="form">
+
+						<div class="form-group">
+
+							<label for="exampleInputEmail1"> Email address </label> <input
+								class="form-control" id="exampleInputEmail1" type="email">
+						</div>
+						<div class="form-group">
+
+							<label for="exampleInputPassword1"> Password </label> <input
+								class="form-control" id="exampleInputPassword1" type="password">
+						</div>
+						<div class="form-group">
+
+							<label for="exampleInputFile"> File input </label> <input
+								class="form-control-file" id="exampleInputFile" type="file">
+							<p class="help-block">Example block-level help text here.</p>
+						</div>
+						<div class="checkbox">
+
+							<label> <input type="checkbox"> Check me out
+							</label>
+						</div>
+						<button class="btn btn-primary" type="submit">Submit</button>
+					</form>
+				</div>
+
+				<div class="col-md-9" id='flex'>
+					<div class="col-md-12">
+						<div class="row" id='loc'>
+							<div class="col-md-6">
+								<img alt="Bootstrap Image Preview" src="img/douala.jpg">
+							</div>
+							<div class="col-md-6">
+								<h2>Douala in Ravensburg:</h2>
+								<p>Der renommierte Club mit Baustellen-Charme, Graffiti und
+									Tropen-Flair ist bekannt für Raves und berühmte DJs. Das Douala
+									in Ravensburg bietet Ihnen die Möglichkeit eine ordentliche
+									Sause mit all ihren Besten zu veranstalten. Sie fühlen den Beat
+									und sind von modernen Drogen nicht abgeneigt? Dann sind Sie
+									hier genau richtig!</p>
+								<p>
+									<a class="btn" href="new.html">View details »</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="row" id='loc'>
+							<div class="col-md-6">
+								<img alt="Bootstrap Image Preview" src="img/douala.jpg">
+							</div>
+							<div class="col-md-6">
+								<h2>Douala in Ravensburg:</h2>
+								<p>Der renommierte Club mit Baustellen-Charme, Graffiti und
+									Tropen-Flair ist bekannt für Raves und berühmte DJs. Das Douala
+									in Ravensburg bietet Ihnen die Möglichkeit eine ordentliche
+									Sause mit all ihren Besten zu veranstalten. Sie fühlen den Beat
+									und sind von modernen Drogen nicht abgeneigt? Dann sind Sie
+									hier genau richtig!</p>
+								<p>
+									<a class="btn" href="new.html">View details »</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="row" id='loc'>
+							<div class="col-md-6">
+								<img alt="Bootstrap Image Preview" src="img/douala.jpg">
+							</div>
+							<div class="col-md-6">
+								<h2>Douala in Ravensburg:</h2>
+								<p>Der renommierte Club mit Baustellen-Charme, Graffiti und
+									Tropen-Flair ist bekannt für Raves und berühmte DJs. Das Douala
+									in Ravensburg bietet Ihnen die Möglichkeit eine ordentliche
+									Sause mit all ihren Besten zu veranstalten. Sie fühlen den Beat
+									und sind von modernen Drogen nicht abgeneigt? Dann sind Sie
+									hier genau richtig!</p>
+								<p>
+									<a class="btn" href="new.html">View details »</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<button onclick="Location()">Next Location!</button>
+	<script type="text/javascript" src="JS_App.js">
+		Location();
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Empty CSS file for your own CSS
+
+#nav_bar {
+	
+	position: sticky; 
+	top: 0;
+}
+
+body {
+	background-image: url("");
+	background-color: lightgrey;
+	background-repeat: no-repeat;
+	background-size: 100% cover;
+	background-position: width: 100%;
+	font-size: 100%;
+}
+
+#loc{
+	background-color: #e8e8e8; 
+	margin-top: 0;
+	margin-bottom: 2%;
+	
+	padding: 2%;
+}
+#htext{
+	
+	padding-right: 30%;
+}

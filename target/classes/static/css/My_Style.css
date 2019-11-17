@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+body {
+	background-image: url("");
+	background-color: lightgrey;
+	background-repeat: no-repeat;
+	background-size: 100% cover;
+	background-position: width: 100%;
+	font-size: 100%;
+}
+
+h1 {
+	font-size: 200%;
+}
+
+h3 {
+
+}
+
+
+
+#Nav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+#Nav_Bar {
+	position: sticky; 
+	top: 0;
+}
+
+.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+#loc{
+	background-color: #e8e8e8; 
+	margin-top: 0;
+	margin-bottom: 2%;
+	
+	padding: 2%;
+}
+#locs {
+	height: 25px;
+}
+
+#tab {
+	height: 5%;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: #111;
+}
+
+input {
+	border: 1px solid;
+	border-radius: 4px;
+	padding: 1px;
+}
+
+textarea {
+	border: 1px solid;
+	border-radius: 4px;
+}
+
+select {
+	border: 1px solid;
+	border-radius: 4px;
+}
+
+#imgl {
+	padding: 10px;
+	width: 40%;
+	height: auto;
+	align: left;
+}
+
+#text {
+	align-self: right;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+p.padding {
+	padding-left: 25%;
+	padding-right: 25%;
+}
+.loc{
+	background-color: #e8e8e8; 
+	margin: 10px; 
+	padding: 10px;
+}

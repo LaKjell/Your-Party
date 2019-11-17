@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>YourParty</title>
+<link rel="stylesheet" th:href="@{/css/My_Style.css}">
+<link rel="stylesheet" th:href="@{/css/grid-css.css}">
+</head>
+
+<body>
+	<div class="grid-container-start">
+		<div class="Titel">
+			<header>
+				<h1>YourParty</h1>
+			</header>
+		</div>
+		<div class="Navigation_Bar" id="Nav_Bar">
+			<nav>
+				<ul id="Nav">
+					<li><a class="active" th:href="@{/}">Start</a></li>
+					<li><a th:href="@{/Locations}">Location</a></li>
+					<li style="float: right"><a th:href="@{/Profil}">Profil</a></li>
+					<li style="float: right"><a th:href="@{/SignIn}">Anmeldung</a></li>
+					<li style="float: right"><a th:href="@{/Register}">Registrierung
+					</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="Main">
+			<section>
+				<img alt="" th:src="@{/img/Saal.jpg}" width="100%">
+			</section>
+			<article>
+				<h1 style="text-align: center">Über YourParty</h1>
+				<p style="text-align: justify" class="padding">
+					<font size="4">YourParty ist eine Webanwendung, die im Jahr
+						2019 ihre Laufbahn begonnen hat. Gründer der Website sind Lasse
+						Schmid, Mario Schlagentweith, Lukas Ströbele und Matthias Preiß.
+						Durch YourParty soll das Mieten und Vermieten von Partylocations
+						erleichtert werden. Innerhalb von wenigen Mausklicken können Sie
+						Ihre Partylocation vermietet beziheungsweise gemietet haben. Unter
+						dem Reiter "Location" ein Bild, eine Preisvorstellung, sowie eine
+						kurze Beschreibung der Partylocation hinzufügen, anschließend auf
+						bestätigen klicken und schon ist Ihre Location für andere Personen
+						sichtbar. Wenn Interesse besteht erhalten Sie entsprechend eine
+						Information. Des Weiteren können Sie Kontakt zu dem potentiellen
+						Kunden aufnehmen, um sich über den Preis, sowie über Ort und
+						Zeitpunkt der Schlüsselübergabe auszutauschen. Nach erfolgreichem
+						Abschluss der Vermietung, können die Kunden Ihre Partylocation im
+						Nachhinein bewerten. Anhand von diesem Konzept können sich unsere
+						Kunden von beiden Sichtweisen ein Bild machen.</font>
+				</p>
+				<p style="text-align: center" class="padding">
+					<font size="4">Wir hoffen, dass Sie hiermit eine geeignete
+						Location für Ihren Anlass finden,<br> because <b
+						style="text-align: center">Your Party must going on!</b>
+					</font>
+				</p>
+			</article>
+		</div>
+		<div class="Footer_Bar">
+			<footer> </footer>
+		</div>
+	</div>
+
+</body>
+
+</html>

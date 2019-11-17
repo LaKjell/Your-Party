@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>YourParty - Profil</title>
+<link rel="stylesheet" th:href="@{/css/My_Style.css}">
+</head>
+
+<body>
+	<div class="grid-container-start">
+		<div class="Titel">
+			<header>
+				<h1>YourParty</h1>
+			</header>
+		</div>
+		<div class="Navigation_Bar" id="Nav_Bar">
+			<nav>
+				<ul id="Nav">
+					<li><a th:href="@{/}">Start</a></li>
+					<li><a th:href="@{/Locations}">Location</a></li>
+					<li style="float: right"><a class="active" th:href="@{/Profil}">Profil</a></li>
+					<li style="float: right"><a th:href="@{/SignIn}">Anmeldung</a></li>
+					<li style="float: right"><a th:href="@{/Register}">Registrierung
+					</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="Main"></div>
+		<div class="Footer_Bar"></div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.grid-container-loc {
+	grid-template-columns: 25% 75%;
+	grid-templates-rows: 10% auto 10%;
+	display: grid;
+}
+
+.Titel {
+	grid-row-start: 1;
+	grid-row-end: 1;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.Navigation_Bar {
+	grid-row-start: 2;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.Main_Filter {
+	grid-row-start: 3;
+	grid-row-end: 3;
+}
+
+.Main_Content {
+	grid-row-start: 3;
+	grid-row-end: 3;
+}
+
+.Footer_Bar {
+	grid-row-start: 4;
+	grid-row-end: 4;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
