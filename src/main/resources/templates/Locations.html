@@ -6,18 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>YourParty</title>
 
-	<link rel="stylesheet"
-          href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" >
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
 
 	<div class="container-fluid">
-	
+
 		<div class="row">
-		<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
-		<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;" >
-		 <div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
+			<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
 			<div class="col-md-12" style="margin-top: 10px;">
 				<h2>Locations</h2>
@@ -143,19 +143,25 @@
 					</div>
 				</div>
 			</div>
+			<button onclick="Location()">Next Location!</button>
+
 		</div>
 	</div>
 
+	<div class="col-md-12" style="padding: 0px;">
+		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
+	</div>
 
-	<button onclick="Location()">Next Location!</button>
 	<script type="text/javascript" src="JS_App.js">
 		Location();
 	</script>
-	 <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
-    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
-<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
-<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
 	<!--  script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
