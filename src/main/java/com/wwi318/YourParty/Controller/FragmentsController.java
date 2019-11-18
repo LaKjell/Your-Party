@@ -8,8 +8,8 @@ public class FragmentsController {
 	
 	
 	 
-	    @GetMapping("/Navigation")
+	    @GetMapping("/Head_Nav_Footer")
 	    public String getHome() {
-	        return "fragments/Navigation.html";
+	        return "fragments/Head_Nav_Footer.html";
 	    }
 }
