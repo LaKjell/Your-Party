@@ -5,58 +5,71 @@
 </head>
 <body>
 
-			<div class="col-md-12" th:fragment='header'>
-				<div class="page-header">
-					<br>
-					<h1>
-						YourParty <small>because Your Party must going on!</small>
-					</h1>
-					<br>
+	<div class="col-md-12" th:fragment='header'>
+		<div class="page-header">
+			<br>
+			<h1>
+				YourParty <small>because Your Party must going on!</small>
+			</h1>
+			<br>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+		th:id='Nav_Bar' th:fragment="nav">
+		<a th:href="@{/}" class='navbar-brand'>YourParty</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a th:class="nav-link"
+					th:href="@{Locations}">Locations <span class="sr-only">(current)</span>
+				</a></li>
+
+
+				<li class="nav-item"><a class="nav-link disabled" href="#"
+					tabindex="-1" aria-disabled="true">Disabled</a></li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item dropdown">
+					<div class="btn-group">
+						<a type="link" class="btn btn-primary" href="Profil.html">Profil</a>
+						<button type="button"
+							class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="Sign_In.html">Einloggen</a> <a
+								class="dropdown-item" href="Sign_Up.html">Registrieren</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<footer th:fragment="footer">
+		<div class="col-md-12" id='footer'>
+			<div class="row">
+				<div class="col-md-4">
+				1
+				</div>
+				<div class="col-md-4">
+				Impressum
+				</div>
+				<div class="col-md-4">
+				3
 				</div>
 			</div>
-			
-				<nav class="navbar navbar-expand-lg navbar-dark bg-dark"
-					th:id='Nav_Bar' th:fragment="nav">
-					<a th:href="@{/}" class='navbar-brand'>YourParty</a>
-
-					<button class="navbar-toggler" type="button" data-toggle="collapse"
-						data-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent" aria-expanded="false"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav mr-auto">
-							<li class="nav-item active"><a th:class="nav-link"
-								th:href="@{Locations}">Locations <span class="sr-only">(current)</span>
-							</a></li>
-
-
-							<li class="nav-item"><a class="nav-link disabled" href="#"
-								tabindex="-1" aria-disabled="true">Disabled</a></li>
-						</ul>
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item dropdown">
-								<div class="btn-group">
-									<a type="link" class="btn btn-primary" href="Profil.html">Profil</a>
-									<button type="button"
-										class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-										data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="false">
-										<span class="sr-only">Toggle Dropdown</span>
-									</button>
-									<div class="dropdown-menu dropdown-menu-right">
-										<a class="dropdown-item" href="Sign_In.html">Einloggen</a> <a
-											class="dropdown-item" href="Sign_Up.html">Registrieren</a>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			
-	
+		</div>
+	</footer>
 
 </body>
 </html>
