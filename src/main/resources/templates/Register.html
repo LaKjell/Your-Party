@@ -4,92 +4,111 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>YourParty - Registrierung</title>
-<link rel="stylesheet" th:href="@{/css/My_Style.css}">
+<!--link rel="stylesheet" th:href="@{/css/My_Style.css}"-->
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 
 <body>
-	<div class="grid-container-start">
-		<div class="Titel">
-			<header>
-				<h1>YourParty</h1>
-			</header>
-		</div>
-		<div class="Navigation_Bar" id="Nav_Bar">
-			<nav>
-				<ul id="Nav">
-					<li><a th:href="@{/}">Start</a></li>
-					<li><a th:href="@{/Locations}">Location</a></li>
-					<li style="float: right"><a th:href="@{/Profil}">Profil</a></li>
-					<li style="float: right"><a th:href="@{/SignIn}">Anmeldung</a></li>
-					<li style="float: right"><a class="active" th:href="@{/Register}">Registrierung
-					</a></li>
-				</ul>
-			</nav>
-		</div>
-		<div class="Main">
-			<article>
-				<form>
-					<table>
-						<tr>
-							<td>Vorname:</td>
-							<td><input id="vorname" type="text" placeholder="Vorname" /></td>
-						</tr>
-						<tr>
-							<td>Nachname:</td>
-							<td><input id="nachname" type="text" placeholder="Nachname" /></td>
-						</tr>
-						<tr>
-							<td>Username:</td>
-							<td><input id="username" type="text" placeholder="Username" /></td>
-						</tr>
-						<tr>
-							<td>E-Mail:</td>
-							<td><input id="email" type="email" placeholder="E-Mail" /></td>
-						</tr>
-						<tr>
-							<td>Passwort:</td>
-							<td><input id="password" type="password"></td>
-						</tr>
-						<tr>
-							<td>Beschreibung:</td>
-							<td><textarea id="beschreibung" rows="5" cols="10"></textarea></td>
-						</tr>
-						<tr>
-							<td>Mann:</td>
-							<td><input id="gender" type="radio" name="gender"
-								value="Mann"></td>
-						</tr>
-						<tr>
-							<td>Frau:</td>
-							<td><input id="gender" type="radio" name="gender"
-								value="Frau"></td>
-						</tr>
-						<tr>
-							<td>Land:</td>
+	<div class="container-fluid">
 
-							<td><select id="land">
-									<option>-----------</option>
-									<option>Deutschland</option>
-									<option>Österreich</option>
-									<option>Schweiz</option>
-							</select></td>
-						</tr>
-					</table>
-					<input type="submit" value="Jetzt registrieren!"
-						onclick="Register(vorname, nachname, username, email, password, beschreibung, gender, land)">
+		<div class="row">
+			<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
+			</div>
+			<div class="grid-container-start">
+				<div class="Titel">
+					<header>
+						<h1>YourParty</h1>
+					</header>
+				</div>
+				<div class="Navigation_Bar" id="Nav_Bar">
+					<nav>
+						<ul id="Nav">
+							<li><a th:href="@{/}">Start</a></li>
+							<li><a th:href="@{/Locations}">Location</a></li>
+							<li style="float: right"><a th:href="@{/Profil}">Profil</a></li>
+							<li style="float: right"><a th:href="@{/SignIn}">Anmeldung</a></li>
+							<li style="float: right"><a class="active"
+								th:href="@{/Register}">Registrierung </a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="Main">
+					<article>
+						<form>
+							<table>
+								<tr>
+									<td>Vorname:</td>
+									<td><input id="vorname" type="text" placeholder="Vorname" /></td>
+								</tr>
+								<tr>
+									<td>Nachname:</td>
+									<td><input id="nachname" type="text"
+										placeholder="Nachname" /></td>
+								</tr>
+								<tr>
+									<td>Username:</td>
+									<td><input id="username" type="text"
+										placeholder="Username" /></td>
+								</tr>
+								<tr>
+									<td>E-Mail:</td>
+									<td><input id="email" type="email" placeholder="E-Mail" /></td>
+								</tr>
+								<tr>
+									<td>Passwort:</td>
+									<td><input id="password" type="password"></td>
+								</tr>
+								<tr>
+									<td>Beschreibung:</td>
+									<td><textarea id="beschreibung" rows="5" cols="10"></textarea></td>
+								</tr>
+								<tr>
+									<td>Mann:</td>
+									<td><input id="gender" type="radio" name="gender"
+										value="Mann"></td>
+								</tr>
+								<tr>
+									<td>Frau:</td>
+									<td><input id="gender" type="radio" name="gender"
+										value="Frau"></td>
+								</tr>
+								<tr>
+									<td>Land:</td>
 
-				</form>
-			</article>
+									<td><select id="land">
+											<option>-----------</option>
+											<option>Deutschland</option>
+											<option>Österreich</option>
+											<option>Schweiz</option>
+									</select></td>
+								</tr>
+							</table>
+							<input type="submit" value="Jetzt registrieren!"
+								onclick="Register(vorname, nachname, username, email, password, beschreibung, gender, land)">
 
-			<script src="JS_App.js"></script>
+						</form>
+					</article>
 
+					<script src="JS_App.js"></script>
+				</div>
+			</div>
 		</div>
 		<div class="Footer_Bar">
 			<footer> </footer>
 		</div>
 	</div>
-
+	<div class="col-md-12" style="padding: 0px;">
+		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
+	</div>
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
 </body>
 
 </html>

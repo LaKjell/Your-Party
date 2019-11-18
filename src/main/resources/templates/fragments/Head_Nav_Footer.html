@@ -39,15 +39,15 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown">
 					<div class="btn-group">
-						<a type="link" class="btn btn-primary" href="Profil.html">Profil</a>
+						<a type="link" class="btn btn-primary" th:href="@{Profil}">Profil</a>
 						<button type="button"
 							class="btn btn-primary dropdown-toggle dropdown-toggle-split"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<span class="sr-only">Toggle Dropdown</span>
 						</button>
 						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" href="Sign_In.html">Einloggen</a> <a
-								class="dropdown-item" href="Sign_Up.html">Registrieren</a>
+							<a class="dropdown-item" th:href="@{SignIn}">Einloggen</a> <a
+								class="dropdown-item" th:href="@{Register}">Registrieren</a>
 						</div>
 					</div>
 				</li>
