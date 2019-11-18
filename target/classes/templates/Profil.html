@@ -4,11 +4,23 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>YourParty - Profil</title>
-<link rel="stylesheet" th:href="@{/css/My_Style.css}">
+<!--link rel="stylesheet" th:href="@{/css/My_Style.css}"-->
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 
 <body>
+<div class="container-fluid">
+
+		<div class="row">
+			<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
+			</div>
+			
 	<div class="grid-container-start">
 		<div class="Titel">
 			<header>
@@ -156,5 +168,12 @@
 	<br>
 		<b><a href="#top">Nach oben scrollen!</a></b>
 	</article>
+	</div></div>
+	<div class="col-md-12" style="padding: 0px;">
+		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
+	</div>
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
 </body>
 </html>
