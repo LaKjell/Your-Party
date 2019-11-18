@@ -35,25 +35,40 @@
 				<div class="col-md-3" id='loc'>
 
 					<form>
-						<br> Name: <br> <input type="text" name="name">
-						<br> <br> Stadt: <br> <select name="städte">
-							<option value="default">- - - - - - -</option>
-							<option value="ravensburg">Ravensburg</option>
-							<option value="biberach">Biberach</option>
-							<option value="bad waldsee">Bad Waldsee</option>
-							<option value="bad saulgau">Bad Saulgau</option>
-						</select> <br> <br> Kosten: <br> <select name="kosten">
-							<option value="default">- - - - - - -</option>
-							<option value="< 100">< 100 €</option>
-							<option value="100-300">100 €-300 €</option>
-							<option value=">300">> 300 €</option>
-						</select> <br> <br> Größe: <br> <select name="groessen">
-							<option value="default">- - - - - - -</option>
-							<option value="<50">< 50 m²</option>
-							<option value="50-150">50-150 m²</option>
-							<option value=">150">> 150 m²</option>
-						</select> <br> <br>
-						<button id="filtern">Filtern</button>
+						<div class="form-row align-items-center">
+							<div class="col-auto my-1">
+								<label class="my-1 mr-2" for="inlineFormCustomSelect">Stadt:</label>
+								<select class="custom-select mr-sm-2"
+									id="inlineFormCustomSelect">
+									<option selected>- - - -</option>
+									<option value="1">Ravensburg</option>
+									<option value="2">Biberach</option>
+									<option value="3">Bad Waldsee</option>
+									<option value="4">Bad Saulgau</option>
+								</select>
+							</div>
+							<div class="col-auto my-1">
+								<label class="my-1 mr-2" for="inlineFormCustomSelect">Kosten:</label>
+								<select class="custom-select mr-sm-2"
+									id="inlineFormCustomSelect">
+									<option selected>- - - -</option>
+									<option value="1"> < 100 €</option>
+									<option value="2">100 € - 300 €</option>
+									<option value="3">> 300 €</option>
+								</select>
+							</div>
+							<div class="col-auto my-1">
+								<label class="my-1 mr-2" for="inlineFormCustomSelect">Größe:</label>
+								<select class="custom-select mr-sm-2"
+									id="inlineFormCustomSelect">
+									<option selected>- - - -</option>
+									<option value="1">< 50 m²</option>
+									<option value="2">50 - 150 m²</option>
+									<option value="3">> 150 m²</option>
+								</select>
+							</div>
+						</div> <br>
+						<button id="filtern" type="button" class="btn btn-info">Filtern</button>
 						<br> <br>
 					</form>
 					<form role="form">
