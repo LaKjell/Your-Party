@@ -4,49 +4,80 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>YourParty - Anmeldung</title>
-<link rel="stylesheet" th:href="@{/css/My_Style.css}">
+<!--link rel="stylesheet" th:href="@{/css/My_Style.css}"-->
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 
 <body>
-	<div class="grid-container-start">
-		<div class="Titel">
-			<header>
-				<h1>YourParty</h1>
-			</header>
+	<div class="container-fluid">
+
+		<div class="row">
+			<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
+			</div>
 		</div>
-		<div class="Navigation_Bar" id="Nav_Bar">
-			<nav>
-				<ul id="Nav">
-					<li><a th:href="@{/}">Start</a></li>
-					<li><a th:href="@{/Locations}">Location</a></li>
-					<li style="float: right"><a th:href="@{/Profil}">Profil</a></li>
-					<li style="float: right"><a class="active" th:href="@{/SignIn}">Anmeldung</a></li>
-					<li style="float: right"><a th:href="@{/Register}">Registrierung
-					</a></li>
-				</ul>
-			</nav>
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Login</h3>
+			</div>
 		</div>
-		<div class="Main">
-			<form method="post" action="http://localhost:8999/YourParty/YourParty/login" name="Login">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="row">
+					<form>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="formGroupExampleInput">Username</label> <input
+								name="username" id="username" type="text" class="form-control"
+								placeholder="Username">
+						</div>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">Passwort</label> <input
+								name="password" id="password" type="password" class="form-control"
+								placeholder="Passwort">
+						</div>
+						</div>
+					</form>
+					<!--form method="post"
+				action="http://localhost:8999/YourParty/YourParty/login"
+				name="Login">
 				<table>
 					<tr>
 						<td>Username:</td>
-						<td><input name="username" id = "username" type="text" placeholder="Username"/></td>
+						<td><input name="username" id="username" type="text"
+							placeholder="Username" /></td>
 					</tr>
 
 					<tr>
 						<td>Passwort:</td>
-						<td><input name="password" id = "password" type="password" placeholder = "Passwort"></td>
+						<td><input name="password" id="password" type="password"
+							placeholder="Passwort"></td>
 					</tr>
 
 				</table>
-				<input type="submit" value="Absenden" onclick="document.form.Login.submit()"/>
-				<a th:href="@{/Register}">Registrieren</a>
+				<input type="submit" value="Absenden"
+					onclick="document.form.Login.submit()" /> <a th:href="@{/Register}">Registrieren</a>
+			</form-->
+				</div>
+
+			</div>
 		</div>
-		<div class="Footer_Bar"></div>
 	</div>
- <script src="JS_App.js"></script>
+
+	<div class="col-md-12" style="padding: 0px;">
+		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
+
+	</div>
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="JS_App.js"></script>
 </body>
 
 </html>

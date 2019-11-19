@@ -40,4 +40,10 @@ public class WelcomeController {
         return "Register";
     }
     
+    @GetMapping("/Impressum")
+    public String ImpressumPage(Model modelRegister) {
+        modelRegister.addAttribute("appName", appName);
+        return "Impressum";
+    }
+    
 }

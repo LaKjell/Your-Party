@@ -20,9 +20,7 @@
 			</div>
 			
 		<div class="Main">
-			<section>
-				<img alt="" th:src="@{/img/Saal.jpg}" width="100%">
-			</section>
+			
 			<article>
 				<h1 style="text-align: center">Über YourParty</h1>
 				<p style="text-align: justify" class="padding">
@@ -53,11 +51,10 @@
 		</div>
 	</div>
 	</div>
-	
-		<div class="Footer_Bar">
-			<footer> </footer>
-	
+	<div class="col-md-12" style="padding: 0px;">
+		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
 	</div>
+		
 <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
 <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
