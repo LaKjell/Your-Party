@@ -13,18 +13,20 @@
 </head>
 
 <body>
+		<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 	<div class="container-fluid">
 
 		<div class="row">
-			<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+	
 			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
 
 			<div class="grid-container-start">
-				<div class="Titel"></div>
-				<div class="Navigation_Bar" id="Nav_Bar"></div>
-				<div class="Main">
+
+				
+				<div class="Main" id='box'>
+
 					<article>
 
 						<table>
