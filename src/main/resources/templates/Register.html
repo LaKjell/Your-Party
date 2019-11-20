@@ -21,23 +21,8 @@
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
 			<div class="grid-container-start">
-				<div class="Titel">
-					<header>
-						<h1>YourParty</h1>
-					</header>
-				</div>
-				<div class="Navigation_Bar" id="Nav_Bar">
-					<nav>
-						<ul id="Nav">
-							<li><a th:href="@{/}">Start</a></li>
-							<li><a th:href="@{/Locations}">Location</a></li>
-							<li style="float: right"><a th:href="@{/Profil}">Profil</a></li>
-							<li style="float: right"><a th:href="@{/SignIn}">Anmeldung</a></li>
-							<li style="float: right"><a class="active"
-								th:href="@{/Register}">Registrierung </a></li>
-						</ul>
-					</nav>
-				</div>
+				<div class="Titel"></div>
+				<div class="Navigation_Bar" id="Nav_Bar"></div>
 				<div class="Main">
 					<article>
 						<form>
@@ -91,7 +76,6 @@
 							</table>
 							<input type="submit" value="Jetzt registrieren!"
 								onclick="Register(vorname, nachname, username, email, password, beschreibung, gender, land)">
-
 						</form>
 					</article>
 
