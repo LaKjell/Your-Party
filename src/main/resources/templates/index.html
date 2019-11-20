@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet"
           href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" >
-<link th:href="@{/css/my_styles.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 
 <body>
@@ -20,10 +20,12 @@
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
 			
-		<div class="Main">
+		<div class="col-md-12">
 			<section>
 				<img alt="" th:src="@{/img/Saal.jpg}" width="100%">
 			</section>
+			</div>
+			<div class="col-md-12" id='box'>
 			<article>
 				<h1 style="text-align: center">Über YourParty</h1>
 				<p style="text-align: justify" class="padding">
