@@ -41,6 +41,12 @@ body {
 	padding-right: 30%;
 }
 
+#sel{
+	padding-left: 0;
+	padding-right: 0;
+	
+}
+
 #footer{
 	
 	background-color: black;

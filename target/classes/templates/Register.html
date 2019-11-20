@@ -24,33 +24,33 @@
 			</div>
 
 <div class="col-md-12" id='box'>
-<form>
+<form class="was-validated" name="register" action="" onsubmit="return validateForm()" ><!--method="post"--> 
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="">Vorname</label>
-      <input type="text" class="form-control" id="vorname" placeholder="Vorname">
+      <input type="text" class="form-control" name ="vorname" id="vorname" placeholder="Vorname" required>
     </div>
     <div class="form-group col-md-6">
       <label for="">Nachname</label>
-      <input type="text" class="form-control" id="nachname" placeholder="Nachname">
+      <input type="text" class="form-control" name ="nachname" id="nachname" placeholder="Nachname" required>
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="">Username</label>
-      <input type="text" class="form-control" id="username" placeholder="Username">
+      <input type="text" class="form-control" name ="username" id="username" placeholder="Username" required>
     </div>
     <div class="form-group col-md-6">
       <label for="">E-Mail</label>
-      <input type="email" class="form-control" id="e-mail" placeholder="E-Mail">
+      <input type="email" class="form-control" name ="e-mail" id="e-mail" placeholder="E-Mail" required>
     </div>
     </div>
     <div class="form-row">
     <div class="form-group col-md-6">
-    <div class="col-auto my-1">
+    <div class="col-auto my-1" id='sel'>
       <label for="">Geschlecht</label>
-      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option selected>Geschlecht</option>
+      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+        <option value="">Geschlecht</option>
         <option value="1">Mann</option>
         <option value="2">Frau</option>
         <option value="3">Divers</option>
@@ -58,10 +58,10 @@
     </div>
     </div>
      <div class="form-group col-md-6">
-    <div class="col-auto my-1">
+    <div class="col-auto my-1"id='sel'>
       <label for="">Land</label>
-      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option selected>Land</option>
+      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+        <option value="">Land</option>
         <option value="1">DE</option>
         <option value="2">CH</option>
         <option value="3">AT</option>
@@ -72,21 +72,21 @@
     <div class="form-row">
     <div class="form-group col-md-9">
       <label for="">Straße</label>
-      <input type="text" class="form-control" id="starße" placeholder="Straße">
+      <input type="text" class="form-control" name ="straße" id="straße" placeholder="Straße" required>
     </div>
     <div class="form-group col-md-3">
       <label for="">Hausnummer</label>
-      <input type="text" class="form-control" id="hausnummer" placeholder="Hausnummer">
+      <input type="text" class="form-control" name ="hausnummer" id="hausnummer" placeholder="Hausnummer" required>
     </div>
     </div>
      <div class="form-row">
     <div class="form-group col-md-4">
       <label for="">Postleitzahl</label>
-      <input type="text" class="form-control" id="plz" placeholder="PLZ">
+      <input type="text" class="form-control" name ="plz" id="plz" placeholder="PLZ" required>
     </div>
     <div class="form-group col-md-8">
       <label for="">Ort</label>
-      <input type="text" class="form-control" id="ort" placeholder="Ort">
+      <input type="text" class="form-control" name ="ort" id="ort" placeholder="Ort" required>
     </div>
     </div>
     
@@ -253,7 +253,7 @@
 						</form>
 					</article>
 
-					<script src="JS_App.js"></script>
+					<script src="JS_Register.js"></script>
 				</div>
 			</div>
 		</div>
