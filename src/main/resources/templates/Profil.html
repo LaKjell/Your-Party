@@ -13,10 +13,11 @@
 </head>
 
 <body>
+		<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 	<div class="container-fluid">
 
 		<div class="row">
-			<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+	
 			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
@@ -30,20 +31,8 @@
 						</h1>
 					</header>
 				</div>
-				<div class="Navigation_Bar" id="Nav_Bar">
-					<nav>
-						<ul id="Nav">
-							<li><a th:href="@{/}">Start</a></li>
-							<li><a th:href="@{/Locations}">Location</a></li>
-							<li style="float: right"><a class="active"
-								th:href="@{/Profil}">Profil</a></li>
-							<li style="float: right"><a th:href="@{/SignIn}">Anmeldung</a></li>
-							<li style="float: right"><a th:href="@{/Register}">Registrierung
-							</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="Main">
+				
+				<div class="Main" id='box'>
 					<article>
 						<table>
 							<tr>
