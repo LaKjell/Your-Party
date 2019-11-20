@@ -11,15 +11,15 @@
 <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
-
+<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 	<div class="container-fluid">
-	
+			
 		<div class="row">
-			<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+			
 			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
-			<div class="col-md-12" style="margin-top: 10px;">
+			<div class="col-md-12" style="margin-top: 10px;" id='box'>
 				<h2>Locations</h2>
 				<p style="text-align: justify" id='htext'>
 					Hier finden Sie alle möglichen Locations, die wir für Sie zur
