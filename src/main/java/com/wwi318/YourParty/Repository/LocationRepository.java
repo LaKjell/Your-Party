@@ -17,19 +17,27 @@ import com.wwi318.YourParty.Entity.Location;
 public interface LocationRepository extends JpaRepository<Location, Integer> {
 //	
 //	 <S extends Location> S save(S entity);      
-//
-//	  Optional<Location> findById(ID primaryKey); 
-//
-//	  List<Location> findAll();               
-//
+
+	  Optional<Location> findById(ID primaryKey); 
+	  
+	  Optional<Location> findByName(String name);
+	  
+	  Optional<Location> findByOwner(String owner);
+	  
+	  Optional<Location> findByCity(String city);
+	  
+	  Optional<Location> findByPostcode(String postcode);
+	  
+	  Optional<Location> findBySize(Integer size);
+	  
+	  Optional<Location> findByPrice(Double price);
+
+	  List<Location> findAll();               
+
 //	  long count();                        
 //
 //	  void delete(Location entity);               
 //
 //	  boolean existsById(ID primaryKey);
-//	  
-//	  @Entity
-//	  class Location {
-//		  
-//	  }
+	  
 }
