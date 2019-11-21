@@ -1,5 +1,7 @@
 package com.wwi318.YourParty.Entity;
 
+import java.sql.Blob;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,22 +31,8 @@ public class Location {
 	private double price;
 
 	private String description;
-
-//	public Location(String owner, String city, String postcode, String street, Integer size, double price,
-//			String description) {
-//		super();
-//		this.owner = owner;
-//		this.city = city;
-//		this.postcode = postcode;
-//		this.street = street;
-//		this.size = size;
-//		this.price = price;
-//		this.description = description;
-//	}
-//
-//	public Location() {
-//
-//	}
+	
+	private Blob picture;
 
 	public Integer getid() {
 		return id;
@@ -108,6 +96,34 @@ public class Location {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Blob getPicture() {
+		return picture;
+	}
+
+	public void setPicture(Blob picture) {
+		this.picture = picture;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
 }
