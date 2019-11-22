@@ -34,7 +34,7 @@ public class WelcomeController {
         return "SignIn";
     }
     
-    @GetMapping("/Register")
+    @GetMapping("/user/Register")
     public String RegisterPage(Model modelRegister) {
         modelRegister.addAttribute("appName", appName);
         return "Register";
