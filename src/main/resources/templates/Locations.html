@@ -18,8 +18,8 @@
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
 		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-12" style="margin-top: 10px;" id='box'>
+			<div class="row bord">
+				<div class="col-md-12 jumbotron" style="margin-top: 10px;">
 				<h2>Locations</h2>
 				<p style="text-align: justify" id='htext'>
 					Hier finden Sie alle möglichen Locations, die wir für Sie zur
@@ -36,7 +36,7 @@
 				<div class="row ">
 				<div class="col-md-12 jumbotron">
 					
-					<form role="form">
+					<form name="location" action="/location" method="post" onsubmit="">
 					<div class="form-row align-items-center">
 					<div class="form-group col-md-12">
 						
@@ -77,7 +77,7 @@
 							
 							</div>
 						</div> <br>
-						<button id="filtern" type="button" class="btn btn-info">Filtern</button>
+						<button id="filtern" type="submit" class="btn btn-info">Filtern</button>
 						<br> <br>
 					</form>
 					</div>

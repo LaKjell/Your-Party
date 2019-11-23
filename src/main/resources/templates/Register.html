@@ -14,252 +14,106 @@
 
 <body>
 
-<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 
-<div class="container-fluid">
+	<div class="container-fluid">
 
 
 		<div class="row">
-		<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
-<div class="col-md-12">
-<div class="col-md-12" id='box'>
-<form class="was-validated" name="register" action="" onsubmit="return validateForm()" ><!--method="post"--> 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="">Vorname</label>
-      <input type="text" class="form-control" name ="vorname" id="vorname" placeholder="Vorname" required>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="">Nachname</label>
-      <input type="text" class="form-control" name ="nachname" id="nachname" placeholder="Nachname" required>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="">Username</label>
-      <input type="text" class="form-control" name ="username" id="username" placeholder="Username" required>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="">E-Mail</label>
-      <input type="email" class="form-control" name ="e-mail" id="e-mail" placeholder="E-Mail" required>
-    </div>
-    </div>
-    <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="">Passwort</label>
-      <input type="password" class="form-control" name ="password" id="password" placeholder="Passwort" required>
-    </div>
-    <div class="form-group col-md-6">
-    <div class="col-auto " id='sel'>
-      <label for="">Geschlecht</label>
-      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
-        <option value="">Geschlecht</option>
-        <option value="1">Mann</option>
-        <option value="2">Frau</option>
-        <option value="3">Divers</option>
-      </select>
-    </div>
-    </div>
-     <div class="form-group col-md-6">
-   
-    </div>
-    </div>
-    <div class="form-row">
-    <div class="form-group col-md-9">
-      <label for="">Straße</label>
-      <input type="text" class="form-control" name ="straße" id="straße" placeholder="Straße" required>
-    </div>
-    <div class="form-group col-md-3">
-      <label for="">Hausnummer</label>
-      <input type="text" class="form-control" name ="hausnummer" id="hausnummer" placeholder="Hausnummer" required>
-    </div>
-    </div>
-     <div class="form-row">
-    <div class="form-group col-md-2">
-      <label for="">Postleitzahl</label>
-      <input type="text" class="form-control" name ="plz" id="plz" placeholder="PLZ" required>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="">Ort</label>
-      <input type="text" class="form-control" name ="ort" id="ort" placeholder="Ort" required>
-    </div>
-    <div class="form-group col-md-4">
-    <div class="col-auto "id='sel'>
-      <label for="">Land</label>
-      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
-        <option value="">Land</option>
-        <option value="1">DE</option>
-        <option value="2">CH</option>
-        <option value="3">AT</option>
-      </select>
-    </div>
-    </div>
-    </div>
-    
-  <button type="submit" class="btn btn-primary">Jetzt registrieren</button>
-</form>
-</div>						<!--form role="form">
+			<div class="col-md-12">
+				<div class="row bord">
+					<div class="col-md-12 jumbotron">
+						<form class="was-validated" name="register" action="/" method="post"
+							onsubmit="return validateForm()">
 							
-								<table>
-									<tr>
-										<td>
-											<h2>
-												<b>Über mich</b>
-											</h2>
-										</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Vorname:</td>
-										<td><input id="vorname" type="text" placeholder="Vorname" /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Nachname:</td>
-										<td><input id="nachname" type="text"
-											placeholder="Nachname" /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Username:</td>
-										<td><input id="username" type="text"
-											placeholder="Username" /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>E-Mail:</td>
-										<td><input id="email" type="email" placeholder="E-Mail" /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Geschlecht:</td>
-										<td><div class="form-check form-check-inline">
-												<input class="form-check-input" type="checkbox"
-													id="inlineCheckbox1" value="mann"> <label
-													class="form-check-label" for="inlineCheckbox1">Mann</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" type="checkbox"
-													id="inlineCheckbox2" value="frau"> <label
-													class="form-check-label" for="inlineCheckbox2">Frau</label>
-											</div>
-											<div class="form-check form-check-inline">
-												<input class="form-check-input" type="checkbox"
-													id="inlineCheckbox3" value="divers"> <label
-													class="form-check-label" for="inlineCheckbox3">Divers</label>
-											</div></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Adresse:</td>
-										<td><input type="text" placeholder="Postleitzahl" /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td><input type="text" placeholder="Wohnort" /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td><input type="text" placeholder="Straße" /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td><input type="text" placeholder="Hausnummer" /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Staatsangehörigkeit:</td>
-										<td><input type="text"
-											placeholder="Deutsch/Französisch..." /></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Beschreibung:</td>
-										<td><textarea id="beschreibung" rows="5" cols="10"
-												placeholder="Kurzbeschreibung"></textarea></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>Sonstiges:</td>
-										<td><textarea type="text" rows="5" cols="10"
-												placeholder="Hobbies, Beruf, etc."></textarea></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td><input type="submit" value="Speichern"></td>
-									</tr>
-								</table>
-							</form>
-						</div>
-				
-	
-			
-			
-			</div>
-			
-			
-					<article>
-						<form>
-							<table>
-								<tr>
-									<td>Vorname:</td>
-									<td><input id="vorname" type="text" placeholder="Vorname" /></td>
-								</tr>
-								<tr>
-									<td>Nachname:</td>
-									<td><input id="nachname" type="text"
-										placeholder="Nachname" /></td>
-								</tr>
-								<tr>
-									<td>Username:</td>
-									<td><input id="username" type="text"
-										placeholder="Username" /></td>
-								</tr>
-								<tr>
-									<td>E-Mail:</td>
-									<td><input id="email" type="email" placeholder="E-Mail" /></td>
-								</tr>
-								<tr>
-									<td>Passwort:</td>
-									<td><input id="password" type="password"></td>
-								</tr>
-								<tr>
-									<td>Beschreibung:</td>
-									<td><textarea id="beschreibung" rows="5" cols="10"></textarea></td>
-								</tr>
-								<tr>
-									<td>Mann:</td>
-									<td><input id="gender" type="radio" name="gender"
-										value="Mann"></td>
-								</tr>
-								<tr>
-									<td>Frau:</td>
-									<td><input id="gender" type="radio" name="gender"
-										value="Frau"></td>
-								</tr>
-								<tr>
-									<td>Land:</td>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="">Vorname</label> <input type="text"
+										class="form-control" name="vorname" id="vorname"
+										placeholder="Vorname" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="">Nachname</label> <input type="text"
+										class="form-control" name="nachname" id="nachname"
+										placeholder="Nachname" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="">Username</label> <input type="text"
+										class="form-control" name="username" id="username"
+										placeholder="Username" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="">E-Mail</label> <input type="email"
+										class="form-control" name="e-mail" id="e-mail"
+										placeholder="E-Mail" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="">Passwort</label> <input type="password"
+										class="form-control" name="password" id="password"
+										placeholder="Passwort" required>
+								</div>
+								<div class="form-group col-md-6">
+									<div class="col-auto " id='sel'>
+										<label for="">Geschlecht</label> <select
+											class="custom-select mr-sm-2" id="inlineFormCustomSelect"
+											required>
+											<option value="">Geschlecht</option>
+											<option value="1">Mann</option>
+											<option value="2">Frau</option>
+											<option value="3">Divers</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group col-md-6"></div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-9">
+									<label for="">Straße</label> <input type="text"
+										class="form-control" name="straße" id="straße"
+										placeholder="Straße" required>
+								</div>
+								<div class="form-group col-md-3">
+									<label for="">Hausnummer</label> <input type="text"
+										class="form-control" name="hausnummer" id="hausnummer"
+										placeholder="Hausnummer" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-2">
+									<label for="">Postleitzahl</label> <input type="text"
+										class="form-control" name="plz" id="plz" placeholder="PLZ"
+										required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="">Ort</label> <input type="text"
+										class="form-control" name="ort" id="ort" placeholder="Ort"
+										required>
+								</div>
+								<div class="form-group col-md-4">
+									<div class="col-auto " id='sel'>
+										<label for="">Land</label> <select
+											class="custom-select mr-sm-2" id="inlineFormCustomSelect"
+											required>
+											<option value="">Land</option>
+											<option value="1">DE</option>
+											<option value="2">CH</option>
+											<option value="3">AT</option>
+										</select>
+									</div>
+								</div>
+							</div>
 
-									<td><select id="land">
-											<option>-----------</option>
-											<option>Deutschland</option>
-											<option>Österreich</option>
-											<option>Schweiz</option>
-									</select></td>
-								</tr>
-							</table>
-							<input type="submit" value="Jetzt registrieren!"
-								onclick="Register(vorname, nachname, username, email, password, beschreibung, gender, land)">
+							<button type="submit" class="btn btn-primary">Jetzt
+								registrieren</button>
 						</form>
-					</article-->
+					</div>
 
 					<script src="js/JS_Register.js"></script>
 				</div>
@@ -269,7 +123,7 @@
 			<footer> </footer>
 		</div-->
 	</div>
-	<div class="col-md-12 fixed-bottom" style="padding: 0px;">
+	<div class="col-md-12" style="padding: 0px;">
 		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
 	</div>
 	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
