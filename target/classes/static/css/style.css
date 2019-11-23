@@ -23,12 +23,18 @@ body {
 
 #loc{
 	background-color: #e8e8e8; 
-	margin-top: 0;
+	/*margin-top: 0;
 	margin-bottom: 2%;
-	opacity: 0.95;
-	padding: 2%;
+	opacity: 0.95;*/
+	border-color: transparent;
+	border-width: 5px !important;
 }
-
+.bord{
+	border-color: transparent;
+	border-style: solid;
+	border-width: 10px;
+	
+}
 #box{
 	background-color: #e8e8e8; 
 	margin-top: 2%;

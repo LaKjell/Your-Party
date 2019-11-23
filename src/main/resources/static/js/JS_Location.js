@@ -29,16 +29,17 @@ function Location() {
 	img.setAttribute('src', ArrayOne[1]);
 	img.setAttribute('alt', ArrayOne[0]);
 	img.setAttribute('align', 'left');
+	img.setAttribute('class', 'img-fluid')
 
-	row.setAttribute('id', 'loc');
+	//row.setAttribute('id', 'loc');
 	
 	col6t.setAttribute('class', 'col-md-6');
 	col6i.setAttribute('class', 'col-md-6');
 	
 	row.setAttribute('class', 'row' );
-	row.setAttribute('id', 'loc');
+	//row.setAttribute('id', 'loc');
 	
-	col12.setAttribute('class', 'col-md-12');
+	col12.setAttribute('class', 'col-md-12 jumbotron');
 	
 	col6i.appendChild(img);
 	
