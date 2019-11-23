@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<div class="col-md-12 no-gutters" th:fragment='header' style="color: green; background-color: lightgray; opacity: 0,5; width: 110%; margin:0;">
+	<div class="col-md-12" th:fragment='header' style="color: green; background-color: lightgray; opacity: 0,5; width: 100%; margin:0;">
 		<div class="page-header">
 			<br>
 			<h1>
@@ -32,23 +32,25 @@
 				<li class="nav-item active"><a th:class="nav-link"
 					th:href="@{Locations}">Locations <span class="sr-only">(current)</span>
 				</a></li>
+				<li class="nav-item active"><a th:class="nav-link"
+					th:href="@{Profil}">Profil <span class="sr-only">(current)</span>
+				</a></li>
+				
 
-
-				<li class="nav-item"><a class="nav-link disabled" href="#"
-					tabindex="-1" aria-disabled="true">Disabled</a></li>
+				<!-- li class="nav-item"><a class="nav-link disabled" href="#"
+					tabindex="-1" aria-disabled="true">Disabled</a></li-->
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown">
 					<div class="btn-group">
-						<a type="link" class="btn btn-primary" th:href="@{Profil}">Profil</a>
+						<a type="link" class="btn btn-primary" th:href="@{SignIn}">Einloggen</a>
 						<button type="button"
 							class="btn btn-primary dropdown-toggle dropdown-toggle-split"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<span class="sr-only">Toggle Dropdown</span>
 						</button>
 						<div class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" th:href="@{SignIn}">Einloggen</a> <a
-								class="dropdown-item" th:href="@{Register}">Registrieren</a>
+							<a class="dropdown-item" th:href="@{Register}">Registrieren</a>
 						</div>
 					</div>
 				</li>
