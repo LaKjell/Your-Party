@@ -128,7 +128,7 @@ public class LocationController {
 	public ResponseEntity<Location> createLocation(@RequestBody Location location) {
 		try {
 			Location results = locationService.save(location);
-			return ResponseEntity.created(new URI("/api/location/" + results.getid())).body(results);
+			return ResponseEntity.created(new URI("/api/location/" + results.getId())).body(results);
 		} catch (Exception e) {
 			return new ResponseEntity<Location>(HttpStatus.CONFLICT);
 		}
@@ -136,12 +136,12 @@ public class LocationController {
 
 	@RequestMapping(method = RequestMethod.PUT, value = "location/update", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Location> updateLocation(@RequestBody Location location) {
-		if (location.getid() == null)
+		if (location.getId() == null)
 			return new ResponseEntity<Location>(HttpStatus.NOT_FOUND);
 
 		try {
 			Location results = locationService.update(location);
-			return ResponseEntity.created(new URI("/api/location/" + results.getid())).body(results);
+			return ResponseEntity.created(new URI("/api/location/" + results.getId())).body(results);
 		} catch (Exception e) {
 			return new ResponseEntity<Location>(HttpStatus.NOT_FOUND);
 		}

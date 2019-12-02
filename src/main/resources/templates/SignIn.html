@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
@@ -13,34 +12,47 @@
 </head>
 
 <body>
-<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 	<div class="container-fluid">
 
-		<div class="row" >
-			
+		<div class="row">
+
 			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
-	
-		<div class="col-md-12" id='box' style="align-items: center;">
-		
-		<form class="was-validated" name="signin" action="" onsubmit="return validateForm()" ><!--method="post"--> 
-		 <div class="form-row">
-    <div class="form-group col-md-12">
-      <label for="">Username</label>
-      <input type="text" class="form-control" name ="username" id="username" placeholder="Username" required>
-    </div>
-    </div>
-    <div class="form-row">
-    <div class="form-group col-md-12">
-      <label for="">Passwort</label>
-      <input type="password" class="form-control" name ="password" id="password" placeholder="Passwort" required>
-    </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Anmelden</button>
-    </form>
-    </div>
-    <!--div class="col-md-12" id='box'>
+
+			<div class="col-md-12" id='box' style="align-items: center;">
+
+				<form class="was-validated" name="signin"
+					action="${contextPath}/login" onsubmit="return validateForm()"
+					method="POST">
+					<!--method="post"-->
+					<div class="form-row">
+						<div
+							class="form-group ${error != null ? 'has-error' : ''} col-md-12">
+							<!--  <span>${message}</span> --> <input name="username" type="text"
+								class="form-control" placeholder="Username" autofocus="true" />
+							<input name="password" type="password" class="form-control"
+								placeholder="Password" /><!-- <span>${error}</span>--> <input
+								type="hidden" name="${_csrf.parameterName}"
+								value="${_csrf.token}" />
+								<!--  <label for="">Username</label> <input
+								type="text" class="form-control" name="username" id="username"
+								placeholder="Username" required> -->
+						</div>
+					</div>
+					<!-- <div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="">Passwort</label> <input type="password"
+								class="form-control" name="password" id="password"
+								placeholder="Passwort" required>
+						</div>
+					</div>-->
+					<button type="submit" class="btn btn-primary">Anmelden</button>
+					<a href="/registration">Registrieren</a>
+				</form>
+			</div>
+			<!--div class="col-md-12" id='box'>
 			<div class="col-md-4">
 				<h3>Login</h3>
 			</div>
