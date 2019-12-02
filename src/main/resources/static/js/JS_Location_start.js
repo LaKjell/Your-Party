@@ -16,42 +16,58 @@ function Locationall() {
 			var row = document.createElement('div');
 			var col6i = document.createElement('div'); 
 			var col6t = document.createElement('div');
+			var col12d = document.createElement('div');
+			var collaps = document.createElement('div');
 			
 			var head = document.createElement('h2');
 			var text = document.createElement('p');
 			var img = document.createElement('img');
+			var tab = document.createElement('table')
+			var but = document.createElement('button');
 			
+			head.innerHTML = locations.name;
 
 			text.innerHTML = locations.description;
 			text.setAttribute('style', 'align-self: right');
-			//.setAttribute('style', 'align: right');
-
-			head.innerHTML = locations.name;
 
 			img.setAttribute('src', 'img/douala.jpg');
 			img.setAttribute('alt', '...');
 			img.setAttribute('align', 'left');
-			img.setAttribute('class', 'img-fluid')
+			img.setAttribute('class', 'img-fluid');
 
-			//row.setAttribute('id', 'loc');
+			tab.innerHTML = "<tbody><tr><th scope='row'>Preis</th><td>" + location.price + "</td></tr><tr><th scope='row'>2</th><td>Jacob</td></tr><tr><th scope='row'>3</th><td>Larry</td></tr></tbody>";
+			tab.setAttribute('class', 'table table-borderless')
+			
+			but.setAttribute('class', 'btn btn btn-primary float-right');
+			but.setAttribute('data-toggle', 'collapse');
+			but.setAttribute('data-target', '#details');
+			but.innerHTML = "Mehr";
 			
 			col6t.setAttribute('class', 'col-md-6');
 			col6i.setAttribute('class', 'col-md-6');
+			collaps.setAttribute('id', 'details');
+			collaps.setAttribute('class', 'collapsing');
+			col12d.setAttribute('class', 'col-md-12');
 			
 			row.setAttribute('class', 'row' );
 			//row.setAttribute('id', 'loc');
 			
+			
 			col12.setAttribute('class', 'col-md-12 jumbotron');
+			
+			collaps.appendChild(tab);
 			
 			col6i.appendChild(img);
 			
 			col6t.appendChild(head);
 			col6t.appendChild(text);
 			
+			col12d.appendChild(but);
+			col12d.appendChild(collaps);
 
 			row.appendChild(col6i);	
 			row.appendChild(col6t);
-			
+			row.appendChild(col12d);
 			
 			col12.appendChild(row);
 			
