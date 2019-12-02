@@ -64,14 +64,14 @@ public class LocationService {
 
 	// Funktionen (speichern, ändern, löschen
 	public Location save(Location location) {
-		if (location.getid() != null && locationRepository.existsById(location.getid())) {
+		if (location.getId() != null && locationRepository.existsById(location.getId())) {
 			throw new EntityExistsException("There is an entity with such an ID");
 		}
 		return locationRepository.save(location);
 	}
 
 	public Location update(Location location) {
-		if (location.getid() != null && locationRepository.existsById(location.getid())) {
+		if (location.getId() != null && locationRepository.existsById(location.getId())) {
 			throw new EntityExistsException("There is an entity with such an ID");
 		}
 		return locationRepository.save(location);
