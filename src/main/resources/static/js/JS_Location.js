@@ -57,3 +57,5 @@ function Location() {
 	boxes.appendChild(col12);
 	console.log(box);
 	}
+
+
