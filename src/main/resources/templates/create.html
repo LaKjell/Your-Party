@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+	<!-- div th:insert="fragments/Head_Nav_Footer :: header">...</div-->
+	<div class="container-fluid">
+		<div class="row">
+			<!--div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
+			</div-->
+			<div class="col-md-12">
+				<div class="row bord">
+					<div class="col-md-12 jumbotron" style="margin-top: 10px;">
+						<h2>Locations</h2>
+						<p style="text-align: justify" id='htext'>Hier können Sie ihre
+							Seite anlegen um diese für potentielle Mieter auffindbar zu
+							machen..</p>
+							<a class="btn btn-primary" href="../Locations">
+				!Zurück!
+				</a>
+					</div>
+
+					<div class="col-md-12 jumbotron" style="margin-top: 10px;">
+						<form class="was-validated" name="register" action="/"
+							method="post" onsubmit="return validateForm()">
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="">Name der Location</label> <input type="text"
+										class="form-control" name="name" id="name" placeholder="Name"
+										required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="">Besitzer</label> <input type="text"
+										class="form-control" name="owner" id="owner"
+										placeholder="Besitzer" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-12">
+									<label for="">Beschreibung</label>
+									<textarea class="form-control" name="des" id="des" rows="4"
+										placeholder="Beschreibung" required></textarea>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="">Postleitzahl</label> <input type="text"
+										class="form-control" name="postcode" id="postcode"
+										placeholder="PLZ" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="">Straße</label> <input type="text"
+										class="form-control" name="street" id="street"
+										placeholder="Straße" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="">Preiß</label> <input type="text"
+										class="form-control" name="price" id="price"
+										placeholder="Preiß" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="">Größe</label> <input type="text"
+										class="form-control" name="size" id="size" placeholder="Größe"
+										required>
+								</div>
+
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-12">
+									<label for="pic">Bild</label> <input type="file"
+										class="form-control-file" name="pic" id="pic" 
+										required>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary">Jetzt
+								erstellen</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12 " style="padding: 0px;">
+		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
+	</div>
+
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+</body>
+</html>
