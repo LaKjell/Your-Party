@@ -11,15 +11,15 @@
 <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
-
-	<div class="container-fluid">
-	
-		<div class="row">
-			<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
-			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
-			<div class="col-md-12" style="margin-top: 10px;">
+		<div class="col-md-12">
+			<div class="row bord">
+				<div class="col-md-12 jumbotron" style="margin-top: 10px;">
 				<h2>Locations</h2>
 				<p style="text-align: justify" id='htext'>
 					Hier finden Sie alle möglichen Locations, die wir für Sie zur
@@ -30,12 +30,13 @@
 					Durchstöbern.
 				</p>
 			</div>
-			
-
-			
-				<div class="col-md-3" id='loc'>
-
-					<form role="form">
+			</div>
+			<div class="row">
+				<div class="col-md-3 bord" >
+				<div class="row ">
+				<div class="col-md-12 jumbotron">
+					
+					<form name="location" action="/location" method="post" onsubmit="">
 					<div class="form-row align-items-center">
 					<div class="form-group col-md-12">
 						
@@ -76,17 +77,18 @@
 							
 							</div>
 						</div> <br>
-						<button id="filtern" type="button" class="btn btn-info">Filtern</button>
+						<button id="filtern" type="submit" class="btn btn-info">Filtern</button>
 						<br> <br>
 					</form>
-					
+					</div>
+					</div>
 				</div>
-
-				<div class="col-md-9" id='flex'>
-					<div class="col-md-12">
-						<div class="row" id='loc'>
+				<div class="col-md-9 bord" >
+					<div class="row"id='flex' >
+						<div class="col-md-12 jumbotron">
+						<div class="row" >
 							<div class="col-md-6">
-								<img alt="Bootstrap Image Preview" src="img/douala.jpg">
+								<img class="img-fluid"alt="Bootstrap Image Preview" src="img/douala.jpg">
 							</div>
 							<div class="col-md-6">
 								<h2>Douala in Ravensburg:</h2>
@@ -102,10 +104,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-12">
-						<div class="row" id='loc'>
+					<div class="col-md-12 jumbotron">
+						<div class="row" >
 							<div class="col-md-6">
-								<img alt="Bootstrap Image Preview" src="img/douala.jpg">
+								<img class="img-fluid" alt="Bootstrap Image Preview" src="img/douala.jpg">
 							</div>
 							<div class="col-md-6">
 								<h2>Douala in Ravensburg:</h2>
@@ -120,56 +122,42 @@
 								</p>
 							</div>
 						</div>
+					</div>
+					</div>
 					
-					<div class="col-md-12">
-						<div class="row" id='loc'>
-							<div class="col-md-6">
-								<img alt="Bootstrap Image Preview" src="img/douala.jpg">
-							</div>
-							<div class="col-md-6">
-								<h2>Douala in Ravensburg:</h2>
-								<p>Der renommierte Club mit Baustellen-Charme, Graffiti und
-									Tropen-Flair ist bekannt für Raves und berühmte DJs. Das Douala
-									in Ravensburg bietet Ihnen die Möglichkeit eine ordentliche
-									Sause mit all ihren Besten zu veranstalten. Sie fühlen den Beat
-									und sind von modernen Drogen nicht abgeneigt? Dann sind Sie
-									hier genau richtig!</p>
-								<p>
-									<a class="btn" href="new.html">View details »</a>
-								</p>
-							</div>
+					<div class="row">
+						<div class="col-md-12">
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+
+
 			<button type="button" class="btn btn-dark" onclick="Location()">Next Location!</button>
 		</div>
 	</div>
 
-	<div class="col-md-12" style="padding: 0px;">
+	<div class="col-md-12 " style="padding: 0px;">
 		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
 	</div>
 
-	<script type="text/javascript" src="JS_App.js">
-		Location();
+	<!--script type="text/javascript" src="js/JS_Location.js"></script>
+	<script>
+	window.onload = Location;
+	</script-->
+	<script type="text/javascript" src="js/JS_Location_start.js"></script>
+	<script>
+	window.onload = Locationall;
 	</script>
-	<script type="text/javascript"
+	
+	<!--script type="text/javascript"
 		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
 	<script type="text/javascript"
-		th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+		th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script-->
 	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
-	<!--  script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script-->
+
 </body>
 </html>
