@@ -54,6 +54,10 @@ body {
 	
 }
 
+#trans{
+	background: transparent;
+}
+
 #footer{
 	
 	background-color: black;
