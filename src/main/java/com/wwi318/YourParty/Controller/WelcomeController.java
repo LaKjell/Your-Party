@@ -46,4 +46,10 @@ public class WelcomeController {
         return "Impressum";
     }
     
+    @GetMapping("/Locations/create")
+    public String CreatePage(Model modelRegister) {
+        modelRegister.addAttribute("appName", appName);
+        return "create";
+    }
+    
 }
