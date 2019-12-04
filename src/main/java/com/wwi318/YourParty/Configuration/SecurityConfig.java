@@ -28,14 +28,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/resources/**", "/registration").permitAll().anyRequest().authenticated()
-				.and().formLogin().loginPage("/login").permitAll().and().logout().permitAll();
+//		http.authorizeRequests().antMatchers("/resources/**", "/registration").permitAll()//.anyRequest().authenticated()
+//				.and().formLogin().loginPage("/login").permitAll().and().logout().permitAll();
+		
+		http.authorizeRequests()
+		.antMatchers("/", "static/css", "static/js", "static/img").permitAll()
+		.antMatchers("/Profil").authenticated()
+		.and().formLogin();
 	}
 
-//		http.authorizeRequests()
-//			.antMatchers("/Profil").hasAnyRole("USER", "ADMIN")
-//			.antMatchers("/", "static/css", "static/js", "static/img").permitAll()
-//			.and().formLogin();
+
 	@Bean
 	public AuthenticationManager customAuthenticationManager() throws Exception {
 		return authenticationManager();
@@ -45,12 +47,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
 	}
+	
 //	@Override
 //	public void configure(AuthenticationManagerBuilder auth) throws Exception {
 //		auth.inMemoryAuthentication().withUser("admin").password("admin").roles("Admin").and().withUser("yourparty")
 //				.password("yourparty").roles("User").and().getUserDetailsService();
 //	}
-//
+
 //	public PasswordEncoder getPasswordEncoder() {
 //		return NoOpPasswordEncoder.getInstance();
 //
