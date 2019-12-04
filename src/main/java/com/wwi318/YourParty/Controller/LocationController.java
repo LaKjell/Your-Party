@@ -54,8 +54,8 @@ public class LocationController {
 		this.locationService = locationService;
 	}
 
-	// Alle Datensätze finden
-	@RequestMapping(method = RequestMethod.GET, value = "/location", produces = MediaType.APPLICATION_JSON_VALUE)
+	// Alle Datensï¿½tze finden
+	@RequestMapping(method = RequestMethod.GET, path = "/location", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Location> getAllLocations() {
 		return locationService.findAll();
 	}
@@ -123,7 +123,7 @@ public class LocationController {
 			return null;
 	}
 
-	// Funktionen anlegen, ändern, löschen
+	// Funktionen anlegen, ï¿½ndern, lï¿½schen
 	@RequestMapping(method = RequestMethod.POST, value = "location/create", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Location> createLocation(@RequestBody Location location) {
 		try {

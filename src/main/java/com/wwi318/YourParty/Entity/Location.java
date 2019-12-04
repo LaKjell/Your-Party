@@ -34,7 +34,6 @@ public class Location {
 	
 	private Blob picture;
 
-
 	public String getOwner() {
 		return owner;
 	}
