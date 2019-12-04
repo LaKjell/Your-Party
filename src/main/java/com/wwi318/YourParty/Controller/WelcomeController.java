@@ -10,7 +10,7 @@ public class WelcomeController {
 	@Value("${spring.application.name}")
     String appName;
  
-    @GetMapping("/")
+    @GetMapping("/index")
     public String homePage(Model modelHome) {
         modelHome.addAttribute("appName", appName);
         return "index";
