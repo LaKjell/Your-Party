@@ -9,6 +9,7 @@
 <link rel="stylesheet"
 	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <link th:href="@{/css/style.css}" rel="stylesheet">
+<script type="text/javascript" src="js/JS_Location_filter.js"></script>
 </head>
 <body>
 	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
@@ -79,9 +80,19 @@
 											</select>
 
 										</div>
+										<div class="form-group col-md-12">
+											<label for="formControlRange">Example Range input</label>
+											<div class="d-flex justify-content-center my-4">
+												<span class="font-weight-bold mr-2 mt-1">10m²</span> <input
+													type="range" class="form-control-range"
+													id="formControlRange" min="10" max="250" step="10">
+												<span class="font-weight-bold mr-2 mt-1">250m²</span>
+											</div>
+										</div>
+
 									</div>
 									<br>
-									<button id="filtern" type="submit" class="btn btn-info">Filtern</button>
+									<button id="filtern" type="button" class="btn btn-info" onclick="Locationfilter()">Filtern</button>
 									<br> <br>
 								</form>
 							</div>
@@ -113,26 +124,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12 jumbotron">
-								<div class="row">
-									<div class="col-md-6">
-										<img class="img-fluid" alt="Bootstrap Image Preview"
-											src="img/douala.jpg">
-									</div>
-									<div class="col-md-6">
-										<h2>Douala in Ravensburg:</h2>
-										<p>Der renommierte Club mit Baustellen-Charme, Graffiti
-											und Tropen-Flair ist bekannt für Raves und berühmte DJs. Das
-											Douala in Ravensburg bietet Ihnen die Möglichkeit eine
-											ordentliche Sause mit all ihren Besten zu veranstalten. Sie
-											fühlen den Beat und sind von modernen Drogen nicht abgeneigt?
-											Dann sind Sie hier genau richtig!</p>
-										<p>
-											<a class="btn" href="new.html">View details »</a>
-										</p>
-									</div>
-								</div>
-							</div>
+							
+
 						</div>
 
 						<div class="row">
@@ -156,6 +149,7 @@
 	<script>
 	window.onload = Location;
 	</script-->
+	
 	<script type="text/javascript" src="js/JS_Location_start.js"></script>
 	<script>
 		window.onload = Locationall;
