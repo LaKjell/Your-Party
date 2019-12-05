@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wwi318.YourParty.Entity.Location;
 import com.wwi318.YourParty.Entity.User;
@@ -39,7 +40,7 @@ public class UserController {
 	public String registration(Model model) {
 		model.addAttribute("userForm", new User());
 
-		return "Register";
+		return "registration";
 	}
 
 	@PostMapping("/registration")
@@ -47,7 +48,7 @@ public class UserController {
 		userValidator.validate(userForm, bindingResult);
 
 		if (bindingResult.hasErrors()) {
-			return "Register";
+			return "registration";
 		}
 
 		userService.save(userForm);
@@ -72,7 +73,19 @@ public class UserController {
 	public String welcome(Model model) {
 		return "index";
 	}
-	
+
+	// Funktionen anlegen, �ndern, l�schen
+	@RequestMapping(method = RequestMethod.POST, value = "/user",
+			consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	public @ResponseBody ResponseEntity<User> createUser(User user) {
+		try {
+			userService.save(user);
+			return new ResponseEntity<User>(HttpStatus.CREATED);
+		} catch (Exception e) {
+			return new ResponseEntity<User>(HttpStatus.CONFLICT);
+		}
+	}
+
 //	@Autowired
 //	MyUserDetailsService userDetails;
 

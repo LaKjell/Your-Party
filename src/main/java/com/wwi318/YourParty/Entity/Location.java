@@ -2,6 +2,7 @@ package com.wwi318.YourParty.Entity;
 
 import java.sql.Blob;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,6 +31,7 @@ public class Location {
 
 	private double price;
 
+	@Column(name="description", length = 100000)
 	private String description;
 	
 	private Blob picture;
