@@ -11,133 +11,140 @@
 <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
-<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
-<div class="container-fluid">
-	<div class="row">
-	<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
-		<div class="col-md-12">
-			<div class="row bord">
-				<div class="col-md-12 jumbotron" style="margin-top: 10px;">
-				<h2>Locations</h2>
-				<p style="text-align: justify" id='htext'>
-					Hier finden Sie alle möglichen Locations, die wir für Sie zur
-					Verfügung stellen. Darunter finden Sie eine gemischte Auswahl an
-					Locations, die für jeden Anlass, egal ob Geburtstag, Hochzeit oder
-					Partys, geeignet sind. Wir hoffen, dass Sie eine geeignete Location
-					für Ihren Anlass finden werden! <br>Viel Spaß beim
-					Durchstöbern.
-				</p>
-				<a class="btn btn-primary" href="Locations/create">
-				!Neue Seite anlegen!
-				</a>
-			</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 bord" >
-				<div class="row ">
-				<div class="col-md-12 jumbotron">
-					
-					<form name="location" action="/location" method="post" onsubmit="">
-					<div class="form-row align-items-center">
-					<div class="form-group col-md-12">
-						
-							
-								<label class="my-1 mr-2" for="inlineFormCustomSelect">Stadt:</label>
-								<select class="custom-select mr-sm-2"
-									id="inlineFormCustomSelect">
-									<option selected>- - - -</option>
-									<option value="1">Ravensburg</option>
-									<option value="2">Biberach</option>
-									<option value="3">Bad Waldsee</option>
-									<option value="4">Bad Saulgau</option>
-								</select>
-							
-							</div>
-							<div class="form-group col-md-12">
-							
-								<label class="my-1 mr-2" for="inlineFormCustomSelect">Kosten:</label>
-								<select class="custom-select mr-sm-2"
-									id="inlineFormCustomSelect">
-									<option selected>- - - -</option>
-									<option value="1"> < 100 €</option>
-									<option value="2">100 € - 300 €</option>
-									<option value="3">> 300 €</option>
-								</select>
-							
-							</div>
-							<div class="form-group col-md-12">
-							
-								<label class="my-1 mr-2" for="inlineFormCustomSelect">Größe:</label>
-								<select class="custom-select mr-sm-2"
-									id="inlineFormCustomSelect">
-									<option selected>- - - -</option>
-									<option value="1">< 50 m²</option>
-									<option value="2">50 - 150 m²</option>
-									<option value="3">> 150 m²</option>
-								</select>
-							
-							</div>
-						</div> <br>
-						<button id="filtern" type="submit" class="btn btn-info">Filtern</button>
-						<br> <br>
-					</form>
-					</div>
+			<div class="col-md-12">
+				<div class="row bord">
+					<div class="col-md-12 jumbotron" style="margin-top: 10px;">
+						<h2>Locations</h2>
+						<p style="text-align: justify" id='htext'>
+							Hier finden Sie alle möglichen Locations, die wir für Sie zur
+							Verfügung stellen. Darunter finden Sie eine gemischte Auswahl an
+							Locations, die für jeden Anlass, egal ob Geburtstag, Hochzeit
+							oder Partys, geeignet sind. Wir hoffen, dass Sie eine geeignete
+							Location für Ihren Anlass finden werden! <br>Viel Spaß beim
+							Durchstöbern.
+						</p>
+						<a class="btn btn-primary" href="Locations/create"> Neue Seite
+							anlegen! </a>
 					</div>
 				</div>
-				<div class="col-md-9 bord" >
-					<div class="row"id='flex' >
-						<div class="col-md-12 jumbotron">
-						<div class="row" >
-							<div class="col-md-6">
-								<img class="img-fluid"alt="Bootstrap Image Preview" src="img/douala.jpg">
-							</div>
-							<div class="col-md-6">
-								<h2>Douala in Ravensburg:</h2>
-								<p>Der renommierte Club mit Baustellen-Charme, Graffiti und
-									Tropen-Flair ist bekannt für Raves und berühmte DJs. Das Douala
-									in Ravensburg bietet Ihnen die Möglichkeit eine ordentliche
-									Sause mit all ihren Besten zu veranstalten. Sie fühlen den Beat
-									und sind von modernen Drogen nicht abgeneigt? Dann sind Sie
-									hier genau richtig!</p>
-								<p>
-									<a class="btn" href="new.html">View details »</a>
-								</p>
+				<div class="row">
+					<div class="col-md-3 bord">
+						<div class="row ">
+							<div class="col-md-12 jumbotron">
+
+								<form name="location" action="/location" method="post"
+									onsubmit="">
+									<div class="form-row align-items-center">
+										<div class="form-group col-md-12">
+
+
+											<label class="my-1 mr-2" for="inlineFormCustomSelect">Stadt:</label>
+											<select class="custom-select mr-sm-2"
+												id="inlineFormCustomSelect">
+												<option selected>- - - -</option>
+												<option value="1">Ravensburg</option>
+												<option value="2">Biberach</option>
+												<option value="3">Bad Waldsee</option>
+												<option value="4">Bad Saulgau</option>
+											</select>
+
+										</div>
+										<div class="form-group col-md-12">
+
+											<label class="my-1 mr-2" for="inlineFormCustomSelect">Kosten:</label>
+											<select class="custom-select mr-sm-2"
+												id="inlineFormCustomSelect">
+												<option selected>- - - -</option>
+												<option value="1">< 100 €</option>
+												<option value="2">100 € - 300 €</option>
+												<option value="3">> 300 €</option>
+											</select>
+
+										</div>
+										<div class="form-group col-md-12">
+
+											<label class="my-1 mr-2" for="inlineFormCustomSelect">Größe:</label>
+											<select class="custom-select mr-sm-2"
+												id="inlineFormCustomSelect">
+												<option selected>- - - -</option>
+												<option value="1">< 50 m²</option>
+												<option value="2">50 - 150 m²</option>
+												<option value="3">> 150 m²</option>
+											</select>
+
+										</div>
+									</div>
+									<br>
+									<button id="filtern" type="submit" class="btn btn-info">Filtern</button>
+									<br> <br>
+								</form>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-12 jumbotron">
-						<div class="row" >
-							<div class="col-md-6">
-								<img class="img-fluid" alt="Bootstrap Image Preview" src="img/douala.jpg">
+					<div class="col-md-9 bord">
+						<div class="row" id='flex'>
+							<div class="col-md-12 jumbotron">
+								<div class="row">
+									<div class="col-md-6">
+										<img class="img-fluid" alt="Bootstrap Image Preview"
+											src="img/douala.jpg">
+									</div>
+									<div class="col-md-6">
+										<h2>Douala in Ravensburg:</h2>
+										<p>Der renommierte Club mit Baustellen-Charme, Graffiti
+											und Tropen-Flair ist bekannt für Raves und berühmte DJs. Das
+											Douala in Ravensburg bietet Ihnen die Möglichkeit eine
+											ordentliche Sause mit all ihren Besten zu veranstalten. Sie
+											fühlen den Beat und sind von modernen Drogen nicht abgeneigt?
+											Dann sind Sie hier genau richtig!</p>
+										<p>
+											<a class="btn" href="new.html">View details »</a>
+										</p>
+										<div align="right">
+											<a class="btn btn-primary" href="Locations/buchen"> Jetzt
+												buchen! </a>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-6">
-								<h2>Douala in Ravensburg:</h2>
-								<p>Der renommierte Club mit Baustellen-Charme, Graffiti und
-									Tropen-Flair ist bekannt für Raves und berühmte DJs. Das Douala
-									in Ravensburg bietet Ihnen die Möglichkeit eine ordentliche
-									Sause mit all ihren Besten zu veranstalten. Sie fühlen den Beat
-									und sind von modernen Drogen nicht abgeneigt? Dann sind Sie
-									hier genau richtig!</p>
-								<p>
-									<a class="btn" href="new.html">View details »</a>
-								</p>
+							<div class="col-md-12 jumbotron">
+								<div class="row">
+									<div class="col-md-6">
+										<img class="img-fluid" alt="Bootstrap Image Preview"
+											src="img/douala.jpg">
+									</div>
+									<div class="col-md-6">
+										<h2>Douala in Ravensburg:</h2>
+										<p>Der renommierte Club mit Baustellen-Charme, Graffiti
+											und Tropen-Flair ist bekannt für Raves und berühmte DJs. Das
+											Douala in Ravensburg bietet Ihnen die Möglichkeit eine
+											ordentliche Sause mit all ihren Besten zu veranstalten. Sie
+											fühlen den Beat und sind von modernen Drogen nicht abgeneigt?
+											Dann sind Sie hier genau richtig!</p>
+										<p>
+											<a class="btn" href="new.html">View details »</a>
+										</p>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					</div>
-					
-					<div class="row">
-						<div class="col-md-12">
+
+						<div class="row">
+							<div class="col-md-12"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
 
-			<button type="button" class="btn btn-dark" onclick="Location()">Next Location!</button>
+			<button type="button" class="btn btn-dark" onclick="Location()">Next
+				Location!</button>
 		</div>
 	</div>
 
@@ -151,9 +158,9 @@
 	</script-->
 	<script type="text/javascript" src="js/JS_Location_start.js"></script>
 	<script>
-	window.onload = Locationall;
+		window.onload = Locationall;
 	</script>
-	
+
 	<!--script type="text/javascript"
 		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
 	<script type="text/javascript"
