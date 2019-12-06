@@ -26,6 +26,10 @@ public class Location {
 	private String postcode;
 
 	private String street;
+	
+	private String housenumber;
+	
+	private String country;
 
 	private Integer size;
 
@@ -108,6 +112,22 @@ public class Location {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getHousenumber() {
+		return housenumber;
+	}
+
+	public void setHousenumber(String housenumber) {
+		this.housenumber = housenumber;
 	}
 
 }
