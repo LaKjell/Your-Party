@@ -1,19 +1,20 @@
-# Empty CSS file for your own CSS
-#header{
+#
+Empty CSS file for your own CSS
+#header {
 	background-color: white;
 	color: white;
 }
+
 #nav_bar {
-	
-	position: sticky; 
+	position: sticky;
 	top: 0;
 }
 
 body {
 	background-image: url("../img/party-background_1.jpg");
 	background-attachment: fixed;
-	  background-size: 100%;
-	  margin: 0;
+	background-size: 100%;
+	margin: 0;
 	/*background-color: lightgrey;
 	background-repeat: no-repeat;
 	background-size: 100% cover;
@@ -21,40 +22,50 @@ body {
 	font-size: 100%;*/
 }
 
-#loc{
-	background-color: #e8e8e8; 
+#loc {
+	background-color: #e8e8e8;
 	/*margin-top: 0;
 	margin-bottom: 2%;
 	opacity: 0.95;*/
 	border-color: transparent;
 	border-width: 5px !important;
 }
-.bord{
+
+.bord {
 	border-color: transparent;
 	border-style: solid;
 	border-width: 10px;
-	
 }
-#box{
-	background-color: #e8e8e8; 
+
+#box {
+	background-color: #e8e8e8;
 	margin-top: 2%;
 	margin-bottom: 2%;
 	opacity: 0.95;
 	padding: 2%;
 }
-#htext{
-	
+
+#htext {
 	padding-right: 30%;
 }
 
-#sel{
+#sel {
 	padding-left: 0;
 	padding-right: 0;
 	margin-top: 0;
-	
 }
 
-#footer{
-	
+#footer {
 	background-color: black;
+}
+
+.ipic {
+	padding: 10px;
+	width: 100%;
+	height: 575px;
+	align: left;
+}
+
+.opacity {
+	opacity: 0.7;
 }
