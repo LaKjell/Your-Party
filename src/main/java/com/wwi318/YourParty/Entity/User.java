@@ -17,10 +17,19 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	private String firstname;
+	private String lastname;
 	private String username;
+	private String email;
+	private String password;
 	@Transient
 	private String passwordConfirm;
-	private String password;
+	private char gender;
+	private String street;
+	private String housenumber;
+	private String postcode;
+	private String city;
+	private String country;
 	private boolean active;
 	@ManyToMany
 	private Set<Role> roles;
@@ -72,6 +81,78 @@ public class User {
 
 	public void setPasswordConfirm(String passwordConfirm) {
 		this.passwordConfirm = passwordConfirm;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setSurname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getHousenumber() {
+		return housenumber;
+	}
+
+	public void setHousnumber(String housenumber) {
+		this.housenumber = housenumber;
+	}
+
+	public String getPostcode() {
+		return postcode;
+	}
+
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 }

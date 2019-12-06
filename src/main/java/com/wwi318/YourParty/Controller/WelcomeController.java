@@ -52,4 +52,10 @@ public class WelcomeController {
         return "create";
     }
     
+    @GetMapping("/Locations/buchen")
+    public String BuchenPage(Model modelRegister) {
+        modelRegister.addAttribute("appName", appName);
+        return "buchen";
+    } 
+    
 }

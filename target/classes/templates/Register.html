@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="_csrf" content="${_csrf.token}"/>
+<meta name="_csrf_header" content="${_csrf.headerName}"/>
 <title>YourParty - Registrierung</title>
 <!--link rel="stylesheet" th:href="@{/css/My_Style.css}"-->
 <link rel="stylesheet"
@@ -13,7 +15,6 @@
 </head>
 
 <body>
-	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 
 	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 
@@ -27,18 +28,18 @@
 			<div class="col-md-12">
 				<div class="row bord">
 					<div class="col-md-12 jumbotron">
-						<form class="was-validated" name="register" action="/"
+						<form class="was-validated" name="register" action="/user"
 							method="post" onsubmit="return validateForm()">
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="">Vorname</label> <input type="text"
-										class="form-control" name="vorname" id="vorname"
+										class="form-control" name="firstname" id="vorname"
 										placeholder="Vorname" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Nachname</label> <input type="text"
-										class="form-control" name="nachname" id="nachname"
+										class="form-control" name="lastname" id="nachname"
 										placeholder="Nachname" required>
 								</div>
 							</div>
@@ -50,7 +51,7 @@
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">E-Mail</label> <input type="email"
-										class="form-control" name="e-mail" id="e-mail"
+										class="form-control" name="email" id="e-mail"
 										placeholder="E-Mail" required>
 								</div>
 							</div>
@@ -61,14 +62,19 @@
 										placeholder="Passwort" required>
 								</div>
 								<div class="form-group col-md-6">
+									<label for="">Passwort wiederholen</label> <input type="password"
+										class="form-control" name="passwordConfirm" id="password"
+										placeholder="Passwort" required>
+								</div>
+								<div class="form-group col-md-6">
 									<div class="col-auto " id='sel'>
-										<label for="">Geschlecht</label> <select
+										<label for="">Geschlecht</label> <select name="gender"
 											class="custom-select mr-sm-2" id="inlineFormCustomSelect"
 											required>
 											<option value="">Geschlecht</option>
-											<option value="1">männlich</option>
-											<option value="2">weiblich</option>
-											<option value="3">divers</option>
+											<option value="m">männlich</option>
+											<option value="w">weiblich</option>
+											<option value="d">divers</option>
 										</select>
 									</div>
 								</div>
@@ -77,29 +83,29 @@
 							<div class="form-row">
 								<div class="form-group col-md-9">
 									<label for="">Straße</label> <input type="text"
-										class="form-control" name="straße" id="straße"
+										class="form-control" name="street" id="straße"
 										placeholder="Straße" required>
 								</div>
 								<div class="form-group col-md-3">
-									<label for="">Hausnummer</label> <input type="text"
-										class="form-control" name="hausnummer" id="hausnummer"
+									<label for="">Hausnummer</label> <input type="number"
+										class="form-control" name="housenumber" id="hausnummer"
 										placeholder="Hausnummer" required>
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-2">
-									<label for="">Postleitzahl</label> <input type="text"
-										class="form-control" name="plz" id="plz" placeholder="PLZ"
+									<label for="">Postleitzahl</label> <input type="number"
+										class="form-control" name="postcode" id="plz" placeholder="PLZ"
 										required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Ort</label> <input type="text"
-										class="form-control" name="ort" id="ort" placeholder="Ort"
+										class="form-control" name="city" id="ort" placeholder="Ort"
 										required>
 								</div>
 								<div class="form-group col-md-4">
 									<div class="col-auto " id='sel'>
-										<label for="">Land</label> <select
+										<label for="">Land</label> <select name="country"
 											class="custom-select mr-sm-2" id="inlineFormCustomSelect"
 											required>
 											<option value="">Land</option>

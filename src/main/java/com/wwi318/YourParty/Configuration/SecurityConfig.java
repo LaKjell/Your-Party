@@ -25,16 +25,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-//		http.authorizeRequests().antMatchers("/resources/**", "/registration").permitAll()//.anyRequest().authenticated()
-//				.and().formLogin().loginPage("/login").permitAll().and().logout().permitAll();
+//		http.authorizeRequests().antMatchers("/resources/**", "/registration").permitAll().anyRequest().authenticated()
+//				.and().formLogin();//.loginPage("/login").permitAll().and().logout().permitAll();
 		
 		http.authorizeRequests()
-		.antMatchers("/", "static/css", "static/js", "static/img").permitAll()
-		.antMatchers("/Profil").authenticated()
-		.and().formLogin();
+		.antMatchers("/", "/Registration", "/user/**", "static/css", "static/js", "static/img").permitAll()
+//		.antMatchers("/Profil").authenticated()
+		.and().formLogin()
+		.and().csrf().disable();;
 	}
 
 
