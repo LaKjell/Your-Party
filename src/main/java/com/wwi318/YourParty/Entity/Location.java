@@ -33,8 +33,6 @@ public class Location {
 
 	@Column(name="description", length = 100000)
 	private String description;
-	
-	private Blob picture;
 
 	public String getOwner() {
 		return owner;
@@ -106,14 +104,6 @@ public class Location {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Blob getPicture() {
-		return picture;
-	}
-
-	public void setPicture(Blob picture) {
-		this.picture = picture;
 	}
 
 	public void setPrice(double price) {

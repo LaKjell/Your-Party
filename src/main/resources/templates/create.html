@@ -29,7 +29,7 @@
 					</div>
 
 					<div class="col-md-12 jumbotron" style="margin-top: 10px;">
-						<form class="was-validated" name="register" action="/"
+						<form class="was-validated" name="register" action="/Location"
 							method="post" onsubmit="return validateForm()">
 
 							<div class="form-row">
@@ -47,7 +47,7 @@
 							<div class="form-row">
 								<div class="form-group col-md-12">
 									<label for="">Beschreibung</label>
-									<textarea class="form-control" name="des" id="des" rows="4"
+									<textarea class="form-control" name="description" id="des" rows="4"
 										placeholder="Beschreibung" required></textarea>
 								</div>
 							</div>
@@ -56,6 +56,11 @@
 									<label for="">Postleitzahl</label> <input type="text"
 										class="form-control" name="postcode" id="postcode"
 										placeholder="PLZ" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="">Stadt</label> <input type="text"
+										class="form-control" name="city" id="city"
+										placeholder="Stadt" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Straße</label> <input type="text"
@@ -79,8 +84,8 @@
 							<div class="form-row">
 								<div class="form-group col-md-12">
 									<label for="pic">Bild</label> <input type="file"
-										class="form-control-file" name="pic" id="pic" 
-										required>
+										class="form-control-file" name="picture" id="picture" 
+										>
 								</div>
 							</div>
 							<button type="submit" class="btn btn-primary">Jetzt

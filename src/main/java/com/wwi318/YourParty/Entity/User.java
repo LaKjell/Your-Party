@@ -30,6 +30,8 @@ public class User {
 	private String postcode;
 	private String city;
 	private String country;
+	private String phonenumber;
+	private char type;
 	private boolean active;
 	@ManyToMany
 	private Set<Role> roles;
@@ -153,6 +155,14 @@ public class User {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public void setHousenumber(String housenumber) {
+		this.housenumber = housenumber;
 	}
 
 }
