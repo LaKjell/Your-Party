@@ -10,7 +10,7 @@ public class WelcomeController {
 	@Value("${spring.application.name}")
     String appName;
  
-    @GetMapping("/index")
+    @GetMapping("/")
     public String homePage(Model modelHome) {
         modelHome.addAttribute("appName", appName);
         return "index";
@@ -34,11 +34,11 @@ public class WelcomeController {
         return "SignIn";
     }
     
-    @GetMapping("/Registration")
-    public String RegisterPage(Model modelRegister) {
-        modelRegister.addAttribute("appName", appName);
-        return "Register";
-    }
+//    @GetMapping("/registration")
+//    public String RegisterPage(Model modelRegister) {
+//        modelRegister.addAttribute("appName", appName);
+//        return "Register";
+//    }
     
     @GetMapping("/Impressum")
     public String ImpressumPage(Model modelRegister) {

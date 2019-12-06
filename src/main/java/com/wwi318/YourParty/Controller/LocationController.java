@@ -124,8 +124,10 @@ public class LocationController {
 	}
 
 	// Funktionen anlegen, �ndern, l�schen
-	@RequestMapping(method = RequestMethod.POST, value = "location/create", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Location> createLocation(@RequestBody Location location) {
+	@RequestMapping(method = RequestMethod.POST, value = "Location", 
+			consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, 
+			produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody ResponseEntity<Location> createLocation(Location location) {
 		try {
 			Location results = locationService.save(location);
 			return ResponseEntity.created(new URI("/api/location/" + results.getId())).body(results);
@@ -152,22 +154,6 @@ public class LocationController {
 		locationService.delete(id);
 		return ResponseEntity.ok().build();
 	}
-	
-	//Bildfunktionen
-	// Return the image from the database using ResponseEntity
-		@GetMapping("database/{id}")
-		public ResponseEntity<byte[]> fromDatabaseAsResEntity(@PathVariable("id") Integer id) throws SQLException {
-
-			Optional<Location> location = locationService.findById(id);
-			byte[] imageBytes = null;
-			if (location.isPresent()) {
-
-				imageBytes = location.get().getPicture().getBytes(1,
-						(int) location.get().getPicture().length());
-			}
-
-			return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(imageBytes);
-		}
 
 //		// Return the image from the database using HttpServletResponse
 //		@GetMapping(value = "database1/{id}", produces = MediaType.IMAGE_JPEG_VALUE)

@@ -40,22 +40,21 @@ public class UserController {
 	public String registration(Model model) {
 		model.addAttribute("userForm", new User());
 
-		return "registration";
+		return "Register";
 	}
 
 	@PostMapping("/registration")
 	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
 		userValidator.validate(userForm, bindingResult);
-
 		if (bindingResult.hasErrors()) {
-			return "registration";
+			return "Register";
 		}
 
 		userService.save(userForm);
 
 		securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-		return "redirect:/";
+		return "redirect:/Profil";
 	}
 
 	@GetMapping("/login")
@@ -69,10 +68,10 @@ public class UserController {
 		return "SignIn";
 	}
 
-	@GetMapping({ "/", "/welcome" })
-	public String welcome(Model model) {
-		return "index";
-	}
+//	@GetMapping({ "/", "/welcome" })
+//	public String welcome(Model model) {
+//		return "index";
+//	}
 
 	// Funktionen anlegen, �ndern, l�schen
 	@RequestMapping(method = RequestMethod.POST, value = "/user",

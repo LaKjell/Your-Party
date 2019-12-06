@@ -15,7 +15,6 @@
 </head>
 
 <body>
-	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 
 	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 
@@ -29,7 +28,7 @@
 			<div class="col-md-12">
 				<div class="row bord">
 					<div class="col-md-12 jumbotron">
-						<form class="was-validated" name="register" action="/user"
+						<form class="was-validated" name="register" action="/registration"
 							method="post" onsubmit="return validateForm()">
 
 							<div class="form-row">
@@ -64,13 +63,13 @@
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Passwort wiederholen</label> <input type="password"
-										class="form-control" name="passwordConfirm" id="password"
+										class="form-control" name="passwordConfirm" id="passwordConfirm"
 										placeholder="Passwort" required>
 								</div>
 								<div class="form-group col-md-6">
 									<div class="col-auto " id='sel'>
 										<label for="">Geschlecht</label> <select name="gender"
-											class="custom-select mr-sm-2" id="inlineFormCustomSelect"
+											class="custom-select mr-sm-2" id="inlineGender"
 											required>
 											<option value="">Geschlecht</option>
 											<option value="m">männlich</option>
@@ -107,7 +106,7 @@
 								<div class="form-group col-md-4">
 									<div class="col-auto " id='sel'>
 										<label for="">Land</label> <select name="country"
-											class="custom-select mr-sm-2" id="inlineFormCustomSelect"
+											class="custom-select mr-sm-2" id="inlineCountry"
 											required>
 											<option value="">Land</option>
 											<option value="Afghanistan">Afghanistan</option>
