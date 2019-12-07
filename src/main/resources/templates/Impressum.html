@@ -8,21 +8,18 @@
 
 	<link rel="stylesheet"
           href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" >
-<link th:href="@{/css/my_styles.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
-
 <body>
+<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 	<div class="container-fluid">
 		<div class="row">
-		<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
-			
 		<div class="Main">
-			
-			<article>
-				<h1 style="text-align: center">Über YourParty</h1>
+		<div class="col-md-12 jumbotron" style="margin-top: 10px;">
+					<h1 style="text-align: center">Über YourParty</h1>
 				<p style="text-align: justify" class="padding">
 					<font size="4">YourParty ist eine Webanwendung, die im Jahr
 						2019 ihre Laufbahn begonnen hat. Gründer der Website sind Lasse
@@ -47,6 +44,10 @@
 						style="text-align: center">Your Party must going on!</b>
 					</font>
 				</p>
+					</div>
+			
+			<article>
+				
 			</article>
 		</div>
 	</div>
