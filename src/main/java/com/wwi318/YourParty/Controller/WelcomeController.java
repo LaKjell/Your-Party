@@ -52,6 +52,18 @@ public class WelcomeController {
         return "create";
     }
     
+    @GetMapping("/Crew")
+    public String CrewPage(Model modelCrew) {
+        modelCrew.addAttribute("appName", appName);
+        return "Crew";
+    }
+    
+    @GetMapping("/Help")
+    public String HelpPage(Model modelHelp) {
+        modelHelp.addAttribute("appName", appName);
+        return "Help";
+    }
+    
     @GetMapping("/Locations/buchen")
     public String BuchenPage(Model modelRegister) {
         modelRegister.addAttribute("appName", appName);

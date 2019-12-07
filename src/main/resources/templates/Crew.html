@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YourParty</title>
+
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
+				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="row" id='flex'>
+						<div class="col-md-12 jumbotron">
+							<div class="row">
+								<div class="col-md-3">
+									<img class="img-fluid" alt="Bootstrap Image Preview"
+										src="img/lasse.jpg">
+								</div>
+								<div class="col-md-8">
+									<h2>Lasse Schmid, 20</h2>
+									<p>
+								Unser CIO ist die kreative und organisatorische Ader unserers
+								Teams.<br> Der dynamische Lasse kommt aus Mittelbiberach
+								und arbeitet bei der Kreissparkeise Biberach.<br> Am
+								Wochenende betrinkt sich Lasse sehr gerne.<br> Lasse behält
+								immer den Überblick und rockt unseren JavaScript-Teil!
+									</p>
+								</div>
+							</div>
+						</div></div>
+				
+					
+					<div class="row" id='flex'>
+						<div class="col-md-12 jumbotron">
+							<div class="row">
+								<div class="col-md-3">
+									<img class="img-fluid" alt="Bootstrap Image Preview"
+										src="img/mario.jpg">
+								</div>
+								<div class="col-md-8">
+									<h2>Mario Schlagentweith, 20</h2>
+									<p>
+										Mario, das Genie!<br> Der kleine, unscheinbare Junge hat
+										es faustig hinter den Ohren.<br> Mario kommt aus Biberach
+										und arbeitet bei der Liebherr-Components GmbH.<br> In
+										seiner Freizeit klettert er liebend gerne.<br> Sie fragen
+										sich wie man ein Backend so gut aufbauen kann? Mario weiß die
+										antwort!
+									</p>
+								</div>
+							</div>
+						</div></div>
+					
+							<div class="col-md-12 jumbotron">
+								<div class="row">
+									<div class="col-md-3">
+										<img class="img-fluid" alt="Bootstrap Image Preview"
+											src="img/lukas.jpg">
+									</div>
+									<div class="col-md-8">
+										<h2>Lukas Ströbele, 20</h2>
+										<p>
+											Lukas, der Unwiderstehliche!<br> Lukas kommt aus
+											Osterhofen und arbeitet bei der MPS Public Solution in
+											Oberessendorf.<br> In seiner Freizeit spielt er gerne
+											Fussball.<br> Lukas gestaltet für Sie das perfekte
+											Profil!<br>
+										</p>
+										</p>
+									</div>
+								</div>
+							</div></div>
+					<div class="col"><div class="row" id='flex'>
+								<div class="col-md-12 jumbotron">
+									<div class="row">
+										<div class="col-md-3">
+											<img class="img-fluid" alt="Bootstrap Image Preview"
+												src="img/matthias.jpg">
+										</div>
+										<div class="col-md-8">
+											<h2>Matthias Preiß, 20</h2>
+											<p>
+												Matthias ist im Team für die Merge Conflicts verantwortlich.<br>
+												Er kommt aus Michelwinnaden und arbeitet bei der
+												Lieberr-Werk Biberach GmbH.<br> In seiner Freizeit
+												spielt er gerne Fußball und ist im Musikverein aktiv.<br>
+												Matthias hat zusammen mit Lukas die wunderschöne
+												Benutzeroberfläche für Sie gezaubert.
+											</p>
+										</div>
+									</div>
+								</div>
+</div>
+				</div>
+			</div>
+			
+						
+							
+
+
+							</div>
+						</div>
+						<div class="col-md-12" style="padding: 0px;">
+							<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
+						</div>
+
+						<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+						<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+						<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+</body>
+
+</html>
