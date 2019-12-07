@@ -50,12 +50,19 @@
 				<div class="row">
 					<div class="col-md-3">
 						<div class="col-md-12" id='box'>
+							<img class="d-block w-100" alt="picture"
+								th:src="@{/img/Saal.jpg}">
+							<!-- 
 							<table>
 								<tr>
 									<input type="file" name="inpFile" id="inpFile">
 									<div class="image-preview" id="imagePreview">
 										<img src="" alt="Image Preview" class="image-preview__image">
-										<span class="image-preview__default-text">Image Preview</span>
+										
+									</div>
+									<div class="image-preview" id="imagePreview">
+										<img src="" alt="Image Preview" class="image-preview__image">
+										<span class="image-preview__default-text">Bildvorschau</span>
 									</div>
 									<script>
 										const inpFile = document
@@ -90,7 +97,7 @@
 												});
 									</script>
 								</tr>
-							</table>
+							</table> -->
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -101,51 +108,51 @@
 									<div class="form-group col-md-12">
 										<label class="my-1 mr-2" for="inlineFormCustomSelect">Vorname:</label>
 										<input type="text" class="form-control" name="vorname"
-											id="vorname" placeholder="Vorname" required>
+											id="vorname" value="Lasse" required>
 									</div>
 									<div class="form-group col-md-12">
 										<label class="my-1 mr-2" for="inlineFormCustomSelect">Nachname:</label>
 										<input type="text" class="form-control" name="nachname"
-											id="nachname" placeholder="Nachname" required>
+											id="nachname" value="Weinen" required>
 									</div>
 									<div class="form-group col-md-12">
 										<label class="my-1 mr-2" for="inlineFormCustomSelect">Username:</label>
 										<input type="text" class="form-control" name="username"
-											id="username" placeholder="Username" required>
+											id="username" value="LW23" required>
 									</div>
 									<div class="form-group col-md-12">
 										<label class="my-1 mr-2" for="inlineFormCustomSelect">E-Mail:</label>
 										<input type="email" class="form-control" name="email"
-											id="email" placeholder="E-Mail" required>
+											id="email" value="l.weinen@gmail.com" required>
 									</div>
 									<div class="form-group col-md-12">
 										<label class="my-1 mr-2" for="inlineFormCustomSelect">Geschlecht:</label>
 										<input type="text" class="form-control" name="vorname"
-											id="vorname" placeholder="Vorname" required>
+											id="vorname" value="männlich" required>
 									</div>
 									<div class="form-group col-md-12">
 										<label class="my-1 mr-2" for="inlineFormCustomSelect">Adresse:</label>
 										<input type="text" class="form-control" name="postleitzahl"
-											id="postleitzahl" placeholder="Postleitzahl" required>
-										<input type="text" class="form-control" name="wohnort"
-											id="wohnort" placeholder="Wohnort" required> <input
-											type="text" class="form-control" name="straße" id="straße"
-											placeholder="Straße" required> <input type="text"
+											id="postleitzahl" value="88339" required> <input
+											type="text" class="form-control" name="wohnort" id="wohnort"
+											value="Bad Waldsee" required> <input type="text"
+											class="form-control" name="straße" id="straße"
+											value="Weinanbaustraße" required> <input type="text"
 											class="form-control" name="hausnummer" id="hausnummer"
-											placeholder="Hausnummer" required>
+											value="5" required>
 									</div>
 									<div class="form-group col-md-12">
 										<label class="my-1 mr-2" for="inlineFormCustomSelect">Staatsangehörigkeit:</label>
 										<input type="text" class="form-control"
 											name="staatsangehörigkeit" id="staatsangehörigkeit"
-											placeholder="Deutsch/Französisch/..." required>
+											value="Deutsch" required>
 									</div>
 									<div class="form-group col-md-12">
 										<label class="my-1 mr-2" for="inlineFormCustomSelect">Sonstiges:</label>
 										<input type="text" class="form-control" name="beruf"
-											id="beruf" placeholder="Beruf" required> <input
+											id="beruf" value="Schwimmprofi" required> <input
 											type="text" class="form-control" name="hobbies" id="hobbies"
-											placeholder="Hobbies" required>
+											value="Schwimmen, Saufen" required>
 									</div>
 									<div class="form-group col-md-12" align="right">
 										<input type="submit" value="Speichern">
