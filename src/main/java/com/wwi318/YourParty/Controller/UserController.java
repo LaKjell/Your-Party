@@ -1,6 +1,9 @@
 package com.wwi318.YourParty.Controller;
 
 import java.net.URI;
+import java.security.Principal;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -67,6 +70,13 @@ public class UserController {
 
 		return "SignIn";
 	}
+	
+	@RequestMapping(value = "/username", method = RequestMethod.GET)
+    @ResponseBody
+    public String currentUserNameSimple(HttpServletRequest request) {
+        Principal principal = request.getUserPrincipal();
+        return principal.getName();
+    }
 
 //	@GetMapping({ "/", "/welcome" })
 //	public String welcome(Model model) {
