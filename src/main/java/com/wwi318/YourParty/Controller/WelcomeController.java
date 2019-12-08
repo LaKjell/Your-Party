@@ -10,7 +10,7 @@ public class WelcomeController {
 	@Value("${spring.application.name}")
     String appName;
  
-    @GetMapping("/index")
+    @GetMapping("/")
     public String homePage(Model modelHome) {
         modelHome.addAttribute("appName", appName);
         return "index";
@@ -34,11 +34,11 @@ public class WelcomeController {
         return "SignIn";
     }
     
-    @GetMapping("/Registration")
-    public String RegisterPage(Model modelRegister) {
-        modelRegister.addAttribute("appName", appName);
-        return "Register";
-    }
+//    @GetMapping("/registration")
+//    public String RegisterPage(Model modelRegister) {
+//        modelRegister.addAttribute("appName", appName);
+//        return "Register";
+//    }
     
     @GetMapping("/Impressum")
     public String ImpressumPage(Model modelRegister) {
@@ -50,6 +50,18 @@ public class WelcomeController {
     public String CreatePage(Model modelRegister) {
         modelRegister.addAttribute("appName", appName);
         return "create";
+    }
+    
+    @GetMapping("/Crew")
+    public String CrewPage(Model modelCrew) {
+        modelCrew.addAttribute("appName", appName);
+        return "Crew";
+    }
+    
+    @GetMapping("/Help")
+    public String HelpPage(Model modelHelp) {
+        modelHelp.addAttribute("appName", appName);
+        return "Help";
     }
     
     @GetMapping("/Locations/buchen")

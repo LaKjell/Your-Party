@@ -26,6 +26,10 @@ public class Location {
 	private String postcode;
 
 	private String street;
+	
+	private String housenumber;
+	
+	private String country;
 
 	private Integer size;
 
@@ -33,8 +37,6 @@ public class Location {
 
 	@Column(name="description", length = 100000)
 	private String description;
-	
-	private Blob picture;
 
 	public String getOwner() {
 		return owner;
@@ -108,16 +110,24 @@ public class Location {
 		this.name = name;
 	}
 
-	public Blob getPicture() {
-		return picture;
-	}
-
-	public void setPicture(Blob picture) {
-		this.picture = picture;
-	}
-
 	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getHousenumber() {
+		return housenumber;
+	}
+
+	public void setHousenumber(String housenumber) {
+		this.housenumber = housenumber;
 	}
 
 }

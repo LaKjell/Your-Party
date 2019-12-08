@@ -1,6 +1,9 @@
 package com.wwi318.YourParty.Controller;
 
 import java.net.URI;
+import java.security.Principal;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,22 +43,21 @@ public class UserController {
 	public String registration(Model model) {
 		model.addAttribute("userForm", new User());
 
-		return "registration";
+		return "Register";
 	}
 
 	@PostMapping("/registration")
 	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
 		userValidator.validate(userForm, bindingResult);
-
 		if (bindingResult.hasErrors()) {
-			return "registration";
+			return "Register";
 		}
 
 		userService.save(userForm);
 
 		securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-		return "redirect:/";
+		return "redirect:/Profil";
 	}
 
 	@GetMapping("/login")
@@ -68,11 +70,18 @@ public class UserController {
 
 		return "SignIn";
 	}
+	
+	@RequestMapping(value = "/username", method = RequestMethod.GET)
+    @ResponseBody
+    public String currentUserNameSimple(HttpServletRequest request) {
+        Principal principal = request.getUserPrincipal();
+        return principal.getName();
+    }
 
-	@GetMapping({ "/", "/welcome" })
-	public String welcome(Model model) {
-		return "index";
-	}
+//	@GetMapping({ "/", "/welcome" })
+//	public String welcome(Model model) {
+//		return "index";
+//	}
 
 	// Funktionen anlegen, �ndern, l�schen
 	@RequestMapping(method = RequestMethod.POST, value = "/user",

@@ -6,67 +6,146 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>YourParty</title>
 
-	<link rel="stylesheet"
-          href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" >
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 
 <body>
-<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
+	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
 	<div class="container-fluid">
 		<div class="row">
-		
+
 			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
-		<div class="col-md-12 no-gutters" style="padding: 0px;">
-			<section>
-				<img alt="" th:src="@{/img/Saal.jpg}" width="100%">
-			</section>
-			</div>	
-		<div class="col-md-12">
-		<div class="row bord">
-		
-			<div class="col-md-12 jumbotron">
-			<article>
-				<h1 style="text-align: center">Über YourParty</h1>
-				<p style="text-align: justify" class="padding">
-					<font size="4">YourParty ist eine Webanwendung, die im Jahr
-						2019 ihre Laufbahn begonnen hat. Gründer der Website sind Lasse
-						Schmid, Mario Schlagentweith, Lukas Ströbele und Matthias Preiß.
-						Durch YourParty soll das Mieten und Vermieten von Partylocations
-						erleichtert werden. Innerhalb von wenigen Mausklicken können Sie
-						Ihre Partylocation vermietet beziheungsweise gemietet haben. Unter
-						dem Reiter "Location" ein Bild, eine Preisvorstellung, sowie eine
-						kurze Beschreibung der Partylocation hinzufügen, anschließend auf
-						bestätigen klicken und schon ist Ihre Location für andere Personen
-						sichtbar. Wenn Interesse besteht erhalten Sie entsprechend eine
-						Information. Des Weiteren können Sie Kontakt zu dem potentiellen
-						Kunden aufnehmen, um sich über den Preis, sowie über Ort und
-						Zeitpunkt der Schlüsselübergabe auszutauschen. Nach erfolgreichem
-						Abschluss der Vermietung, können die Kunden Ihre Partylocation im
-						Nachhinein bewerten. Anhand von diesem Konzept können sich unsere
-						Kunden von beiden Sichtweisen ein Bild machen.</font>
-				</p>
-				<p style="text-align: center" class="padding">
-					<font size="4">Wir hoffen, dass Sie hiermit eine geeignete
-						Location für Ihren Anlass finden,<br> because <b
-						style="text-align: center">Your Party must going on!</b>
-					</font>
-				</p>
-			</article>
+
+			<div class="col-md-12">
+				<div id="carouselExampleIndicators"
+					class="carousel slide carousel-fade" data-ride="carousel"
+					style="padding: 0px;">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleIndicators" data-slide-to="0"
+							class="active"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active" data-interval="3500">
+							<div class="ipic">
+								<img class="d-block w-100" alt="First slide"
+									th:src="@{/img/Saal.jpg}">
+							</div>
+							<div class="col-md-12" align="right">
+								<div class="carousel-caption d-none d-md-block">
+									<div class="opacity" style="background-color: #f0f0f0">
+										<h5 style="color: black">Ein Raum für jeden Geburtstag...</h5>
+										<p style="color: black">egal ob jung oder alt!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item" data-interval="3500">
+							<div class="ipic">
+								<img class="d-block w-100" alt="Second slide"
+									th:src="@{/img/party.jpg}">
+							</div>
+							<div class="carousel-caption d-none d-md-block">
+								<div class="opacity" style="background-color: #f0f0f0">
+									<h5 style="color: black">Der perfekte Partyraum!</h5>
+									<p style="color: black">Egal ob 80er, 90er oder 200er
+										Party...</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item" data-interval="3500">
+							<div class="ipic">
+								<img class="d-block w-100" alt="Third slide"
+									th:src="@{/img/hochzeit.jpg}">
+							</div>
+							<div class="carousel-caption d-none d-md-block">
+								<div class="opacity" style="background-color: #f0f0f0">
+									<h5 style="color: black">Für eine wunderschöne Hochzeit...</h5>
+									<p style="color: black">die unvergesslich sein wird!</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item" data-interval="3500">
+							<div class="ipic">
+								<img class="d-block w-100" alt="Firth slide"
+									th:src="@{/img/schulabschluss.jpg}">
+							</div>
+							<div class="carousel-caption d-none d-md-block">
+								<div class="opacity" style="background-color: #f0f0f0">
+									<h5 style="color: black">Der perfekte Ort für einen
+										Schulabschluss!</h5>
+									<p style="color: black">Egal ob Realschule, Gymnasium,...</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators"
+						role="button" data-slide="prev"> <span
+						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+						class="sr-only">Nächste Lokalität</span>
+					</a> <a class="carousel-control-next" href="#carouselExampleIndicators"
+						role="button" data-slide="next"> <span
+						class="carousel-control-next-icon" aria-hidden="true"></span> <span
+						class="sr-only">Vorherige Lokalität</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="row bord">
+
+					<div class="col-md-12 jumbotron">
+						<article>
+							<h1 style="text-align: center">Über YourParty</h1>
+							<p style="text-align: justify" class="padding">
+								<font size="4">YourParty ist eine Webanwendung, die im
+									Jahr 2019 ihre Laufbahn begonnen hat. Gründer der Website sind
+									Lasse Schmid, Mario Schlagentweith, Lukas Ströbele und Matthias
+									Preiß. Durch YourParty soll das Mieten und Vermieten von
+									Partylocations erleichtert werden. Innerhalb von wenigen
+									Mausklicken kannst du <b>deine Partylocation</b> gemietet
+									beziheungsweise vermietet haben. Unter dem Reiter "Location"
+									ein Bild, eine Preisvorstellung, die Adresse, sowie eine kurze
+									Beschreibung der Partylocation hinzufügen, anschließend auf
+									bestätigen klicken und schon ist Ihre Location für andere
+									Personen sichtbar. Wenn Interesse besteht erhalten Sie
+									entsprechend eine Information. Des Weiteren können Sie Kontakt
+									zu dem potentiellen Kunden aufnehmen, um sich über den Preis,
+									sowie über Ort und Zeitpunkt der Schlüsselübergabe
+									auszutauschen. Nach erfolgreichem Abschluss der Vermietung,
+									können die Kunden deine Partylocation im Nachhinein bewerten.
+									Anhand von diesem Konzept können sich unsere Kunden von beiden
+									Sichtweisen ein Bild machen und entscheiden, welche Location
+									für ihren Anlass am besten geeignet ist.
+								</font>
+							</p>
+							<p style="text-align: center" class="padding">
+								<font size="4">Wir hoffen, dass <b>du</b> bei uns eine geeignete
+									Location finden,<br> because <b style="text-align: center">Your
+										Party must going on!</b>
+								</font>
+							</p>
+						</article>
+					</div>
+				</div>
+			</div>
 		</div>
+
 	</div>
 	</div>
 	</div>
-	
-		<div class="Footer_Bar">
-			<footer> </footer>
-	
+
+	<div class="col-md-12 " style="padding: 0px;">
+		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
 	</div>
-<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
-<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
 </body>
 
 </html>

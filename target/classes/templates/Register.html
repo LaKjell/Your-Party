@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="_csrf" content="${_csrf.token}"/>
-<meta name="_csrf_header" content="${_csrf.headerName}"/>
+<meta name="_csrf" content="${_csrf.token}" />
+<meta name="_csrf_header" content="${_csrf.headerName}" />
 <title>YourParty - Registrierung</title>
 <!--link rel="stylesheet" th:href="@{/css/My_Style.css}"-->
 <link rel="stylesheet"
@@ -28,9 +28,20 @@
 			<div class="col-md-12">
 				<div class="row bord">
 					<div class="col-md-12 jumbotron">
-						<form class="was-validated" name="register" action="/user"
+						<h1>Deine Registrierung</h1>
+						<form class="was-validated" name="register" action="/registration"
 							method="post" onsubmit="return validateForm()">
 
+							<div>
+								<br>
+								<h4>Über dich</h4>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="exampleInputFile"></label> <input
+										class="form-control-file" id="exampleInputFile" type="file">
+								</div>
+							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="">Vorname</label> <input type="text"
@@ -42,35 +53,10 @@
 										class="form-control" name="lastname" id="nachname"
 										placeholder="Nachname" required>
 								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col-md-6">
-									<label for="">Username</label> <input type="text"
-										class="form-control" name="username" id="username"
-										placeholder="Username" required>
-								</div>
-								<div class="form-group col-md-6">
-									<label for="">E-Mail</label> <input type="email"
-										class="form-control" name="email" id="e-mail"
-										placeholder="E-Mail" required>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col-md-6">
-									<label for="">Passwort</label> <input type="password"
-										class="form-control" name="password" id="password"
-										placeholder="Passwort" required>
-								</div>
-								<div class="form-group col-md-6">
-									<label for="">Passwort wiederholen</label> <input type="password"
-										class="form-control" name="passwordConfirm" id="password"
-										placeholder="Passwort" required>
-								</div>
 								<div class="form-group col-md-6">
 									<div class="col-auto " id='sel'>
 										<label for="">Geschlecht</label> <select name="gender"
-											class="custom-select mr-sm-2" id="inlineFormCustomSelect"
-											required>
+											class="custom-select mr-sm-2" id="inlineGender" required>
 											<option value="">Geschlecht</option>
 											<option value="m">männlich</option>
 											<option value="w">weiblich</option>
@@ -78,25 +64,21 @@
 										</select>
 									</div>
 								</div>
-								<div class="form-group col-md-6"></div>
+								<div class="form-group col-md-6">
+									<label for="">Geburtsdatum</label> <input type="date"
+										class="form-control" name="birthday" id="geburtsdatum"
+										placeholder="Dein Geburtsdatum" required>
+								</div>
 							</div>
-							<div class="form-row">
-								<div class="form-group col-md-9">
-									<label for="">Straße</label> <input type="text"
-										class="form-control" name="street" id="straße"
-										placeholder="Straße" required>
-								</div>
-								<div class="form-group col-md-3">
-									<label for="">Hausnummer</label> <input type="number"
-										class="form-control" name="housenumber" id="hausnummer"
-										placeholder="Hausnummer" required>
-								</div>
+							<div>
+								<br>
+								<h4>Woher kommst du?</h4>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-2">
 									<label for="">Postleitzahl</label> <input type="number"
-										class="form-control" name="postcode" id="plz" placeholder="PLZ"
-										required>
+										class="form-control" name="postcode" id="plz"
+										placeholder="PLZ" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Ort</label> <input type="text"
@@ -106,8 +88,7 @@
 								<div class="form-group col-md-4">
 									<div class="col-auto " id='sel'>
 										<label for="">Land</label> <select name="country"
-											class="custom-select mr-sm-2" id="inlineFormCustomSelect"
-											required>
+											class="custom-select mr-sm-2" id="inlineCountry" required>
 											<option value="">Land</option>
 											<option value="Afghanistan">Afghanistan</option>
 											<option value="Ägypten">Ägypten</option>
@@ -372,12 +353,72 @@
 											<option value="Zentralafrikanische Republik">Zentralafrikanische
 												Republik</option>
 											<option value="Zypern">Zypern</option>
-
-
 										</select>
 									</div>
 								</div>
 							</div>
+							<div class="form-row">
+								<div class="form-group col-md-9">
+									<label for="">Straße</label> <input type="text"
+										class="form-control" name="street" id="straße"
+										placeholder="Straße" required>
+								</div>
+								<div class="form-group col-md-3">
+									<label for="">Hausnummer</label> <input type="number"
+										class="form-control" name="housenumber" id="hausnummer"
+										placeholder="Hausnummer" required>
+								</div>
+							</div>
+							<div>
+								<br>
+								<h4>Was wir von dir benötigen</h4>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="">Username</label> <input type="text"
+										class="form-control" name="username" id="username"
+										placeholder="Username" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="">E-Mail</label> <input type="email"
+										class="form-control" name="email" id="e-mail"
+										placeholder="E-Mail" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="">Telefonnummer</label> <input type="tel"
+										class="form-control" name="phonenumber" id="phonenumber"
+										placeholder="Telefonnummer" required>
+								</div>
+								<div class="form-group col-md-6">
+									<div class="col-auto " id='sel'>
+										<label for="">Typ</label> <select name="typ"
+											class="custom-select mr-sm-2" id="typ" required>
+											<option value="">Mieter oder Vermieter</option>
+											<option value="m">Mieter</option>
+											<option value="v">Vermieter</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group col-md-6"></div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="">Passwort</label> <input type="password"
+										class="form-control" name="password" id="password"
+										placeholder="Passwort" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="">Passwort wiederholen</label> <input
+										type="password" class="form-control" name="passwordConfirm"
+										id="passwordConfirm" placeholder="Passwort" required>
+								</div>
+								<div class="form-group col-md-6"></div>
+							</div>
+
+
+
 
 							<button type="submit" class="btn btn-primary">Jetzt
 								registrieren</button>
