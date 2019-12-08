@@ -41,7 +41,7 @@ function Locationall() {
 
 			
 			tab.innerHTML = "<tbody><tr><th scope='row'>Preis</th><td>" + locations.price + " EUR </td></tr><tr><th scope='row'>Größe</th><td>"+locations.size+" m² </td></tr><tr><th scope='row'>Straße</th><td>"+ locations.street +"</td></tr><tr><th scope='row'>Ort</th><td>"+ locations.city +"</td></tr><tr><th scope='row'>Besitzer</th><td>"+ locations.owner +"</td></tr></tbody>";
-			tab.setAttribute('class', 'table table-borderless')
+			tab.setAttribute('class', 'table table-borderless table-sm')
 //			th.setAttribute('scope', 'row');
 			
 			but.setAttribute('class', 'btn btn btn-primary float-right');
