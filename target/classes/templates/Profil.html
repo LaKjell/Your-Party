@@ -10,26 +10,7 @@
 <link rel="stylesheet"
 	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <link th:href="@{/css/style.css}" rel="stylesheet">
-
-<style>
-.image-preview {
-	width: 300px;
-	min-height: 100px;
-	border: 2px solid #dddddd;
-	margin-top: 15px;
-	/*Default Text*/
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: bold;
-	color: #cccccc;
-}
-
-.image-preview__image {
-	display: none;
-	width: 100%;
-}
-</style>
+<link th:href="@{/css/CSS_Profil.css}" rel="stylesheet">
 
 </head>
 
@@ -44,10 +25,10 @@
 			</div>
 
 			<div class="col-md-12">
-				<div class="row">
+				<!--div class="row">
 					<div class="col-md-12"></div>
-				</div>
-				<div class="row">
+				</di-->
+				<div class="row" id='flex'>
 					<div class="col-md-3">
 						<div class="col-md-12" id='box'>
 							<img class="d-block w-100" alt="picture"
@@ -256,6 +237,10 @@
 	<div class="col-md-12" style="padding: 0px;">
 		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
 	</div>
+	<script type="text/javascript" src="js/JS_Profil.js"></script>
+	<script>
+		window.onload = My_Profil;
+	</script>
 	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
