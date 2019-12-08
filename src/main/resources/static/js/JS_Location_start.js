@@ -10,8 +10,6 @@ function Locationall() {
 		    
 		    var boxes = document.getElementById('flex');
 
-			console.log(boxes);
-
 			var col12 = document.createElement('div');
 			var row = document.createElement('div');
 			var col6i = document.createElement('div'); 
