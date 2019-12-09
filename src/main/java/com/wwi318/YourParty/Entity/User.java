@@ -10,6 +10,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.springframework.lang.Nullable;
+
 @Entity
 @Table(name = "user")
 public class User {
