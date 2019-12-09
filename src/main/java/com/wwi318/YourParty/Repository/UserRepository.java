@@ -8,10 +8,9 @@ import com.wwi318.YourParty.Entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+//	Optional<User> findByUser(String username);
 	User findByUsername(String username);
-
-//	Optional<User> findByUserName(String userName);
-//
-//	boolean existsById(User user);
+	
+	boolean existsById(User user);
 
 }

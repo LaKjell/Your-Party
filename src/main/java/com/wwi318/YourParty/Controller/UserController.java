@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -77,6 +78,14 @@ public class UserController {
         Principal principal = request.getUserPrincipal();
         return principal.getName();
     }
+//	
+////	@RequestMapping(method = RequestMethod.GET, value = "/user/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
+////	public User getSpecificUser(@PathVariable String name) {
+////		if (userService.findByUser(name).isPresent())
+////			return userService.findByUser(name).get();
+////		else
+////			return null;
+////	}
 
 //	@GetMapping({ "/", "/welcome" })
 //	public String welcome(Model model) {
