@@ -1,11 +1,13 @@
 package com.wwi318.YourParty.Service;
 
 import java.util.HashSet;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.wwi318.YourParty.Entity.Location;
 import com.wwi318.YourParty.Entity.User;
 import com.wwi318.YourParty.Repository.RoleRepository;
 import com.wwi318.YourParty.Repository.UserRepository;
@@ -30,4 +32,11 @@ public class MyUserService implements UserService {
 	public User findByUsername(String username) {
 		return userRepository.findByUsername(username);
 	}
+
+//	@Override
+//	public Optional<User> findByUser(String name) {
+//		// TODO Auto-generated method stub
+//		return userRepository.findByUser(name);
+//	}
+	
 }
