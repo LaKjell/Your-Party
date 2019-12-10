@@ -15,15 +15,17 @@ function My_Profil() {
 		var col3r = document.createElement('div');
 		var col12r = document.createElement('div');
 		
-		col3l.setAttribute('class','col-md-3');
-		col12l.setAttribute('class','col-md-12');
-		col6.setAttribute('class','col-md-6');
-		col12m.setAttribute('class','col-md-12');
-		col3r.setAttribute('class','col-md-3');
-		col12r.setAttribute('class','col-md-12');
+		col3l.setAttribute('class','col-md-3 bord');
+		col12l.setAttribute('class','col-md-12 jumbotron');
+		col6.setAttribute('class','col-md-6 bord');
+		col12m.setAttribute('class','col-md-12 jumbotron');
+		col3r.setAttribute('class','col-md-3 bord');
+		col12r.setAttribute('class','col-md-12 jumbotron');
 		
+		col12l.innerHTML = '<img class="d-block w-100" alt="picture" src="/img/Saal.jpg">';
 		
-		col12l.innerHTML = "<img class='d-block w-100' alt='picture' th:src='@{/img/Saal.jpg}'">
+		var h2m1 = document.createElement('h2');
+		var pm1 = document.createElement('p');
 		
 		
 		col3l.appendChild(col12l);
