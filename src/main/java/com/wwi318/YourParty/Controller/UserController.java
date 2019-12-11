@@ -29,6 +29,7 @@ import com.wwi318.YourParty.Service.MyUserDetailsService;
 import com.wwi318.YourParty.Service.SecurityService;
 import com.wwi318.YourParty.Service.UserService;
 import com.wwi318.YourParty.Validator.UserValidator;
+import com.wwi318.YourParty.Email.Mailer;
 
 @Controller
 public class UserController {
@@ -58,8 +59,10 @@ public class UserController {
 		if (bindingResult.hasErrors()) {
 			return "";
 		}
-
+		Mailer.registrationMail(userForm.getEmail(), userForm.getFirstname());
 		userService.save(userForm);
+		
+		
 
 		securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
 
