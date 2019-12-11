@@ -28,11 +28,11 @@ public class WelcomeController {
         return "Profil";
     }
     
-    @GetMapping("/Login")
-    public String SignPage(Model modelSign) {
-        modelSign.addAttribute("appName", appName);
-        return "SignIn";
-    }
+//    @GetMapping("/Login")
+//    public String SignPage(Model modelSign) {
+//        modelSign.addAttribute("appName", appName);
+//        return "SignIn";
+//    }
     
 //    @GetMapping("/registration")
 //    public String RegisterPage(Model modelRegister) {
