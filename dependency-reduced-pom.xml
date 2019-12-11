@@ -10,7 +10,7 @@
   <groupId>com.wwi318</groupId>
   <artifactId>YourParty</artifactId>
   <name>YourParty</name>
-  <version>0.0.3</version>
+  <version>0.0.5</version>
   <description>Vermittlung für Locations</description>
   <url>http://maven.apache.org</url>
   <build>
@@ -263,6 +263,18 @@
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-lambda-java-core</artifactId>
       <version>1.2.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>javax.mail-api</artifactId>
+      <version>1.6.2</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>1.6.0</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
