@@ -9,9 +9,21 @@ function Locationfilter() {
 			var dbloc = data; 
 			for (let i=0; i<dbloc.length; i++) {
 			    var locations = dbloc[i];
+			    if(locations.city == document.getElementById("inlineFormCustomSelectCity").value || document.getElementById("inlineFormCustomSelectCity").value == 0 ){
+			    	if(		document.getElementById("inlineFormCustomSelectPrice").value == 1 && locations.price < 100 || 
+			    			document.getElementById("inlineFormCustomSelectPrice").value == 2 && locations.price >= 100 && locations.price <= 300  || 
+			    			document.getElementById("inlineFormCustomSelectPrice").value == 3 && locations.price > 300 ||
+			    			document.getElementById("inlineFormCustomSelectPrice").value == 0){
+			    		
+			    	}
+			    		if(		document.getElementById("inlineFormCustomSelectSize").value == 1 && locations.size < 50 || 
+				    			document.getElementById("inlineFormCustomSelectSize").value == 2 && locations.size >= 50 && locations.size <= 150  || 
+				    			document.getElementById("inlineFormCustomSelectSize").value == 3 && locations.size > 150 ||
+				    			document.getElementById("inlineFormCustomSelectSize").value == 0){
+			    			
 			    var boxes = document.getElementById('flex');
 			    
-				console.log(boxes);
+				
 
 				var col12 = document.createElement('div');
 				var row = document.createElement('div');
@@ -26,10 +38,7 @@ function Locationfilter() {
 				var tab = document.createElement('table')
 				var but = document.createElement('button');
 			
-//				var tbody = document.createElement('tbody');
-//				var trf = document.createElement('tr');
-//				var thf = document.createElement('th');
-//				var tdf = document.createElement('td');
+
 				head.innerHTML = locations.name;
 
 				text.innerHTML = locations.description;
@@ -43,16 +52,16 @@ function Locationfilter() {
 				
 				tab.innerHTML = "<tbody><tr><th scope='row'>Preis</th><td>" + locations.price + " EUR </td></tr><tr><th scope='row'>Größe</th><td>"+locations.size+" m² </td></tr><tr><th scope='row'>Straße</th><td>"+ locations.street +"</td></tr><tr><th scope='row'>Ort</th><td>"+ locations.city +"</td></tr><tr><th scope='row'>Besitzer</th><td>"+ locations.owner +"</td></tr></tbody>";
 				tab.setAttribute('class', 'table table-borderless table-sm')
-//				th.setAttribute('scope', 'row');
+
 				
 				but.setAttribute('class', 'btn btn btn-primary float-right');
 				but.setAttribute('data-toggle', 'collapse');
-				but.setAttribute('data-target', '#'+locations.id);
+				but.setAttribute('data-target', '#'+locations.name);
 				but.innerHTML = "Mehr";
 				
 				col6t.setAttribute('class', 'col-md-6');
 				col6i.setAttribute('class', 'col-md-6');
-				collaps.setAttribute('id', locations.id);
+				collaps.setAttribute('id', locations.name);
 				collaps.setAttribute('class', 'collapsing');
 				col12d.setAttribute('class', 'col-md-12');
 				
@@ -80,8 +89,10 @@ function Locationfilter() {
 				
 
 				boxes.appendChild(col12);
+			    }
 			}
 			
+			}
 			});
 	
 }
