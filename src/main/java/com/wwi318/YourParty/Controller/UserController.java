@@ -77,12 +77,6 @@ public class UserController {
 		return "redirect:/Profil";
 	}
 
-//	@RequestMapping(method = RequestMethod.GET, value = "/username", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public String currentUserName(HttpServletRequest request) {
-//        Principal principal = request.getUserPrincipal();
-//        return principal.getName();
-//    }
-
 	// Funktionen anlegen, �ndern, l�schen
 	@RequestMapping(method = RequestMethod.POST, value = "/user", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 	public @ResponseBody ResponseEntity<User> createUser(User user) {
