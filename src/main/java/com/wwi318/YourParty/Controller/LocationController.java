@@ -61,38 +61,38 @@ public class LocationController {
 	}
 
 	// Filterfunktion
-	@RequestMapping(method = RequestMethod.GET, value = "/location/filter{city}{price}{size}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public Location getSpecificLocation(@PathVariable String city, int price, int size) {
-		int priceu = 0;
-		int priceo = 0;
-		if (price == 1) {
-			priceu = 0;
-			priceo = 100;
-		} else if (price == 2) {
-			priceu = 100;
-			priceo = 300;
-		} else if (price == 3) {
-			priceu = 300;
-			priceo = 50000;
-		}
-		int sizeu = 0;
-		int sizeo = 0;
-		if (size == 1) {
-			sizeu = 0;
-			sizeo = 50;
-		} else if (size == 2) {
-			sizeu = 50;
-			sizeo = 150;
-		} else if (size == 3) {
-			sizeu = 150;
-			sizeo = 2000;
-		}
-		if (city != null && price > 0 && size > 0) {
-			return locationService.findByFilter(city, priceu, priceo, sizeu, sizeo);
-		}
-		return null;
-		
-	}
+//	@RequestMapping(method = RequestMethod.GET, value = "/location/filter{city}{price}{size}", produces = MediaType.APPLICATION_JSON_VALUE)
+//	public Location getSpecificLocation(@PathVariable String city, int price, int size) {
+//		int priceu = 0;
+//		int priceo = 0;
+//		if (price == 1) {
+//			priceu = 0;
+//			priceo = 100;
+//		} else if (price == 2) {
+//			priceu = 100;
+//			priceo = 300;
+//		} else if (price == 3) {
+//			priceu = 300;
+//			priceo = 50000;
+//		}
+//		int sizeu = 0;
+//		int sizeo = 0;
+//		if (size == 1) {
+//			sizeu = 0;
+//			sizeo = 50;
+//		} else if (size == 2) {
+//			sizeu = 50;
+//			sizeo = 150;
+//		} else if (size == 3) {
+//			sizeu = 150;
+//			sizeo = 2000;
+//		}
+//		if (city != null && price > 0 && size > 0) {
+//			return locationService.findByFilter(city, priceu, priceo, sizeu, sizeo);
+//		}
+//		return null;
+//		
+//	}
 
 	// Einzelnen Datensatz
 	@RequestMapping(method = RequestMethod.GET, value = "/location/id/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
