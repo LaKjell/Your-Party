@@ -20,11 +20,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.wwi318.YourParty.Entity.Location;
 import com.wwi318.YourParty.Entity.User;
+import com.wwi318.YourParty.File.UploadFileResponse;
+import com.wwi318.YourParty.Service.FileStorageService;
 import com.wwi318.YourParty.Service.MyUserDetailsService;
 import com.wwi318.YourParty.Service.SecurityService;
 import com.wwi318.YourParty.Service.UserService;
@@ -41,6 +46,9 @@ public class UserController {
 
 	@Autowired
 	private UserValidator userValidator;
+	
+	@Autowired
+	private FileController fileController;
 
 	@GetMapping("/registration")
 	public String registration(Model model) {
@@ -58,6 +66,7 @@ public class UserController {
 		if (bindingResult.hasErrors()) {
 			return "";
 		}
+//		fileController.uploadProfilePicture(null);
 
 		userService.save(userForm);
 
@@ -76,12 +85,6 @@ public class UserController {
 
 		return "redirect:/Profil";
 	}
-
-//	@RequestMapping(method = RequestMethod.GET, value = "/username", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public String currentUserName(HttpServletRequest request) {
-//        Principal principal = request.getUserPrincipal();
-//        return principal.getName();
-//    }
 
 	// Funktionen anlegen, �ndern, l�schen
 	@RequestMapping(method = RequestMethod.POST, value = "/user", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
