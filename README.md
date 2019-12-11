@@ -27,5 +27,9 @@ Checkout this repository
 Copy the whole content to tomcats webapps folder
 Start tomcat
 
-## Art des Hostings
+## Hosting
+
+Art des Hosting:
+
+URL: http://yourparty-env-1.puaa4wu9yb.us-east-2.elasticbeanstalk.com/
 
