@@ -64,19 +64,16 @@ public class UserController {
 		if (userService.findByUsername(userForm.getUsername()) != null) {
 			return "";
 		}
-		if (bindingResult.hasErrors()) {
-			return "";
-		}
+//		if (bindingResult.hasErrors()) {
+//			return "";
+//		}
 
 //		fileController.uploadProfilePicture(null);
-
 
 		Mailer.registrationMail(userForm.getEmail(), userForm.getFirstname());
 
 		userService.save(userForm);
 		
-		
-
 		securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
 
 		return "redirect:/Profil";
