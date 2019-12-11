@@ -30,9 +30,9 @@
 				<div class="row bord">
 					<div class="col-md-12 jumbotron">
 						<h1>Deine Registrierung</h1>
-						<form class="was-validated" name="register" action="/registration"
-							method="post" onsubmit="return validateForm()">
-
+						<!--<form class="was-validated" name="register" action="/registration"
+							method="post" onsubmit="return validateForm()">-->
+						<form>
 							<div>
 								<br>
 								<h4>Über dich</h4>
@@ -47,12 +47,16 @@
 								<div class="form-group col-md-6">
 									<label for="">Vorname</label> <input type="text"
 										class="form-control" name="firstname" id="vorname"
-										placeholder="Vorname" required>
+										placeholder="Vorname"
+										pattern="^[A-Z]{1}[A-Za-zäöüÄÖÜß \-]{1,20}$"
+										title="Beginn mit Großbuchstabe" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Nachname</label> <input type="text"
 										class="form-control" name="lastname" id="nachname"
-										placeholder="Nachname" required>
+										placeholder="Nachname"
+										pattern="^[A-Z]{1}[A-Za-zäöüÄÖÜß \-]{1,20}$"
+										title="Beginn mit Großbuchstabe" required>
 								</div>
 								<div class="form-group col-md-6">
 									<div class="col-auto " id='sel'>
@@ -77,14 +81,15 @@
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-2">
-									<label for="">Postleitzahl</label> <input type="number"
-										class="form-control" name="postcode" id="plz"
-										placeholder="PLZ" required>
+									<label for="">Postleitzahl</label> <input class="form-control"
+										name="postcode" id="plz" placeholder="PLZ"
+										pattern="^[0-9]{5}$" title="Genau 5 Zahlen" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Ort</label> <input type="text"
 										class="form-control" name="city" id="ort" placeholder="Ort"
-										required>
+										pattern="^[A-Z]{1}[A-Za-zäöüÄÖÜß \-]{1,20}$"
+										title="Beginn mit Großbuchstabe" required>
 								</div>
 								<div class="form-group col-md-4">
 									<div class="col-auto " id='sel'>
@@ -362,7 +367,9 @@
 								<div class="form-group col-md-9">
 									<label for="">Straße</label> <input type="text"
 										class="form-control" name="street" id="straße"
-										placeholder="Straße" required>
+										placeholder="Straße"
+										pattern="^[A-Z]{1}[A-Za-zäöüÄÖÜß \-]{1,20}$"
+										title="Beginn mit Großbuchstabe" required>
 								</div>
 								<div class="form-group col-md-3">
 									<label for="">Hausnummer</label> <input type="number"
@@ -383,14 +390,16 @@
 								<div class="form-group col-md-6">
 									<label for="">E-Mail</label> <input type="email"
 										class="form-control" name="email" id="e-mail"
-										placeholder="E-Mail" required>
+										placeholder="E-Mail"
+										pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<label for="">Telefonnummer</label> <input type="tel"
-										class="form-control" name="phonenumber" id="phonenumber"
-										placeholder="Telefonnummer" required>
+									<label for="">Telefonnummer (mit Vorwahl)</label> <input
+										type="tel" class="form-control" name="phonenumber"
+										id="phonenumber" placeholder="Telefonnummer"
+										pattern="^[0-9-+\s() \/]*$" required>
 								</div>
 								<div class="form-group col-md-6">
 									<div class="col-auto " id='sel'>
@@ -406,21 +415,23 @@
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<label for="">Passwort</label> <input type="password"
-										class="form-control" name="password" id="password"
-										placeholder="Passwort" required>
+									<label for="password">Passwort</label> <input type="password"
+										class="form-control" name="password" placeholder="Passwort"
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+										title="Muss beinhalten: eine Zahl, ein Großbuchstabe, ein Kleinbuchstabe und 8 oder mehr Eingaben"
+										required id="password">
 								</div>
 								<div class="form-group col-md-6">
-									<label for="">Passwort wiederholen</label> <input
+									<label for="passwordConfirm">Passwort bestätigen</label> <input
 										type="password" class="form-control" name="passwordConfirm"
-										id="passwordConfirm" placeholder="Passwort" required>
+										placeholder="Passwort"
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+										title="Muss beinhalten: eine Zahl, ein Großbuchstabe, ein Kleinbuchstabe und 8 oder mehr Eingaben"
+										required id="passwordConfirm">
 								</div>
 								<div class="form-group col-md-6"></div>
+
 							</div>
-
-
-
-
 							<button type="submit" class="btn btn-primary">Jetzt
 								registrieren</button>
 						</form>
