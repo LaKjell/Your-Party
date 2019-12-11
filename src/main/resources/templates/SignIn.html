@@ -21,27 +21,36 @@
 			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
-		<div class="col-md-12">
-		<div class="row bord">
-		<div class="col-md-12 jumbotron" style="align-items: center;">
-		
-		<form class="was-validated" method="post" name="signin" action="/login" onsubmit="return validateForm()" ><!--method="post"--> 
-		 <div class="form-row">
-    <div class="form-group col-md-12">
-      <label for="">Username</label>
-      <input type="text" class="form-control" name ="username" id="username" placeholder="Username" required>
-    </div>
-    </div>
-    <div class="form-row">
-    <div class="form-group col-md-12">
-      <label for="">Passwort</label>
-      <input type="password" class="form-control" name ="password" id="password" placeholder="Passwort" required>
-    </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Anmelden</button>
-    </form>
-    </div></div></div>
-    <!--div class="col-md-12" id='box'>
+			<div class="col-md-12">
+				<div class="row bord">
+					<div class="col-md-12 jumbotron" style="align-items: center;">
+
+						<form class="was-validated" method="post" name="signin"
+							action="/login" onsubmit="return validateForm()">
+							<!--method="post"-->
+							<div class="form-row">
+								<div class="form-group col-md-12">
+									<label for="">Username</label> <input type="text"
+										class="form-control" name="username" id="username"
+										placeholder="Username" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-12">
+									<label for="">Passwort</label> <input type="password"
+										class="form-control" name="password" id="password"
+										placeholder="Passwort"
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+										title="Muss beinhalten: eine Zahl, ein Großbuchstabe, ein Kleinbuchstabe und 8 oder mehr Eingaben"
+										required>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary">Anmelden</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--div class="col-md-12" id='box'>
 			<div class="col-md-4">
 				<h3>Login</h3>
 			</div>
