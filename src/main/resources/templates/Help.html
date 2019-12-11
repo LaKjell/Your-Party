@@ -9,6 +9,7 @@
 <link rel="stylesheet"
 	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <link th:href="@{/css/style.css}" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
 </head>
 <body>
 	<div th:insert="fragments/Head_Nav_Footer :: header">...</div>
@@ -18,24 +19,101 @@
 			<div class="col-md-12 sticky-top no-gutters" style="padding: 0px;">
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="row" id='flex'>
-						<div class="col-md-12 jumbotron">
-							<div class="row">
-								<div class="col-md-10">
-									<h2>Hilfe</h2>
-									<p>
-										Hier sollte etwas über Hilfe stehen.
-									</p>
-								</div>
-							</div>
+			<div class="col-md-12">
+				<div class="row bord">
+					<div class="col-md-8 jumbotron">
+						<h1>Wie können wir dir auf unserer Seite weiterhelfen?</h1>
+						<p style="text-align: justify" class="padding">
+							<font size="5">Hier findest du verschiedene
+								Hilfestellungen, wenn du mal nicht wissen solltest, wo man
+								bestimmte Aktivitäten ausführen beziheungsweise durchführen
+								kann. Häufige Fragestellungen sind in der unten stehenden Liste
+								aufgeführt. Wenn du aber gar nicht mehr weiter weißt, wende dich
+								am besten an einen der vier Entwickler (Lasse, Mario, Lukas oder
+								Matthias), welche im Reiter "<a href="Crew">The Crew</a>" mit
+								Telefonnummern aufgelistet sind.
+							</font>
+						</p>
+						<br>
+						<p style="text-align: center" class="padding">
+							<font size="5">Wir hoffen, dass wir dir weiterhelfen
+								konnten! Viel Spaß auf unserer Seite. <br> Hoffentlich
+								findest du eine passende Location für deinen Anlass, <br>
+								because <b style="text-align: center">Your Party must going
+									on!</b>
+							</font>
+					</div>
+					<div class="col-md-4 jumbtron">
+						<img class="d-block w-100" th:src="@{/img/hilfe.jpg}">
+					</div>
+
+					<div class="col-md-12 jumbotron">
+						<h1 align="center">Häufige Fragestellungen</h1>
+						<div class="col-md-8 jumbotron">
+							<table>
+								<tr>
+									<td><p style="text-align: left" class="padding">
+											<font size="4"><br> <u>Wo kann ich eine neue
+													Location anlegen?</u> <br> 1. Klicke auf den Reiter <a
+												href="Locations">Locations.</a> <br> 2. Gehe auf den
+												Button "Neue Seite anlegen!". <br> 3. Gebe die
+												entsprechenden Daten bezüglich deiner Location ein. <br>
+												4. Klicke abschließend auf "Jetzt erstellen".</font>
+										</p></td>
+								</tr>
+								<tr>
+									<td><p style="text-align: left" class="padding">
+											<font size="4"><br> <u>Wo kann ich eine
+													Location buchen?</u> <br> 1. Klicke auf den Reiter <a
+												href="Locations">Locations.</a>Dort findest du eine Reihe an
+												Locations, die du allesamt buchen kannst.<br> 2. Gehe
+												anschließend auf den Button "Jetzt buchen!".<br> 3.
+												Danach die benötigten Daten eingeben. <br> 4. Zum
+												Schluss auf den Button "Buchung ausführen!" klicken und die
+												Buchung ist vollzogen.</font>
+										</p></td>
+								</tr>
+								<tr>
+									<td><p style="text-align: left" class="padding">
+											<font size="4"><br> <u>Wo kann ich mich
+													registrieren?</u> <br> Gehe zur Navigation Bar. Dort
+												findest du auf der rechten Seite den Button einloggen. <br>Daneben
+												befindet sich ein Pfeil nach unten. Dort musst du
+												draufklicken und schon findest <br>du die
+												Auswahlmöglichkeit "registrieren".</font>
+										</p></td>
+								</tr>
+								<tr>
+									<td><p style="text-align: left" class="padding">
+											<font size="4"><br> <u>Wo finde ich mein
+													Profil?</u> <br> 1. Klicke auf den Reiter <a href="Profil">Profil</a>.
+												<br> Dort findest du dein Profil, das heißt, dort sind
+												unter anderem die Daten versteckt, <br>welche du bei
+												deinem Registrierungsvorgang eingegeben hast. </font>
+										</p></td>
+								</tr>
+								<tr>
+									<td><p style="text-align: left" class="padding">
+											<font size="4"><br> <u>Wo finde ich
+													Informationen über die Entwickler?</u> <br> 1. Klicke auf
+												den Reiter "<a href="Crew">The Crew</a>". <br> Dort
+												findest du alle Entwickler, die an der Webseite gearbeitet
+												haben.</font>
+										</p></td>
+								</tr>
+							</table>
 						</div>
 					</div>
+
+
+
+
+
+
+					<div class="col-md-12" style="padding: 0px;">
+						<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-12" style="padding: 0px;">
-				<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
 			</div>
 
 			<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>

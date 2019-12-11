@@ -10,27 +10,8 @@
 <link rel="stylesheet"
 	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <link th:href="@{/css/style.css}" rel="stylesheet">
-
-<style>
-.image-preview {
-	width: 300px;
-	min-height: 100px;
-	border: 2px solid #dddddd;
-	margin-top: 15px;
-	/*Default Text*/
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: bold;
-	color: #cccccc;
-}
-
-.image-preview__image {
-	display: none;
-	width: 100%;
-}
-</style>
-
+<link th:href="@{/css/CSS_Profil.css}" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
 </head>
 
 <body>
@@ -43,12 +24,12 @@
 				<div th:insert="fragments/Head_Nav_Footer :: nav">...</div>
 			</div>
 
-			<div class="col-md-12">
+			<!-- div class="col-md-12">
 				<div class="row">
 					<div class="col-md-12"></div>
-				</div>
-				<div class="row">
-					<div class="col-md-3">
+				</div-->
+				<div class="row" id='flex'>
+					<!--div class="col-md-3">
 						<div class="col-md-12" id='box'>
 							<img class="d-block w-100" alt="picture"
 								th:src="@{/img/Saal.jpg}">
@@ -99,8 +80,8 @@
 								</tr>
 							</table> -->
 						</div>
-					</div>
-					<div class="col-md-6">
+					</div-->
+					<!-- div class="col-md-6">
 						<div class="col-md-12" id='box'>
 							<form role="form">
 								<div class="container">
@@ -160,8 +141,8 @@
 								</div>
 							</form>
 						</div>
-					</div>
-					<div class="col-md-3">
+					</div-->
+					<!-- iv class="col-md-3">
 						<div class="col-md-12" id='box'>
 							<div class="container">
 								<div class="form-group col-md-12">
@@ -184,10 +165,10 @@
 									<input type="submit" value="Abschicken">
 								</div>
 							</div>
-						</div>
+						</div-->
 					</div>
 
-					<div class="col-md-12" id='box'>
+					<!-- div class="col-md-12" id='box'>
 						<h2 align="center">
 							<b>Deine Lokalitäten</b>
 						</h2>
@@ -238,7 +219,7 @@
 							<input type="submit" value="Speichern">
 						</div>
 					</div>
-				</div>
+				</div-->
 			</div>
 		</div>
 
@@ -256,6 +237,10 @@
 	<div class="col-md-12" style="padding: 0px;">
 		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
 	</div>
+	<script type="text/javascript" src="js/JS_Profil.js"></script>
+	<script>
+		window.onload = My_Profil;
+	</script>
 	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>
