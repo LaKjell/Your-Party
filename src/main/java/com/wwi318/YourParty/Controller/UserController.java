@@ -52,7 +52,7 @@ public class UserController {
 
 	@PostMapping("/registration")
 	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
-//		userValidator.validate(userForm, bindingResult);
+		userValidator.validate(userForm, bindingResult);
 		if (userService.findByUsername(userForm.getUsername()) != null) {
 			return "";
 		}
@@ -79,16 +79,15 @@ public class UserController {
 
 		return "redirect:/Profil";
 	}
-	
-	@RequestMapping(method = RequestMethod.GET, value = "/username", produces = MediaType.APPLICATION_JSON_VALUE)
-    public String currentUserName(HttpServletRequest request) {
-        Principal principal = request.getUserPrincipal();
-        return principal.getName();
-    }
+
+//	@RequestMapping(method = RequestMethod.GET, value = "/username", produces = MediaType.APPLICATION_JSON_VALUE)
+//    public String currentUserName(HttpServletRequest request) {
+//        Principal principal = request.getUserPrincipal();
+//        return principal.getName();
+//    }
 
 	// Funktionen anlegen, �ndern, l�schen
-	@RequestMapping(method = RequestMethod.POST, value = "/user",
-			consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+	@RequestMapping(method = RequestMethod.POST, value = "/user", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 	public @ResponseBody ResponseEntity<User> createUser(User user) {
 		try {
 			userService.save(user);

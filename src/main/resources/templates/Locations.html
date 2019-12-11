@@ -40,18 +40,18 @@
 						<div class="row ">
 							<div class="col-md-12 jumbotron">
 
-								<form name="location" action="/location" method="post"
+								<form name="location" action="/location/filter/" method="post"
 									onsubmit="">
 									<div class="form-row align-items-center">
 										<div class="form-group col-md-12">
 											<label class="my-1 mr-2" for="inlineFormCustomSelect">Stadt:</label>
 											<select class="custom-select mr-sm-2"
-												id="inlineFormCustomSelect">
+												id="inlineFormCustomSelect" name="city">
 												<option selected>- - - -</option>
-												<option value="1">Ravensburg</option>
-												<option value="2">Biberach</option>
-												<option value="3">Bad Waldsee</option>
-												<option value="4">Bad Saulgau</option>
+												<option value="Ravensburg">Ravensburg</option>
+												<option value="Biberach">Biberach</option>
+												<option value="Bad Waldsee">Bad Waldsee</option>
+												<option value="Bad Saulgau">Bad Saulgau</option>
 											</select>
 
 										</div>
@@ -59,7 +59,7 @@
 
 											<label class="my-1 mr-2" for="inlineFormCustomSelect">Kosten:</label>
 											<select class="custom-select mr-sm-2"
-												id="inlineFormCustomSelect">
+												id="inlineFormCustomSelect" name="price">
 												<option selected>- - - -</option>
 												<option value="1">< 100 €</option>
 												<option value="2">100 € - 300 €</option>
@@ -71,7 +71,7 @@
 
 											<label class="my-1 mr-2" for="inlineFormCustomSelect">Größe:</label>
 											<select class="custom-select mr-sm-2"
-												id="inlineFormCustomSelect">
+												id="inlineFormCustomSelect" name="size">
 												<option selected>- - - -</option>
 												<option value="1">< 50 m²</option>
 												<option value="2">50 - 150 m²</option>
