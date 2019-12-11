@@ -32,12 +32,12 @@ public interface LocationRepository extends JpaRepository<Location, Integer> {
 
 	  List<Location> findAll();    
 	  
-	  @Query(value = "SELECT * FROM location as loc"
-	  		+ "WHERE loc.city = city", 
-//	  		 AND loc.price between priceu AND priceo "
-//	  		  		+ "AND loc.size BETWEEN sizeu AND sizeo
-				nativeQuery = true)
-	  Location findByFilter(@Param("city") String city, @Param("priceu")int priceu, int priceo, int sizeu, int sizeo);
+//	  @Query(value = "SELECT * FROM location as loc"
+//	  		+ "WHERE loc.city = city", 
+////	  		 AND loc.price between priceu AND priceo "
+////	  		  		+ "AND loc.size BETWEEN sizeu AND sizeo
+//				nativeQuery = true)
+//	  Location findByFilter(@Param("city") String city, @Param("priceu")int priceu, int priceo, int sizeu, int sizeo);
 
 //	  long count();                        
 //

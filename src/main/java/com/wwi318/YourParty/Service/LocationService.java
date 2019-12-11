@@ -26,9 +26,9 @@ public class LocationService {
 		return locationRepository.findAll();
 	}
 	
-	public Location findByFilter(String city, int priceu, int priceo, int sizeu, int sizeo) {
-		return locationRepository.findByFilter(city, priceu, priceo, sizeu, sizeo);
-	}
+//	public Location findByFilter(String city, int priceu, int priceo, int sizeu, int sizeo) {
+//		return locationRepository.findByFilter(city, priceu, priceo, sizeu, sizeo);
+//	}
 
 	// einzelnen Datensatz finden
 	public Optional<Location> findById(Integer id) {
