@@ -3,9 +3,9 @@
  */
 function My_Profil() {
 	
-	$.get("username#text", function(data){
-		var user = data;
-		alert(user);
+	$.get("username", function(data){
+		var users = data;
+		alert(users);
 		var boxes = document.getElementById('flex');
 		
 		var col3l = document.createElement('div');
