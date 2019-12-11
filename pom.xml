@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.wwi318</groupId>
 	<artifactId>YourParty</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.6</version>
 
 	<name>YourParty</name>
 	<url>http://maven.apache.org</url>
