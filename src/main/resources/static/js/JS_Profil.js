@@ -3,9 +3,9 @@
  */
 function My_Profil() {
 	
-	$.get("username#text", function(data){
+	$.get("username", function(data){
 		var user = data;
-		alert(user);
+		alert(user.firstname);
 		var boxes = document.getElementById('flex');
 		
 		var col3l = document.createElement('div');
@@ -28,8 +28,11 @@ function My_Profil() {
 		var pm1 = document.createElement('p');
 		
 		h2m1.innerHTML= "Über mich";
-		pm1.innerHTML= "Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.vorname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.nachname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.geschlecht + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.geburtsdatum ;
-	
+		/**
+		pm1.innerHTML= "Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gender + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gg ;
+		*/
+		if(user.gender == "m"){pm1.innerHTML= "Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + "Männlich" + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gg ;}
+		else{pm1.innerHTML="Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + "Weiblich" + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gg ;;};
 		col12m.appendChild(h2m1);
 		col12m.appendChild(pm1);
 		
@@ -37,7 +40,7 @@ function My_Profil() {
 		var pm2 = document.createElement('p');
 		
 		h2m2.innerHTML= "Woher du kommst";
-		pm2.innerHTML= user.street + "&nbsp;" + user.housenumber + "<br>" + user.postalcode + "&nbsp;" + user.ort + "<br>" + user.country;
+		pm2.innerHTML= user.street + "&nbsp;" + user.housenumber + "<br>" + user.postcode + "&nbsp;" + user.city + "<br>" + user.country;
 			
 		col12m.appendChild(h2m2);
 		col12m.appendChild(pm2);
@@ -55,7 +58,7 @@ function My_Profil() {
 		var pm4 = document.createElement('p');
 		
 		h2m4.innerHTML= "Du bist";
-		pm4.innerHTML= user.type;
+		if(user.type == "v"){pm4.innerHTML= "Vermieter";}else{pm4.innerHTML="Mieter";};
 		
 		col12m.appendChild(h2m4);
 		col12m.appendChild(pm4);
