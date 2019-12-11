@@ -19,13 +19,7 @@ import com.wwi318.YourParty.Service.UserService;
 public class UserRestController {
 	@Autowired
 	private UserService userService;
-//	@RequestMapping(method = RequestMethod.GET, value = "/username/{username}")
-//    public User currentUser(@PathVariable String username) {
-//         if (userService.findByUsername(username).isActive())
-// 			return userService.findByUsername(username);
-// 		else
-// 			return userService.findByUsername(username);
-//    }
+	
 	@RequestMapping(method = RequestMethod.GET, value = "/username", produces = MediaType.APPLICATION_JSON_VALUE)
 	public User currentUser(HttpServletRequest request) {
 		Principal principal = request.getUserPrincipal();
