@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
@@ -10,6 +9,7 @@
 <link rel="stylesheet"
 	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <link th:href="@{/css/style.css}" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 							solltest, kannst du durch den Button "Zurück!" den
 							Buchungsprozess beenden.
 						</p>
-						<a class="btn btn-primary" href="../Locations"> !Zurück! </a>
+						<a class="btn btn-primary" href="../Locations"> Zurück </a>
 					</div>
 					<div class="col-md-12 jumbotron">
 						<form class="was-validated" name="register" action="/"
@@ -39,100 +39,14 @@
 								werden!</p>
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<label for="">Vorname</label> <input type="text"
-										class="form-control" name="vorname" id="vorname"
-										placeholder="Vorname">
-								</div>
-								<div class="form-group col-md-6">
-									<label for="">Nachname*</label> <input type="text"
-										class="form-control" name="nachname" id="nachname"
-										placeholder="Nachname" required>
-								</div>
-								<div class="form-group col-md-6">
-									<label for="">E-Mail*</label> <input type="email"
-										class="form-control" name="e-mail" id="e-mail"
-										placeholder="E-Mail" required>
-								</div>
-								<div class="form-group col-md-6">
 									<label for="">Wann benötigst du die Location?*</label> <input
 										type="date" class="form-control" name="datum" id="datum"
 										required>
 								</div>
-								<div class="form-group col-md-6">
-									<div class="col-auto " id='sel'>
-										<label for="">Zahlungsart*</label> <select
-											class="custom-select mr-sm-2" id="inlineFormCustomSelect"
-											required>
-											<option value="">Zahlungsart</option>
-											<option value="1">Bankkonto</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col-md-6">
-									<label for="">Kontoinhaber*</label> <input type="text"
-										class="form-control" name="kontoinhaber" id="kontoinhaber"
-										placeholder="Kontoinhaber" required>
-								</div>
-								<div class="form-group col-md-6">
-									<label for="">Bankeinzugskonto*</label> <input type="text"
-										class="form-control" name="bankeinzugskonto"
-										id="bankeinzugskonto" placeholder="Bankeinzugskonto" required>
-								</div>
-								<div class="form-group col-md-6">
-									<label for="">IBAN*</label> <input type="text"
-										class="form-control" name="IBAN" id="IBAN" placeholder="IBAN"
-										required>
-								</div>
-								<div class="form-group col-md-6">
-									<label for="">BIC (Swift-Code)</label> <input type="text"
-										class="form-control" name="BIC" id="BIC"
-										placeholder="BIC (Swift-Code)">
-								</div>
-								<div class="form-group col-md-6"></div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col-md-9">
-									<label for="">Straße*</label> <input type="text"
-										class="form-control" name="straße" id="straße"
-										placeholder="Straße" required>
-								</div>
-								<div class="form-group col-md-3">
-									<label for="">Hausnummer*</label> <input type="text"
-										class="form-control" name="hausnummer" id="hausnummer"
-										placeholder="Hausnummer" required>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col-md-2">
-									<label for="">Postleitzahl*</label> <input type="text"
-										class="form-control" name="plz" id="plz" placeholder="PLZ"
-										required>
-								</div>
-								<div class="form-group col-md-6">
-									<label for="">Ort*</label> <input type="text"
-										class="form-control" name="ort" id="ort" placeholder="Ort"
-										required>
-								</div>
-								<div class="form-group col-md-4">
-									<div class="col-auto " id='sel'>
-										<label for="">Land</label> <select
-											class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-											<option value="">Land</option>
-											<option value="1">Deutschland</option>
-											<option value="2">Schweiz</option>
-											<option value="3">Österreich</option>
-											<option value="3">Russland</option>
-											<option value="3">Türkei</option>
-											<option value="3">Spanien</option>
-											<option value="3">Frankreich</option>
-											<option value="3">England</option>
-											<option value="3">Dänemark</option>
-											<option value="3">Tschechien</option>
-											<option value="3">Portugal</option>
-										</select>
-									</div>
+								<div class="form-group col-md-12">
+									<label for="">Nachricht an Vermieter:</label>
+									<textarea class="form-control" name="description" id="des"
+										rows="4" placeholder="Nachricht" required></textarea>
 								</div>
 							</div>
 							<div align="left">
@@ -153,7 +67,7 @@
 			<footer> </footer>
 		</div-->
 	</div>
-	<div class="col-md-12" style="padding: 0px;">
+	<div class="col-md-12 " style="padding: 0px;">
 		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
 	</div>
 	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
