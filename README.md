@@ -1,7 +1,7 @@
 # Your-Party
 ## Zweck der Anwendung
 
-Die Anwendung soll Menschen helfen für private Veranstaltungen wie z.B. Geburtstage die passende Location zu finden und diese einfach zu mieten.
+Die Anwendung soll Menschen helfen für private Veranstaltungen wie z.B. Geburtstage die passende Location zu finden und diese einfach zu mieten. Des Weiteren besteht die Möglichkeit Locations zu vermieten.
 
 ## Eingesetzte Technologien
 
