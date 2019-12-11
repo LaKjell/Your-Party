@@ -21,9 +21,13 @@ public class LocationService {
 		this.locationRepository = locationRepository;
 	}
 
-	// alle Datensätze
+	// alle Datensï¿½tze
 	public List<Location> findAll() {
 		return locationRepository.findAll();
+	}
+	
+	public Location findByFilter(String city, int priceu, int priceo, int sizeu, int sizeo) {
+		return locationRepository.findByFilter(city, priceu, priceo, sizeu, sizeo);
 	}
 
 	// einzelnen Datensatz finden
@@ -62,7 +66,7 @@ public class LocationService {
 //        return locationRepository.findOne( <> name);
 //    }
 
-	// Funktionen (speichern, ändern, löschen
+	// Funktionen (speichern, ï¿½ndern, lï¿½schen
 	public Location save(Location location) {
 		if (location.getId() != null && locationRepository.existsById(location.getId())) {
 			throw new EntityExistsException("There is an entity with such an ID");
