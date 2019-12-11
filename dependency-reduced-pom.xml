@@ -10,7 +10,7 @@
   <groupId>com.wwi318</groupId>
   <artifactId>YourParty</artifactId>
   <name>YourParty</name>
-  <version>0.0.5</version>
+  <version>0.0.6</version>
   <description>Vermittlung für Locations</description>
   <url>http://maven.apache.org</url>
   <build>
