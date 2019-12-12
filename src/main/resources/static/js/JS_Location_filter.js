@@ -37,7 +37,7 @@ function Locationfilter() {
 				var img = document.createElement('img');
 				var tab = document.createElement('table')
 				var but = document.createElement('button');
-			
+				var butb = document.createElement('a');
 
 				head.innerHTML = locations.name;
 
@@ -59,6 +59,11 @@ function Locationfilter() {
 				but.setAttribute('data-target', '#'+locations.name);
 				but.innerHTML = "Mehr";
 				
+				butb.setAttribute('class', 'btn btn btn-primary float-left');
+				butb.setAttribute('href', 'Locations/buchen');
+				butb.innerHTML = "Jetzt buchen";
+				butb.setAttribute('onclick', 'function sichern () {storage.set("firstname", ' + location.firstname + ');storage.set("lastname",' + location.lastname + ' ;location.href = "window-name-empfaenger.html";}')
+				
 				col6t.setAttribute('class', 'col-md-6');
 				col6i.setAttribute('class', 'col-md-6');
 				collaps.setAttribute('id', locations.name);
@@ -78,6 +83,7 @@ function Locationfilter() {
 				col6t.appendChild(head);
 				col6t.appendChild(text);
 				
+				col12d.appendChild(butb);
 				col12d.appendChild(but);
 				col12d.appendChild(collaps);
 
