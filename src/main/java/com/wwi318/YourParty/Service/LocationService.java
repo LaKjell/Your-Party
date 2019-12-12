@@ -25,46 +25,35 @@ public class LocationService {
 	public List<Location> findAll() {
 		return locationRepository.findAll();
 	}
-	
-//	public Location findByFilter(String city, int priceu, int priceo, int sizeu, int sizeo) {
-//		return locationRepository.findByFilter(city, priceu, priceo, sizeu, sizeo);
-//	}
 
 	// einzelnen Datensatz finden
 	public Optional<Location> findById(Integer id) {
 		return locationRepository.findById(id);
 	}
-	
-	public Optional<Location> findByName(String name)  {
-			return locationRepository.findByName(name);
+
+	public Optional<Location> findByName(String name) {
+		return locationRepository.findByName(name);
 	}
-	
+
 	public Optional<Location> findByOwner(String owner) {
 		return locationRepository.findByOwner(owner);
 	}
-	
+
 	public Optional<Location> findByCity(String city) {
 		return locationRepository.findByCity(city);
 	}
-	
+
 	public Optional<Location> findByPostcode(String postcode) {
 		return locationRepository.findByPostcode(postcode);
 	}
-	
+
 	public Optional<Location> findBySize(Integer size) {
 		return locationRepository.findBySize(size);
 	}
-	
+
 	public Optional<Location> findByPrice(Double price) {
 		return locationRepository.findByPrice(price);
 	}
-//	public Optional<Location> findOneId(Integer id){
-//  return locationRepository.findOne( <> id);
-//}
-
-//	public Optional<Location> findOneName(String name){
-//        return locationRepository.findOne( <> name);
-//    }
 
 	// Funktionen (speichern, �ndern, l�schen
 	public Location save(Location location) {

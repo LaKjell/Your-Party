@@ -9,16 +9,17 @@ public class Mailer {
 	public static void registrationMail(String to, String name) {
 
 		send(to, "Wilkommen bei YourParty",
-				"Hallo " + name + ", <br> Wir freuen uns dich in unsere YourParty-Familie willkommen zu heißen");
+				"Hallo " + name + ", <br> Wir freuen uns dich in unsere YourParty-Familie willkommen zu heiï¿½en");
 	}
 
 	public static void bookingMail(String to, String owner, String location, String date, String msg, String from) {
-		
+
 		send(to, "Neue Buchungsanfrage",
-				"Hallo " + owner + ", <br> Ihr Location" + location + "hat eine neue Buchungsanfrage für den" + date + 
-				". <br> Der Mieter hat folgende Nachricht hinterlassen:" + msg + "<br> Sie können die Anfrage an " + to + "beantworten");
+				"Hallo " + owner + ", <br> Ihr Location" + location + "hat eine neue Buchungsanfrage fï¿½r den" + date
+						+ ". <br> Der Mieter hat folgende Nachricht hinterlassen:" + msg
+						+ "<br> Sie kï¿½nnen die Anfrage an " + to + "beantworten");
 	}
-	
+
 	private static void send(String to, String sub, String msg) {
 		// Get properties object
 		Properties props = new Properties();

@@ -26,7 +26,7 @@ public class UserValidator implements Validator {
 	public void validate(Object o, Errors errors) {
 		User user = (User) o;
 
-		//Username prüfen
+		// Username prüfen
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "NotEmpty");
 		if (user.getUsername().length() < 6 || user.getUsername().length() > 32) {
 			errors.rejectValue("username", "Size.userForm.username");
@@ -38,7 +38,7 @@ public class UserValidator implements Validator {
 			errors.rejectValue("username", "Duplicate.userForm.username");
 		}
 
-		//Passwort prüfen
+		// Passwort prüfen
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "passwordConfirm", "NotEmpty");
 		if (user.getPassword().length() < 8 || user.getPassword().length() > 32) {
@@ -50,8 +50,8 @@ public class UserValidator implements Validator {
 		if (!user.getPasswordConfirm().equals(user.getPassword())) {
 			errors.rejectValue("passwordConfirm", "Diff.userForm.passwordConfirm");
 		}
-		
-		//Name prüfen
+
+		// Name prüfen
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "firstname", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "lastname", "NotEmpty");
 		if (Pattern.matches("[a-zA-Z]", user.getFirstname())) {
@@ -60,12 +60,12 @@ public class UserValidator implements Validator {
 		if (Pattern.matches("[a-zA-Z]", user.getLastname())) {
 			errors.rejectValue("lastname", "Character.userForm.lastname");
 		}
-		
-		//Geschlecht und Typ
+
+		// Geschlecht und Typ
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "gender", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "type", "NotEmpty");
-		
-		//Adresse prüfen
+
+		// Adresse prüfen
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "country", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "city", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "postcode", "NotEmpty");
@@ -86,13 +86,13 @@ public class UserValidator implements Validator {
 		if (Pattern.matches("[0-9]", user.getHousenumber())) {
 			errors.rejectValue("housenumber", "Character.userForm.housenumber");
 		}
-		
-		//E-Mail und Telefon prüfen
+
+		// E-Mail und Telefon prüfen
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "phonenumber", "NotEmpty");
 //		if (Pattern.matches("[\\w|-]+@\\w[\\w|-]*\\.[a-z]{2,3}", user.getEmail())) {
 //			errors.rejectValue("email", "Character.userForm.email");
 //		}
-		
+
 	}
 }

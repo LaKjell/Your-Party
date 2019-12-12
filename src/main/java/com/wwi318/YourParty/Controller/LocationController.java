@@ -30,7 +30,7 @@ public class LocationController {
 
 	@Autowired
 	private FileStorageService fileStorageService;
-	
+
 	public LocationController(LocationService locationService) {
 		this.locationService = locationService;
 	}
@@ -40,40 +40,6 @@ public class LocationController {
 	public List<Location> getAllLocations() {
 		return locationService.findAll();
 	}
-
-	// Filterfunktion
-//	@RequestMapping(method = RequestMethod.GET, value = "/location/filter{city}{price}{size}", produces = MediaType.APPLICATION_JSON_VALUE)
-//	public Location getSpecificLocation(@PathVariable String city, int price, int size) {
-//		int priceu = 0;
-//		int priceo = 0;
-//		if (price == 1) {
-//			priceu = 0;
-//			priceo = 100;
-//		} else if (price == 2) {
-//			priceu = 100;
-//			priceo = 300;
-//		} else if (price == 3) {
-//			priceu = 300;
-//			priceo = 50000;
-//		}
-//		int sizeu = 0;
-//		int sizeo = 0;
-//		if (size == 1) {
-//			sizeu = 0;
-//			sizeo = 50;
-//		} else if (size == 2) {
-//			sizeu = 50;
-//			sizeo = 150;
-//		} else if (size == 3) {
-//			sizeu = 150;
-//			sizeo = 2000;
-//		}
-//		if (city != null && price > 0 && size > 0) {
-//			return locationService.findByFilter(city, priceu, priceo, sizeu, sizeo);
-//		}
-//		return null;
-//		
-//	}
 
 	// Einzelnen Datensatz
 	@RequestMapping(method = RequestMethod.GET, value = "/location/id/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -134,7 +100,8 @@ public class LocationController {
 
 	// Funktionen anlegen, �ndern, l�schen
 	@RequestMapping(method = RequestMethod.POST, value = "Location", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody ResponseEntity<Location> createLocation(Location location, @RequestParam("file") MultipartFile file) {
+	public @ResponseBody ResponseEntity<Location> createLocation(Location location,
+			@RequestParam("file") MultipartFile file) {
 		try {
 			uploadLocationPicture(file, location.getName().replace(" ", ""));
 			Location results = locationService.save(location);
@@ -147,9 +114,8 @@ public class LocationController {
 	@PostMapping("/uploadLocationPicture")
 	private void uploadLocationPicture(@RequestParam("file") MultipartFile file, String replace) {
 		String fileName = fileStorageService.storePicture(file, replace);
-		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/downloadFile/")
-				.path(fileName).toUriString();
-		
+		ServletUriComponentsBuilder.fromCurrentContextPath().path("/downloadFile/").path(fileName).toUriString();
+
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, value = "location/update", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -171,49 +137,4 @@ public class LocationController {
 		return ResponseEntity.ok().build();
 	}
 
-//		// Return the image from the database using HttpServletResponse
-//		@GetMapping(value = "database1/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
-//		public void fromDatabaseAsHttpServResp(@PathVariable("id") Integer id, HttpServletResponse response)
-//				throws SQLException, IOException {
-//
-//			Optional<Location> location = locationService.findById(id);
-//
-//			if (location.isPresent()) {
-//
-//				Blob image = location.get().getPicture();
-//
-//				StreamUtils.copy(image.getBinaryStream(), response.getOutputStream());
-//			}
-//		}
-//
-//		// Return the image from the classpath location using ResponseEntity
-//		@GetMapping(value = "classpath")
-//		public ResponseEntity<byte[]> fromClasspathAsResEntity() throws IOException {
-//
-//			ClassPathResource imageFile = new ClassPathResource("pm-india/modi.jpg");
-//
-//			byte[] imageBytes = StreamUtils.copyToByteArray(imageFile.getInputStream());
-//
-//			return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(imageBytes);
-//		}
-//
-//		// Return the image from the classpath location using HttpServletResponse
-//		@GetMapping(value = "classpath1", produces = MediaType.IMAGE_JPEG_VALUE)
-//		public void fromClasspathAsHttpServResp(HttpServletResponse response) throws IOException {
-//
-//			ClassPathResource imageFile = new ClassPathResource("pm-india/vajpayee.jpg");
-//
-//			StreamUtils.copy(imageFile.getInputStream(), response.getOutputStream());
-//		}
-
-	/*
-	 * 
-	 * @GetMapping("/name/{name}") public List findByTitle(@PathVariable String
-	 * bookTitle) { return locationRepository.findByTitle(bookTitle); }
-	 * 
-	 * @GetMapping("/{id}") public Location findOne(@PathVariable Long id) { return
-	 * locationRepository.findById(id) .orElseThrow(LocationNotFoundException::new);
-	 * }
-	 * 
-	 */
 }

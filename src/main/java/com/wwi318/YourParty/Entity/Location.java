@@ -20,17 +20,17 @@ public class Location {
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Der Name darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z\\s]+", message = "Der Name darf nur Buchstaben enthalten.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß\\s]+", message = "Der Name darf nur Buchstaben enthalten.")
 	private String name;
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Der Besitzer darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z\\s-]+", message = "Der Besitzer darf nur Buchstaben enthalten.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß\\s-]+", message = "Der Besitzer darf nur Buchstaben enthalten.")
 	private String owner;
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Die Stadt darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z\\s-.]+", message = "Die Stadt darf nur Buchstaben und -,. enthalten.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß\\s-.]+", message = "Die Stadt darf nur Buchstaben und -,. enthalten.")
 	private String city;
 
 	@NotNull(message = "Pflichtfeld")
@@ -40,7 +40,7 @@ public class Location {
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Die Straße darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z\\s.-]+", message = "Die Straße darf nur Buchstaben und .,- enthalten.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß\\s.-]+", message = "Die Straße darf nur Buchstaben und .,- enthalten.")
 	private String street;
 
 	@NotNull(message = "Pflichtfeld")
@@ -50,7 +50,7 @@ public class Location {
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Das Land darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z\\s-.]+", message = "Das Land darf nur Buchstaben und -,. enthalten.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß\\s-.]+", message = "Das Land darf nur Buchstaben und -,. enthalten.")
 	private String country;
 
 	@NotNull(message = "Pflichtfeld")
@@ -66,10 +66,10 @@ public class Location {
 	@NotNull(message = "Pflichtfeld")
 	@Column(name = "description", length = 100000)
 	private String description;
-	
+
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Die E-Mail darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z0-9.@-]+", message = "Die E-Mail darf nur Alphanumerisch sein.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß0-9.@-]+", message = "Die E-Mail darf nur Alphanumerisch sein.")
 	private String email;
 
 	public String getOwner() {
