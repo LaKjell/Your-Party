@@ -2,7 +2,6 @@
 var password = document.getElementById('password');
 var passwordConfirm = document.getElementById('passwordConfirm');
 
-
 var checkPasswordValidity = function() {
 	if (password.value != passwordConfirm.value) {
 		passwordConfirm
@@ -13,3 +12,5 @@ var checkPasswordValidity = function() {
 }
 password.addEventListener('change', checkPasswordValidity);
 passwordConfirm.addEventListener('change', checkPasswordValidity);
+
+

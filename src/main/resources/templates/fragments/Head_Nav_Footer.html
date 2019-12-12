@@ -12,12 +12,12 @@
 			<br>
 			<h1>
 				<img src="img/logo_transparent.png" class="img-fluid" alt="Logo1"
-					id='trans'> <small>because Your Party must going on!</small>
+					id='trans'> <small style="font-size: x-large;">because
+					Your Party must go on!</small>
 			</h1>
 			<br>
 		</div>
 	</div>
-
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"
 		th:id='Nav_Bar' th:fragment="nav">
 		<a th:href="@{/}" class='navbar-brand'><img
@@ -55,11 +55,7 @@
 						</button>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" th:href="@{registration}">Registrieren</a>
-
-							<!-- 							<a class="dropdown-item" th:href="@{Impressum}">Impressum</a> -->
-							<!-- 							<a class="dropdown-item" th:href="@{Crew}">The Crew</a> -->
-							<!-- 							<a class="dropdown-item" th:href="@{Help}">Hilfe</a> -->
-
+							<a class="dropdown-item" th:href="@{/logout}">Log out</a>
 						</div>
 					</div>
 				</li>
@@ -71,9 +67,9 @@
 		<div class="main-footer" id='footer'>
 			<div class="Links">
 				<div id="footer" style="text-align: center">
-					<a th:href="@{Help}" class style="color: white">Hilfe - <a />
-						<a th:href="@{Impressum}" class style="color: white">Impressum
-							- <a /> <a th:href="@{Crew}" class style="color: white">The
+					<a th:href="@{Help}" class style="color: white">Hilfe - <a /> <a
+						th:href="@{Impressum}" class style="color: white">Impressum -
+							<a /> <a th:href="@{Crew}" class style="color: white">The
 								Crew<a />
 				</div>
 			</div>
