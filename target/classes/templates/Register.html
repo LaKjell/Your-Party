@@ -97,7 +97,7 @@
 								<div class="form-group col-md-2">
 									<label for="">Postleitzahl</label> <input class="form-control"
 										name="postcode" id="plz" placeholder="PLZ"
-										pattern="^[0-9]{5}$"
+										pattern="^[0-9]{4,5}$"
 										title="PLZ muss genau 5 Zahlen beinhalten" required>
 								</div>
 								<div class="form-group col-md-6">
@@ -402,7 +402,7 @@
 								<div class="form-group col-md-6">
 									<label for="">Username</label> <input type="text"
 										class="form-control" name="username" id="username"
-										placeholder="Username"
+										placeholder="Username" pattern="[A-Za-z0-9äöüÄÖÜ/-_-]{6,}"
 										Title="Lege deinen Username für diese Webseite fest" required>
 								</div>
 								<div class="form-group col-md-6">
