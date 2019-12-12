@@ -44,7 +44,7 @@ function Locationfilter() {
 				text.innerHTML = locations.description;
 				text.setAttribute('style', 'align-self: right');
 
-				img.setAttribute('src', 'img/douala.jpg');
+				img.setAttribute('src', '"/downloadFile/' + locations.name.trim + '.jpg"');
 				img.setAttribute('alt', '...');
 				img.setAttribute('align', 'left');
 				img.setAttribute('class', 'img-fluid');
