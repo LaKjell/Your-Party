@@ -12,6 +12,13 @@ public class Mailer {
 				"Hallo " + name + ", <br> Wir freuen uns dich in unsere YourParty-Familie wilkommen zu heißen");
 	}
 
+	public static void bookingMail(String to, String owner, String location, String date, String msg, String from) {
+		
+		send(to, "Neue Buchungsanfrage",
+				"Hallo " + owner + ", <br> Ihr Location" + location + "hat eine neue Buchungsanfrage für den" + date + 
+				". <br> Der Mieter hat folgende Nachricht hinterlassen:" + msg + "<br> Sie können die Anfrage an " + to + "beantworten");
+	}
+	
 	private static void send(String to, String sub, String msg) {
 		// Get properties object
 		Properties props = new Properties();
@@ -23,7 +30,7 @@ public class Mailer {
 		// get Session
 		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("yourpartylocations@gmail.com", "Your99Party!");
+				return new PasswordAuthentication("yourpartylocations@gmail.com", "------");
 			}
 		});
 		// compose message
