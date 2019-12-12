@@ -12,5 +12,3 @@ var checkPasswordValidity = function() {
 }
 password.addEventListener('change', checkPasswordValidity);
 passwordConfirm.addEventListener('change', checkPasswordValidity);
-
-
