@@ -32,18 +32,18 @@
 						<h1>Deine Registrierung</h1>
 						<!--<form class="was-validated" name="register" action="/registration"
 							method="post" onsubmit="return validateForm()">-->
-						<form>
+						<form name="register">
 							<div>
 								<br>
 								<h4>Über dich</h4>
 							</div>
-<!-- 							<div class="form-row"> -->
-<!-- 								<div class="form-group col-md-6"> -->
-<!-- 									<label for="exampleInputFile"></label> <input -->
-<!-- 										class="form-control-file" id="exampleInputFile" type="file" formmethod="post"  -->
-<!-- 										onsubmit="/uploadProfilePicture" formaction="submit"> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
+							<!-- 							<div class="form-row"> -->
+							<!-- 								<div class="form-group col-md-6"> -->
+							<!-- 									<label for="exampleInputFile"></label> <input -->
+							<!-- 										class="form-control-file" id="exampleInputFile" type="file" formmethod="post"  -->
+							<!-- 										onsubmit="/uploadProfilePicture" formaction="submit"> -->
+							<!-- 								</div> -->
+							<!-- 							</div> -->
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="">Vorname</label> <input type="text"
@@ -62,7 +62,8 @@
 								<div class="form-group col-md-6">
 									<div class="col-auto " id='sel'>
 										<label for="">Geschlecht</label> <select name="gender"
-											class="custom-select mr-sm-2" id="inlineGender" required>
+											class="custom-select mr-sm-2" id="inlineGender"
+											title="Wähle dein Geschlecht aus" required>
 											<option value="">Geschlecht</option>
 											<option value="m">männlich</option>
 											<option value="w">weiblich</option>
@@ -73,7 +74,8 @@
 								<div class="form-group col-md-6">
 									<label for="">Geburtsdatum</label> <input type="date"
 										class="form-control" name="birthday" id="geburtsdatum"
-										placeholder="Dein Geburtsdatum" required>
+										placeholder="Dein Geburtsdatum"
+										title="Gebe dein Geburtsdatum ein" required>
 								</div>
 							</div>
 							<div>
@@ -84,7 +86,8 @@
 								<div class="form-group col-md-2">
 									<label for="">Postleitzahl</label> <input class="form-control"
 										name="postcode" id="plz" placeholder="PLZ"
-										pattern="^[0-9]{5}$" title="Genau 5 Zahlen" required>
+										pattern="^[0-9]{5}$"
+										title="PLZ muss genau 5 Zahlen beinhalten" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Ort</label> <input type="text"
@@ -95,7 +98,8 @@
 								<div class="form-group col-md-4">
 									<div class="col-auto " id='sel'>
 										<label for="">Land</label> <select name="country"
-											class="custom-select mr-sm-2" id="inlineCountry" required>
+											class="custom-select mr-sm-2" id="inlineCountry"
+											title="Wähle dein Herkunftsland aus" required>
 											<option value="">Land</option>
 											<option value="Afghanistan">Afghanistan</option>
 											<option value="Ägypten">Ägypten</option>
@@ -375,7 +379,8 @@
 								<div class="form-group col-md-3">
 									<label for="">Hausnummer</label> <input type="number"
 										class="form-control" name="housenumber" id="hausnummer"
-										placeholder="Hausnummer" required>
+										placeholder="Hausnummer" title="Trage deine Hausnummer ein"
+										required>
 								</div>
 							</div>
 							<div>
@@ -386,13 +391,15 @@
 								<div class="form-group col-md-6">
 									<label for="">Username</label> <input type="text"
 										class="form-control" name="username" id="username"
-										placeholder="Username" required>
+										placeholder="Username"
+										Title="Lege deinen Username für diese Webseite fest" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">E-Mail</label> <input type="email"
 										class="form-control" name="email" id="e-mail"
 										placeholder="E-Mail"
-										pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+										pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+										title="Gebe deine E-Mail Adresse ein" required>
 								</div>
 							</div>
 							<div class="form-row">
@@ -400,12 +407,14 @@
 									<label for="">Telefonnummer (mit Vorwahl)</label> <input
 										type="tel" class="form-control" name="phonenumber"
 										id="phonenumber" placeholder="Telefonnummer"
-										pattern="^[0-9-+\s() \/]*$" required>
+										pattern="^[0-9-+\s() \/]*$"
+										title="Trage deine Telefon- oder Handynummer ein" required>
 								</div>
 								<div class="form-group col-md-6">
 									<div class="col-auto " id='sel'>
 										<label for="">Typ</label> <select name="type"
-											class="custom-select mr-sm-2" id="typ" required>
+											class="custom-select mr-sm-2" id="typ"
+											title="Bist du Vermieter oder Mieter?" required>
 											<option value="">Mieter oder Vermieter</option>
 											<option value="m">Mieter</option>
 											<option value="v">Vermieter</option>
@@ -431,13 +440,12 @@
 										required id="passwordConfirm">
 								</div>
 								<div class="form-group col-md-6"></div>
-
 							</div>
+
 							<button type="submit" class="btn btn-primary">Jetzt
 								registrieren</button>
 						</form>
 					</div>
-
 					<script src="js/JS_Register.js"></script>
 				</div>
 			</div>
