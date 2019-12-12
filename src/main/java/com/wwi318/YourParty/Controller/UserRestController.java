@@ -44,7 +44,7 @@ public class UserRestController {
 	public UploadFileResponse uploadProfilePicture(@RequestParam("file") MultipartFile file, String username) {
 
 		String fileName = fileStorageService.storePicture(file, username);
-		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/downloadFile/")
+		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/downloadFile/ProfilePictures/")
 				.path(fileName).toUriString();
 
 		return new UploadFileResponse(fileName, fileDownloadUri, file.getContentType(), file.getSize());
