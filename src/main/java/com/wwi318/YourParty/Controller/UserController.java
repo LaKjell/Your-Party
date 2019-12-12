@@ -48,7 +48,7 @@ public class UserController {
 	private UserValidator userValidator;
 	
 	@Autowired
-	private FileController fileController;
+	private UserRestController userRestController;
 
 	@GetMapping("/registration")
 	public String registration(Model model) {
@@ -58,7 +58,7 @@ public class UserController {
 	}
 
 	@PostMapping("/registration")
-	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
+	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult,@RequestParam("file") MultipartFile file) {
 		userValidator.validate(userForm, bindingResult);
 		if (userService.findByUsername(userForm.getUsername()) != null) {
 			return "";
@@ -66,7 +66,8 @@ public class UserController {
 		if (bindingResult.hasErrors()) {
 			return "";
 		}
-//		fileController.uploadProfilePicture(null);
+		
+		userRestController.uploadProfilePicture(file, userForm.getUsername());
 
 		userService.save(userForm);
 

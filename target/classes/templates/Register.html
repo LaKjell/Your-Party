@@ -31,19 +31,19 @@
 					<div class="col-md-12 jumbotron">
 						<h1>Deine Registrierung</h1>
 						<form class="was-validated" name="register" action="/registration"
-							method="post" onsubmit="return validateForm()">
+							method="post" onsubmit="return validateForm()" enctype="multipart/form-data" id="register">
 
 							<div>
 								<br>
 								<h4>Über dich</h4>
 							</div>
-<!-- 							<div class="form-row"> -->
-<!-- 								<div class="form-group col-md-6"> -->
-<!-- 									<label for="exampleInputFile"></label> <input -->
-<!-- 										class="form-control-file" id="exampleInputFile" type="file" formmethod="post"  -->
-<!-- 										onsubmit="/uploadProfilePicture" formaction="submit"> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="exampleInputFile"></label> <input
+										class="file-input" id="singleFileUploadInput" type="file" formmethod="post" name="file" 
+										 formaction="submit" onsubmit="/uploadProfilePicture">
+								</div>
+							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="">Vorname</label> <input type="text"
@@ -68,7 +68,7 @@
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Geburtsdatum</label> <input type="date"
-										class="form-control" name="birthday" id="geburtsdatum"
+										class="form-control" name="birthdate" id="geburtsdatum"
 										placeholder="Dein Geburtsdatum" required>
 								</div>
 							</div>
