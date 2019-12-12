@@ -12,7 +12,7 @@ import com.wwi318.YourParty.Entity.Location;
 import com.wwi318.YourParty.Entity.User;
 import com.wwi318.YourParty.Service.LocationService;
 import com.wwi318.YourParty.Service.UserService;
-
+import com.wwi318.YourParty.Email.*;
 @Controller
 public class BookingController {
 	
@@ -28,6 +28,8 @@ public class BookingController {
 		User user = userService.findById(userForm.getUserId());
 		Optional<Location> location = locationService.findById(userForm.getLocationId());
 
-		return "";
+		Mailer.bookingMail(location.get().toString(), location.get().toString(), location.toString(), userForm.getDate().toString(), userForm.getMessage(), user.getEmail());
+		
+		return "redirect:/Locations";
 	}
 }
