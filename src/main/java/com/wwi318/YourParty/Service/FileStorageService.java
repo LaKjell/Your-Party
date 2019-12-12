@@ -53,6 +53,27 @@ public class FileStorageService {
 			throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
 		}
 	}
+	
+	public String storePicture(MultipartFile file, String filename) {
+		// Normalize file name
+//		String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+		filename = filename + ".jpg";
+
+		try {
+			// Check if the file's name contains invalid characters
+			if (filename.contains("..")) {
+				throw new FileStorageException("Sorry! Filename contains invalid path sequence " + filename);
+			}
+
+			// Copy file to the target location (Replacing existing file with the same name)
+			Path targetLocation = this.fileStorageLocation.resolve(filename);
+			Files.copy(file.getInputStream(), targetLocation, StandardCopyOption.REPLACE_EXISTING);
+
+			return filename;
+		} catch (IOException ex) {
+			throw new FileStorageException("Could not store file " + filename + ". Please try again!", ex);
+		}
+	}
 
 	public Resource loadFileAsResource(String fileName) {
 		try {

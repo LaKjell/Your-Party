@@ -1,5 +1,6 @@
 package com.wwi318.YourParty.Entity;
 
+import java.sql.Date;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -86,6 +87,9 @@ public class User {
 	@Size(min = 1, max = 50, message = "Die Telefonnummer darf nicht länger als 50 Zeichen sein.")
 	@Pattern(regexp = "[0-9+-/\\s]+", message = "Die Telefonnummer darf nur Zahlen und +,-,/ enthalten.")
 	private String phonenumber;
+	
+	@NotNull(message = "Pflichtfeld")
+	private Date birthdate;
 
 	@NotNull(message = "Pflichtfeld")
 	private char type;
@@ -237,6 +241,14 @@ public class User {
 
 	public void setType(char type) {
 		this.type = type;
+	}
+
+	public Date getBirthdate() {
+		return birthdate;
+	}
+
+	public void setBirthdate(Date birthdate) {
+		this.birthdate = birthdate;
 	}
 
 }

@@ -33,15 +33,15 @@ public class FileController {
 	@Autowired
 	private FileStorageService fileStorageService;
 
-	@PostMapping("/uploadProfilePicture")
-	public UploadFileResponse uploadProfilePicture(@RequestParam("file") MultipartFile file) {
-		String fileName = fileStorageService.storeFile(file);
-
-		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/downloadFile/ProfilePicture/")
-				.path(fileName).toUriString();
-
-		return new UploadFileResponse(fileName, fileDownloadUri, file.getContentType(), file.getSize());
-	}
+//	@PostMapping("/uploadProfilePicture")
+//	public UploadFileResponse uploadProfilePicture(@RequestParam("file") MultipartFile file) {
+//		String fileName = fileStorageService.storeFile(file);
+//
+//		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/downloadFile/ProfilePicture/")
+//				.path(fileName).toUriString();
+//
+//		return new UploadFileResponse(fileName, fileDownloadUri, file.getContentType(), file.getSize());
+//	}
 	
 	@PostMapping("/uploadFile")
 	public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) {
