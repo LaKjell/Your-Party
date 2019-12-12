@@ -5,7 +5,7 @@ function My_Profil() {
 	
 	$.get("username", function(data){
 		var user = data;
-		alert(user.firstname);
+		
 		var boxes = document.getElementById('flex');
 		
 		var col3l = document.createElement('div');
@@ -31,8 +31,8 @@ function My_Profil() {
 		/**
 		pm1.innerHTML= "Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gender + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gg ;
 		*/
-		if(user.gender == "m"){pm1.innerHTML= "Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + "Männlich" + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gg ;}
-		else{pm1.innerHTML="Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + "Weiblich" + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gg ;;};
+		if(user.gender == "m"){pm1.innerHTML= "Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + "Männlich" + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.birthdate ;}
+		else{pm1.innerHTML="Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + "Weiblich" + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + birthdate;;};
 		col12m.appendChild(h2m1);
 		col12m.appendChild(pm1);
 		

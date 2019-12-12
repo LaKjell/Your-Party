@@ -15,7 +15,7 @@ function Locationfilter() {
 			    			document.getElementById("inlineFormCustomSelectPrice").value == 3 && locations.price > 300 ||
 			    			document.getElementById("inlineFormCustomSelectPrice").value == 0){
 			    		
-			    	}
+			    	
 			    		if(		document.getElementById("inlineFormCustomSelectSize").value == 1 && locations.size < 50 || 
 				    			document.getElementById("inlineFormCustomSelectSize").value == 2 && locations.size >= 50 && locations.size <= 150  || 
 				    			document.getElementById("inlineFormCustomSelectSize").value == 3 && locations.size > 150 ||
@@ -62,7 +62,7 @@ function Locationfilter() {
 				butb.setAttribute('class', 'btn btn btn-primary float-left');
 				butb.setAttribute('href', 'Locations/buchen');
 				butb.innerHTML = "Jetzt buchen";
-				butb.setAttribute('onclick', 'function sichern () {storage.set("firstname", ' + location.firstname + ');storage.set("lastname",' + location.lastname + ' ;location.href = "window-name-empfaenger.html";}')
+				butb.setAttribute('onclick', 'function sichern () {storage.set("id", ' + location.id + ') }')
 				
 				col6t.setAttribute('class', 'col-md-6');
 				col6i.setAttribute('class', 'col-md-6');
@@ -97,7 +97,7 @@ function Locationfilter() {
 				boxes.appendChild(col12);
 			    }
 			}
-			
+			    }
 			}
 			});
 	
