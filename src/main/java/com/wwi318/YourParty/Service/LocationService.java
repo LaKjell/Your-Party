@@ -21,7 +21,7 @@ public class LocationService {
 		this.locationRepository = locationRepository;
 	}
 
-	// alle Datens�tze
+	// alle Datensätze
 	public List<Location> findAll() {
 		return locationRepository.findAll();
 	}
