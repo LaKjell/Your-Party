@@ -68,7 +68,8 @@
 								<div class="form-group col-md-2">
 									<label for="">Postleitzahl</label> <input class="form-control"
 										name="postcode" id="plz" placeholder="PLZ"
-										pattern="^[0-9]{5}$" title="Genau 5 Zahlen" required>
+										pattern="^[0-9]{5}$"
+										title="PLZ muss genau 5 Zahlen beinhalten" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Ort</label> <input type="text"
@@ -79,7 +80,8 @@
 								<div class="form-group col-md-4">
 									<div class="col-auto " id='sel'>
 										<label for="">Land</label> <select name="country"
-											class="custom-select mr-sm-2" id="inlineCountry" required>
+											class="custom-select mr-sm-2" id="inlineCountry"
+											title="Wähle das Land deiner Location aus" required>
 											<option value="">Land</option>
 											<option value="Afghanistan">Afghanistan</option>
 											<option value="Ägypten">Ägypten</option>
@@ -359,7 +361,13 @@
 								<div class="form-group col-md-3">
 									<label for="">Hausnummer</label> <input type="number"
 										class="form-control" name="housenumber" id="housenumber"
-										placeholder="Hausnummer" required>
+										placeholder="Hausnummer"
+										title="Trage die Hausnummer deiner Location ein" required>
+								</div>
+								<div class="form-group col-md-3">
+									<label for="">E-Mail-Adresse</label> <input type="number"
+										class="form-control" name="email" id="email"
+										placeholder="email" required>
 								</div>
 							</div>
 							<div>
@@ -370,12 +378,13 @@
 								<div class="form-group col-md-6">
 									<label for="">Preis in €</label> <input type="number"
 										class="form-control" name="price" id="price"
-										placeholder="Preis" required>
+										placeholder="Preis"
+										title="Trage hier deine Preisvorstellung ein" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Größe in m²</label> <input type="number"
 										class="form-control" name="size" id="size" placeholder="Größe"
-										required>
+										title="Gebe hier die Größe deiner Location ein" required>
 								</div>
 
 							</div>
