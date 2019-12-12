@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
+<title>YourParty - Location erstellen</title>
 <link rel="stylesheet"
 	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 <link th:href="@{/css/style.css}" rel="stylesheet">
@@ -32,8 +32,8 @@
 					</div>
 
 					<div class="col-md-12 jumbotron" style="margin-top: 10px;">
-						<form class="was-validated" name="register" action="/Location"
-							method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+						<form class="was-validated" name="register" action="/Location" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+
 							<div>
 								<h1>Neue Location anlegen</h1>
 							</div>
@@ -52,7 +52,7 @@
 									<label for="">Besitzer</label> <input type="text"
 										class="form-control" name="owner" id="owner"
 										placeholder="Besitzer"
-										pattern="^[A-Z]{1}[A-Za-zäöüÄÖÜß \-]{1,20}$"
+										pattern="^[A-Z]{1}[A-Za-z0-9äöüÄÖÜß \-]{1,20}$"
 										title="Beginn mit Großbuchstabe" required>
 								</div>
 							</div>
@@ -406,9 +406,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="col-md-12 " style="padding: 0px;">
-		<div th:insert="fragments/Head_Nav_Footer :: footer">...</div>
 	</div>
 
 	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
