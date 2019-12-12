@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.wwi318.YourParty.Entity.Booking;
 import com.wwi318.YourParty.Entity.Location;
 import com.wwi318.YourParty.Entity.User;
+import com.wwi318.YourParty.Repository.LocationRepository;
 import com.wwi318.YourParty.Service.LocationService;
 import com.wwi318.YourParty.Service.UserService;
 import com.wwi318.YourParty.Email.*;
@@ -21,12 +22,16 @@ public class BookingController {
 	
 	@Autowired
 	private LocationService locationService;
+	
+	@Autowired
+	private LocationRepository locationRepository;
 
 	@PostMapping("/Locations/booking")
 	public String registration(@ModelAttribute("userForm") Booking userForm) {
 
 		User user = userService.findById(userForm.getUserId());
-		Optional<Location> location = locationService.findById(userForm.getLocationId());
+//		Optional<Location> location = locationService.findById(userForm.getLocationId());
+		Location location = locationRepository.getOne(userForm.getLocationId());
 
 		Mailer.bookingMail(location.get().toString(), location.get().toString(), location.toString(), userForm.getDate().toString(), userForm.getMessage(), user.getEmail());
 		
