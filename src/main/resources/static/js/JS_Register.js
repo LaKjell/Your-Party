@@ -39,18 +39,16 @@
  * var x13 = document.forms["register"]["type"].value; if (x13 == "") {
  * alert("Typ auswählen"); return false; }
  */
-function validateForm() {
-	var password = documentforms["register"]["password"].value;
-	var passwordConfirm = documentforms["register"]["passwordConfirm"].value;
+var password = document.getElementById('password');
+var passwordConfirm = document.getElementById('passwordConfirm');
 
-	var checkPasswordValidity = function() {
-		if (password.value != passwordConfirm.value) {
-			passwordConfirm
-					.setCustomValidity('Passwörter müssen miteinander übereinstimmen!');
-		} else {
-			passwordConfirm.setCustomValidity('');
-		}
-	};
-	password.addEventListener('change', checkPasswordValidity);
-	passwordConfirm.addEventListener('change', checkPasswordValidity);
-}
+var checkPasswordValidity = function() {
+	if (password.value != passwordConfirm.value) {
+		passwordConfirm
+				.setCustomValidity('Passwörter müssen miteinander übereinstimmen!');
+	} else {
+		passwordConfirm.setCustomValidity('');
+	}
+};
+password.addEventListener('change', checkPasswordValidity);
+passwordConfirm.addEventListener('change', checkPasswordValidity);
