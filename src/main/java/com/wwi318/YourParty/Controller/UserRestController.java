@@ -27,9 +27,6 @@ public class UserRestController {
 	private UserService userService;
 	
 	@Autowired
-	private FileController fileController;
-	
-	@Autowired
 	private FileStorageService fileStorageService;
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/username", produces = MediaType.APPLICATION_JSON_VALUE)

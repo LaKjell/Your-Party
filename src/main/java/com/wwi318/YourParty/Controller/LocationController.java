@@ -1,48 +1,26 @@
 package com.wwi318.YourParty.Controller;
 
-import java.awt.Image;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URI;
-import java.sql.Blob;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-import javax.annotation.Resource;
-import javax.imageio.ImageIO;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.data.util.StreamUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.mvc.condition.ProducesRequestCondition;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.wwi318.YourParty.Controller.LocationController;
 import com.wwi318.YourParty.Entity.Location;
-import com.wwi318.YourParty.Repository.LocationRepository;
+import com.wwi318.YourParty.Service.FileStorageService;
 import com.wwi318.YourParty.Service.LocationService;
 
 @RestController
@@ -50,6 +28,9 @@ public class LocationController {
 
 	private LocationService locationService;
 
+	@Autowired
+	private FileStorageService fileStorageService;
+	
 	public LocationController(LocationService locationService) {
 		this.locationService = locationService;
 	}
@@ -152,14 +133,23 @@ public class LocationController {
 	}
 
 	// Funktionen anlegen, �ndern, l�schen
-	@RequestMapping(method = RequestMethod.POST, value = "Location", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody ResponseEntity<Location> createLocation(Location location) {
+	@RequestMapping(method = RequestMethod.POST, value = "Location", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody ResponseEntity<Location> createLocation(Location location, @RequestParam("file") MultipartFile file) {
 		try {
+			uploadLocationPicture(file, location.getName().replace(" ", ""));
 			Location results = locationService.save(location);
 			return ResponseEntity.created(new URI("/api/location/" + results.getId())).body(results);
 		} catch (Exception e) {
 			return new ResponseEntity<Location>(HttpStatus.CONFLICT);
 		}
+	}
+
+	@PostMapping("/uploadLocationPicture")
+	private void uploadLocationPicture(@RequestParam("file") MultipartFile file, String replace) {
+		String fileName = fileStorageService.storePicture(file, replace);
+		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/downloadFile/")
+				.path(fileName).toUriString();
+		
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, value = "location/update", produces = MediaType.APPLICATION_JSON_VALUE)

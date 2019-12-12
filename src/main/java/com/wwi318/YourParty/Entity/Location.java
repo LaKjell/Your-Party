@@ -54,14 +54,14 @@ public class Location {
 	private String country;
 
 	@NotNull(message = "Pflichtfeld")
-	@Size(min = 1, max = 10, message = "Die Fläche darf nicht länger als 10 Zeichen sein.")
-	@Pattern(regexp = "[0-9]+", message = "Die Fläche darf nur Zahlen enthalten.")
-	private Integer size;
+//	@Size(min = 1, max = 10, message = "Die Fläche darf nicht länger als 10 Zeichen sein.")
+//	@Pattern(regexp = "[0-9]+", message = "Die Fläche darf nur Zahlen enthalten.")
+	private int size;
 
 	@NotNull(message = "Pflichtfeld")
-	@Size(min = 1, max = 10, message = "Der Preis darf nicht länger als 10 Zeichen sein.")
-	@Pattern(regexp = "[0-9,.]+", message = "Der Preis darf nur Zahlen und ,,. enthalten.")
-	private double price;
+//	@Size(min = 1, max = 10, message = "Der Preis darf nicht länger als 10 Zeichen sein.")
+//	@Pattern(regexp = "[0-9,.]+", message = "Der Preis darf nur Zahlen und ,,. enthalten.")
+	private Integer price;
 
 	@NotNull(message = "Pflichtfeld")
 	@Column(name = "description", length = 100000)
@@ -112,11 +112,11 @@ public class Location {
 		this.size = size;
 	}
 
-	public Double getPrice() {
+	public Integer getPrice() {
 		return price;
 	}
 
-	public void setPrice(Double price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
 
@@ -142,10 +142,6 @@ public class Location {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
 	}
 
 	public String getCountry() {

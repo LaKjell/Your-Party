@@ -44,7 +44,7 @@ public class UserController {
 	}
 
 	@PostMapping("/registration")
-	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult,@RequestParam("file") MultipartFile file) {
+	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, @RequestParam("file") MultipartFile file) {
 		userValidator.validate(userForm, bindingResult);
 		if (userService.findByUsername(userForm.getUsername()) != null) {
 			return "";
