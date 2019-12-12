@@ -17,12 +17,12 @@ function My_Profil() {
 		
 		col3l.setAttribute('class','col-md-3 bord');
 		col12l.setAttribute('class','col-md-12 jumbotron');
-		col6.setAttribute('class','col-md-6 bord');
+		col6.setAttribute('class','col-md-9 bord');
 		col12m.setAttribute('class','col-md-12 jumbotron');
 		col3r.setAttribute('class','col-md-3 bord');
 		col12r.setAttribute('class','col-md-12 jumbotron');
 		
-		col12l.innerHTML = '<img class="d-block w-100" alt="picture" src="/img/Saal.jpg">';
+		col12l.innerHTML = '<img class="d-block w-100" alt="picture" src="/downloadFile/' + user.username + '.jpg">';
 		
 		var h2m1 = document.createElement('h2');
 		var pm1 = document.createElement('p');
@@ -31,8 +31,8 @@ function My_Profil() {
 		/**
 		pm1.innerHTML= "Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gender + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.gg ;
 		*/
-		if(user.gender == "m"){pm1.innerHTML= "Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + "Männlich" + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + user.birthdate ;}
-		else{pm1.innerHTML="Vorname: <br> &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname: <br> &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + "Weiblich" + "<br><br>  Geburtsdatum:<br> &nbsp;&nbsp;&nbsp;&nbsp; " + birthdate;;};
+		if(user.gender == "m"){pm1.innerHTML= "Vorname:  &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname:  &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:&nbsp;&nbsp;&nbsp;&nbsp; " + "Männlich" + "<br><br>  Geburtsdatum: &nbsp;&nbsp;&nbsp;&nbsp; " + user.birthdate ;}
+		else{pm1.innerHTML="Vorname:  &nbsp;&nbsp;&nbsp;&nbsp;	" + user.firstname + "<br> <br> Nachname:  &nbsp;&nbsp;&nbsp;&nbsp;" + user.lastname + "<br> <br> Geschlecht:&nbsp;&nbsp;&nbsp;&nbsp; " + "Weiblich" + "<br><br>  Geburtsdatum: &nbsp;&nbsp;&nbsp;&nbsp; " + birthdate;;};
 		col12m.appendChild(h2m1);
 		col12m.appendChild(pm1);
 		
@@ -49,7 +49,7 @@ function My_Profil() {
 		var pm3 = document.createElement('p');
 		
 		h2m3.innerHTML= "Kontakt zu dir";
-		pm3.innerHTML= user.email + "&nbsp;&nbsp;&nbsp;&nbsp;" + user.phonenumber;
+		pm3.innerHTML= user.email + "&nbsp;&nbsp;&nbsp;&nbsp; <br>" + user.phonenumber;
 		
 		col12m.appendChild(h2m3);
 		col12m.appendChild(pm3);
@@ -69,6 +69,6 @@ function My_Profil() {
 		
 		boxes.appendChild(col3l);
 		boxes.appendChild(col6);
-		boxes.appendChild(col3r);
+//		boxes.appendChild(col3r);
 	});
 }

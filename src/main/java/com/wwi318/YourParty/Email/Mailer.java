@@ -8,16 +8,18 @@ public class Mailer {
 
 	public static void registrationMail(String to, String name) {
 
-		send(to, "Wilkommen bei YourParty",
-				"Hallo " + name + ", <br> Wir freuen uns dich in unsere YourParty-Familie willkommen zu hei�en");
+		send(to,"Wilkommen bei YourParty" ,"Hallo " + name + ", \n \n Wir freuen uns dich in unserer YourParty-Familie willkommen zu heißen. Von nun an kannst du innerhalb weniger Mausklicke deine Traumlocation für dein Event buchen. Ebenso bietet sich die Möglichkeit Locations  anzubieten. \n \n"
+				+ " Viel Vergnügen auf unserer Seite. Wir hoffen, du wirst auf dieser Seite fündig! \n \n YourParty must go on! \n \n"
+				+ " Für weitere Hilfe wende dich an folgende Nummer: 01234/23456");
+
 	}
 
 	public static void bookingMail(String to, String owner, String location, String date, String msg, String from) {
 
 		send(to, "Neue Buchungsanfrage",
-				"Hallo " + owner + ", <br> Ihr Location" + location + "hat eine neue Buchungsanfrage f�r den" + date
+				"Hallo " + owner + ", <br> Ihr Location" + location + "hat eine neue Buchungsanfrage fï¿½r den" + date
 						+ ". <br> Der Mieter hat folgende Nachricht hinterlassen:" + msg
-						+ "<br> Sie k�nnen die Anfrage an " + to + "beantworten");
+						+ "<br> Sie kï¿½nnen die Anfrage an " + to + "beantworten");
 	}
 
 	private static void send(String to, String sub, String msg) {
@@ -31,15 +33,15 @@ public class Mailer {
 		// get Session
 		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("yourpartylocations@gmail.com", "Your99Party!");
+				return new PasswordAuthentication("yourpartylocations@gmail.com", "-------");
 			}
 		});
 		// compose message
 		try {
 			MimeMessage message = new MimeMessage(session);
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-			message.setSubject(sub);
-			message.setText(msg);
+			message.setSubject(sub, "UTF-8");
+			message.setText(msg, "UTF-8");
 			// send message
 			Transport.send(message);
 		} catch (MessagingException e) {
