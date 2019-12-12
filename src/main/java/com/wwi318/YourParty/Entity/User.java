@@ -25,23 +25,23 @@ public class User {
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Der Vorname darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[-a-zA-Z\\s]+", message = "Der Vorname darf nur Buchstaben und - enthalten.")
+	@Pattern(regexp = "[-a-zA-ZäöüÄÖÜß\\s]+", message = "Der Vorname darf nur Buchstaben und - enthalten.")
 	private String firstname;
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Der Nachname darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[-a-zA-Z\\s]+", message = "Der Nachname darf nur Buchstaben und - enthalten.")
+	@Pattern(regexp = "[-a-zA-ZäöüÄÖÜß\\s]+", message = "Der Nachname darf nur Buchstaben und - enthalten.")
 	private String lastname;
 
 	@NotNull(message = "Pflichtfeld")
 	@Column(unique = true)
 	@Size(min = 6, max = 50, message = "Der Username muss zwischen 6 und 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z0-9]+", message = "Der Username darf nur Aplhanumerisch sein.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß0-9]+", message = "Der Username darf nur Aplhanumerisch sein.")
 	private String username;
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Die E-Mail darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z0-9.@-]+", message = "Die E-Mail darf nur Alphanumerisch sein.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß0-9.@-]+", message = "Die E-Mail darf nur Alphanumerisch sein.")
 	private String email;
 
 	@NotNull(message = "Pflichtfeld")
@@ -60,7 +60,7 @@ public class User {
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Die Straße darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z\\s.-]+", message = "Die Straße darf nur Buchstaben und .,- enthalten.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß\\s.-]+", message = "Die Straße darf nur Buchstaben und .,- enthalten.")
 	private String street;
 
 	@NotNull(message = "Pflichtfeld")
@@ -75,19 +75,19 @@ public class User {
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Die Stadt darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z\\s-.]+", message = "Die Stadt darf nur Buchstaben und -,. enthalten.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß\\s-.]+", message = "Die Stadt darf nur Buchstaben und -,. enthalten.")
 	private String city;
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Das Land darf nicht länger als 50 Zeichen sein.")
-	@Pattern(regexp = "[a-zA-Z\\s-.]+", message = "Das Land darf nur Buchstaben und -,. enthalten.")
+	@Pattern(regexp = "[a-zA-ZäöüÄÖÜß\\s-.]+", message = "Das Land darf nur Buchstaben und -,. enthalten.")
 	private String country;
 
 	@NotNull(message = "Pflichtfeld")
 	@Size(min = 1, max = 50, message = "Die Telefonnummer darf nicht länger als 50 Zeichen sein.")
 	@Pattern(regexp = "[0-9+-/\\s]+", message = "Die Telefonnummer darf nur Zahlen und +,-,/ enthalten.")
 	private String phonenumber;
-	
+
 	@NotNull(message = "Pflichtfeld")
 	private Date birthdate;
 

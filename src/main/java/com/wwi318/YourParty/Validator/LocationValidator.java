@@ -9,11 +9,10 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import com.wwi318.YourParty.Entity.Location;
-import com.wwi318.YourParty.Entity.User;
 import com.wwi318.YourParty.Service.LocationService;
 
 @Component
-public class LocationValidator implements Validator{
+public class LocationValidator implements Validator {
 
 	@Autowired
 	LocationService locationService;
@@ -26,7 +25,7 @@ public class LocationValidator implements Validator{
 	@Override
 	public void validate(Object target, Errors errors) {
 		Location location = (Location) target;
-		//Überprüfen ob Felder gefüllt
+		// Überprüfen ob Felder gefüllt
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "owner", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "city", "NotEmpty");
@@ -37,9 +36,8 @@ public class LocationValidator implements Validator{
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "price", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "size", "NotEmpty");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "description", "NotEmpty");
-		
 
-		//Name und Besitzer der Location prüfen
+		// Name und Besitzer der Location prüfen
 		if (Pattern.matches("[a-zA-Z]", location.getName())) {
 			errors.rejectValue("username", "Character.userForm.name");
 		}
@@ -49,8 +47,8 @@ public class LocationValidator implements Validator{
 		if (Pattern.matches("[a-zA-Z]", location.getOwner())) {
 			errors.rejectValue("owner", "Character.userForm.owner");
 		}
-		
-		//Adresse prüfen
+
+		// Adresse prüfen
 		if (Pattern.matches("[a-zA-Z]", location.getCity())) {
 			errors.rejectValue("city", "Character.userForm.city");
 		}
@@ -66,12 +64,12 @@ public class LocationValidator implements Validator{
 		if (Pattern.matches("[a-zA-Z]", location.getCountry())) {
 			errors.rejectValue("country", "Character.userForm.country");
 		}
-		
-		//sonst. Daten prüfen
+
+		// sonst. Daten prüfen
 		if (Pattern.matches("[a-zA-Z]", location.getDescription())) {
 			errors.rejectValue("description", "Character.userForm.description");
 		}
-		
+
 	}
-	
+
 }

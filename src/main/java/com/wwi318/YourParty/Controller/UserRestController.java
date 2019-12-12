@@ -23,24 +23,23 @@ import com.wwi318.YourParty.Service.UserService;
 public class UserRestController {
 	@Autowired
 	private UserService userService;
-	
+
 	@Autowired
 	private FileStorageService fileStorageService;
-	
+
 	@RequestMapping(method = RequestMethod.GET, value = "/username", produces = MediaType.APPLICATION_JSON_VALUE)
 	public User currentUser(HttpServletRequest request) {
 		Principal principal = request.getUserPrincipal();
 		String username = principal.getName();
-			return userService.findByUsername(username);
+		return userService.findByUsername(username);
 	}
-	
-	
+
 	@PostMapping("/uploadProfilePicture")
 	public UploadFileResponse uploadProfilePicture(@RequestParam("file") MultipartFile file, String username) {
 
 		String fileName = fileStorageService.storePicture(file, username);
-		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/downloadFile/ProfilePictures/")
-				.path(fileName).toUriString();
+		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+				.path("/downloadFile/ProfilePictures/").path(fileName).toUriString();
 
 		return new UploadFileResponse(fileName, fileDownloadUri, file.getContentType(), file.getSize());
 	}

@@ -10,17 +10,17 @@ import javax.persistence.Id;
 
 @Entity
 public class Booking {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	private int userId;
-	
+
 	private int locationId;
-	
+
 	private Date date;
-	
+
 	@Column(name = "description", length = 100000)
 	private String message;
 
@@ -63,6 +63,5 @@ public class Booking {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
-	
+
 }
