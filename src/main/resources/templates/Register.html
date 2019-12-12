@@ -31,10 +31,12 @@
 					<div class="col-md-12 jumbotron">
 						<h1>Deine Registrierung</h1>
 						<form class="was-validated" name="register" action="/registration"
-							method="post" onsubmit="return validateForm()" enctype="multipart/form-data" id="register">
+							method="post" onsubmit="return validateForm()"
+							enctype="multipart/form-data" id="register">
 							<div>
 								<br>
 								<h4>Über dich</h4>
+								<br>
 							</div>
 							<!-- 							<div class="form-row"> -->
 							<!-- 								<div class="form-group col-md-6"> -->
@@ -44,14 +46,17 @@
 							<!-- 								</div> -->
 							<!-- 							</div> -->
 							<div class="form-row">
+								<div class="form-group col-md-12">
+									<div class="form-row">
+										<div class="form-group col-md-12">
+											<label for="exampleInputFile"></label> <input
+												class="file-input" id="singleFileUploadInput" type="file"
+												formmethod="post" name="file" formaction="submit"
+												onsubmit="/uploadProfilePicture">
+										</div>
+									</div>
+								</div>
 								<div class="form-group col-md-6">
-										<div class="form-row">
-												<div class="form-group col-md-6">
-													<label for="exampleInputFile"></label> <input
-														class="file-input" id="singleFileUploadInput" type="file" formmethod="post" name="file" 
-														 formaction="submit" onsubmit="/uploadProfilePicture">
-												</div>
-											</div>
 									<label for="">Vorname</label> <input type="text"
 										class="form-control" name="firstname" id="vorname"
 										placeholder="Vorname"
@@ -79,7 +84,7 @@
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Geburtsdatum</label> <input type="date"
-										class="form-control" name="birthday" id="geburtsdatum"
+										class="form-control" name="birthdate" id="geburtsdatum"
 										placeholder="Dein Geburtsdatum"
 										title="Gebe dein Geburtsdatum ein" required>
 								</div>
@@ -435,7 +440,7 @@
 										class="form-control" name="password" placeholder="Passwort"
 										title="Muss beinhalten: eine Zahl, ein Großbuchstabe, ein Kleinbuchstabe und 8 oder mehr Eingaben"
 										required id="password">
-										<!-- 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+									<!-- 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
 								</div>
 								<div class="form-group col-md-6">
 									<label for="passwordConfirm">Passwort bestätigen</label> <input
@@ -443,7 +448,7 @@
 										placeholder="Passwort"
 										title="Muss beinhalten: eine Zahl, ein Großbuchstabe, ein Kleinbuchstabe und 8 oder mehr Eingaben"
 										required id="passwordConfirm">
-										<!-- 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+									<!-- 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
 								</div>
 								<div class="form-group col-md-6"></div>
 							</div>
