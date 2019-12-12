@@ -31,10 +31,12 @@
 					<div class="col-md-12 jumbotron">
 						<h1>Deine Registrierung</h1>
 						<form class="was-validated" name="register" action="/registration"
-							method="post" onsubmit="return validateForm()" enctype="multipart/form-data" id="register">
+							method="post" onsubmit="return validateForm()"
+							enctype="multipart/form-data" id="register">
 							<div>
 								<br>
 								<h4>Über dich</h4>
+								<br>
 							</div>
 							<!-- 							<div class="form-row"> -->
 							<!-- 								<div class="form-group col-md-6"> -->
@@ -44,14 +46,18 @@
 							<!-- 								</div> -->
 							<!-- 							</div> -->
 							<div class="form-row">
+								<div class="form-group col-md-12">
+									<div class="form-row">
+										<div class="form-group col-md-12">
+											<label for="exampleInputFile">Dein Profilbild</label> <br>
+											<input class="file-input" id="singleFileUploadInput"
+												type="file" accept=".jpg,.jpe,.png" formmethod="post"
+												name="file" formaction="submit"
+												onsubmit="/uploadProfilePicture">
+										</div>
+									</div>
+								</div>
 								<div class="form-group col-md-6">
-										<div class="form-row">
-												<div class="form-group col-md-6">
-													<label for="exampleInputFile"></label> <input
-														class="file-input" id="singleFileUploadInput" type="file" formmethod="post" name="file" 
-														 formaction="submit" onsubmit="/uploadProfilePicture">
-												</div>
-											</div>
 									<label for="">Vorname</label> <input type="text"
 										class="form-control" name="firstname" id="vorname"
 										placeholder="Vorname"
@@ -92,7 +98,7 @@
 								<div class="form-group col-md-2">
 									<label for="">Postleitzahl</label> <input class="form-control"
 										name="postcode" id="plz" placeholder="PLZ"
-										pattern="^[0-9]{5}$"
+										pattern="^[0-9]{4,5}$"
 										title="PLZ muss genau 5 Zahlen beinhalten" required>
 								</div>
 								<div class="form-group col-md-6">
@@ -397,8 +403,10 @@
 								<div class="form-group col-md-6">
 									<label for="">Username</label> <input type="text"
 										class="form-control" name="username" id="username"
-										placeholder="Username"
+										placeholder="Username" pattern="[A-Za-z0-9äöüÄÖÜ/-_-]{6,}"
 										Title="Lege deinen Username für diese Webseite fest" required>
+									<label style="color: grey">(Voraussetzung: mindestens 6
+										Zeichen / Buchstaben, Zahlen, sowie "-" und "_" möglich)</label>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">E-Mail</label> <input type="email"
@@ -433,17 +441,19 @@
 								<div class="form-group col-md-6">
 									<label for="password">Passwort</label> <input type="password"
 										class="form-control" name="password" placeholder="Passwort"
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 										title="Muss beinhalten: eine Zahl, ein Großbuchstabe, ein Kleinbuchstabe und 8 oder mehr Eingaben"
-										required id="password">
-										<!-- 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+										required id="password"> <label style="color: grey">(Voraussetzung:
+										mindestens 8 Zeichen, 1 Großbuchstabe, 1 Kleinbuchstabe und 1
+										Zahl)</label>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="passwordConfirm">Passwort bestätigen</label> <input
 										type="password" class="form-control" name="passwordConfirm"
 										placeholder="Passwort"
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 										title="Muss beinhalten: eine Zahl, ein Großbuchstabe, ein Kleinbuchstabe und 8 oder mehr Eingaben"
 										required id="passwordConfirm">
-										<!-- 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
 								</div>
 								<div class="form-group col-md-6"></div>
 							</div>
