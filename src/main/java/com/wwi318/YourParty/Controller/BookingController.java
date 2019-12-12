@@ -33,7 +33,7 @@ public class BookingController {
 //		Optional<Location> location = locationService.findById(userForm.getLocationId());
 		Location location = locationRepository.getOne(userForm.getLocationId());
 
-		Mailer.bookingMail(location.get().toString(), location.get().toString(), location.toString(), userForm.getDate().toString(), userForm.getMessage(), user.getEmail());
+		Mailer.bookingMail(location.getEmail(), location.getOwner(), location.getName(), userForm.getDate().toString(), userForm.getMessage(), user.getEmail());
 		
 		return "redirect:/Locations";
 	}
