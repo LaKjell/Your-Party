@@ -7,12 +7,16 @@ Die Anwendung soll Menschen helfen für private Veranstaltungen wie z.B. Geburts
 
 * HTML, CSS, Javascript
      * JQuery
-* Frameworks (client-side): Bootstrap, Thymeleaf,
+* Frameworks (client-side): Bootstrap, Thymeleaf
 * Java Servlet
-* Tomcat webserver
+* Tomcat Webserver
 * MySQL Database
 * Spring Boot
 * Maven
+* Webjars
+* AWS Datenbank
+* Java Mail
+
 
 ## Installationsanleitung
 
