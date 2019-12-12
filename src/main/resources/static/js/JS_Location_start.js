@@ -45,7 +45,7 @@ function Locationall() {
 			
 			but.setAttribute('class', 'btn btn btn-primary float-right');
 			but.setAttribute('data-toggle', 'collapse');
-			but.setAttribute('data-target', '#'+locations.name);
+			but.setAttribute('data-target', '#a'+locations.id );
 			but.innerHTML = "Mehr";
 			
 			butb.setAttribute('class', 'btn btn btn-primary float-left');
@@ -55,7 +55,7 @@ function Locationall() {
 			
 			col6t.setAttribute('class', 'col-md-6');
 			col6i.setAttribute('class', 'col-md-6');
-			collaps.setAttribute('id', locations.name);
+			collaps.setAttribute('id', 'a' + locations.id);
 			collaps.setAttribute('class', 'collapsing');
 			col12d.setAttribute('class', 'col-md-12');
 			
