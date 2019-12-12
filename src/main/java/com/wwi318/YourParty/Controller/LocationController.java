@@ -98,7 +98,7 @@ public class LocationController {
 			return null;
 	}
 
-	// Funktionen anlegen, �ndern, l�schen
+	// Funktionen anlegen, ändern, löschen
 	@RequestMapping(method = RequestMethod.POST, value = "Location", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody ResponseEntity<Location> createLocation(Location location,
 			@RequestParam("file") MultipartFile file) {
