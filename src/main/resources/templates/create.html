@@ -28,9 +28,9 @@
 					</div>
 
 					<div class="col-md-12 jumbotron" style="margin-top: 10px;">
-						<!--<form class="was-validated" name="register" action="/Location"
-							method="post" onsubmit="return validateForm()">-->
-						<form>
+						<form class="was-validated" name="register" action="/Location"
+							method="post" onsubmit="return validateForm()">
+
 							<div>
 								<h1>Neue Location anlegen</h1>
 							</div>
@@ -49,7 +49,7 @@
 									<label for="">Besitzer</label> <input type="text"
 										class="form-control" name="owner" id="owner"
 										placeholder="Besitzer"
-										pattern="^[A-Z]{1}[A-Za-zäöüÄÖÜß \-]{1,20}$"
+										pattern="^[A-Z]{1}[A-Za-z0-9äöüÄÖÜß \-]{1,20}$"
 										title="Beginn mit Großbuchstabe" required>
 								</div>
 							</div>
