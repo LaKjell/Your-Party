@@ -9,7 +9,7 @@ public class Mailer {
 	public static void registrationMail(String to, String name) {
 
 		send(to, "Wilkommen bei YourParty",
-				"Hallo " + name + ", <br> Wir freuen uns dich in unsere YourParty-Familie wilkommen zu heiﬂen");
+				"Hallo " + name + ", <br> Wir freuen uns dich in unsere YourParty-Familie willkommen zu heiﬂen");
 	}
 
 	public static void bookingMail(String to, String owner, String location, String date, String msg, String from) {
@@ -30,7 +30,7 @@ public class Mailer {
 		// get Session
 		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("yourpartylocations@gmail.com", "------");
+				return new PasswordAuthentication("yourpartylocations@gmail.com", "Your99Party!");
 			}
 		});
 		// compose message
@@ -41,7 +41,6 @@ public class Mailer {
 			message.setText(msg);
 			// send message
 			Transport.send(message);
-			System.out.println("message sent successfully");
 		} catch (MessagingException e) {
 			throw new RuntimeException(e);
 		}

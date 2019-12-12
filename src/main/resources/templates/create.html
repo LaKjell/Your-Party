@@ -29,8 +29,12 @@
 
 					<div class="col-md-12 jumbotron" style="margin-top: 10px;">
 						<form class="was-validated" name="register" action="/Location"
+<<<<<<< HEAD
 							method="post" onsubmit="return validateForm()">
 
+=======
+							method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+>>>>>>> branch 'master' of https://github.com/schla-ma/Your-Party.git
 							<div>
 								<h1>Neue Location anlegen</h1>
 							</div>
@@ -365,7 +369,7 @@
 										title="Trage die Hausnummer deiner Location ein" required>
 								</div>
 								<div class="form-group col-md-3">
-									<label for="">E-Mail-Adresse</label> <input type="number"
+									<label for="">E-Mail-Adresse</label> <input type="email"
 										class="form-control" name="email" id="email"
 										placeholder="email" required>
 								</div>
@@ -391,7 +395,8 @@
 							<div class="form-row">
 								<div class="form-group col-md-12">
 									<label for="pic">Bild</label> <input type="file"
-										class="form-control-file" name="picture" id="picture" required>
+										class="form-control-file" name="picture" id="locationPicture"  formmethod="post"
+										formaction="submit" onsubmit="/uploadLocationPicture">
 								</div>
 							</div>
 							<button type="submit" class="btn btn-primary">Jetzt

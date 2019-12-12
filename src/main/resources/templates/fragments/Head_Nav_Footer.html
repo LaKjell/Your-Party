@@ -6,12 +6,13 @@
 </head>
 <body>
 
-	<div class="col-md-12" th:fragment='header' style="color: green; background-color: lightgray; opacity: 0,5; width: 100%; margin:0;">
+	<div class="col-md-12" th:fragment='header'
+		style="color: green; background-color: lightgray; opacity: 0, 5; width: 100%; margin: 0;">
 		<div class="page-header">
 			<br>
 			<h1>
-			<img src="img/logo_transparent.png" class="img-fluid" alt="Logo1" id='trans'>
-				 <small>because Your Party must going on!</small>
+				<img src="img/logo_transparent.png" class="img-fluid" alt="Logo1"
+					id='trans'> <small>because Your Party must going on!</small>
 			</h1>
 			<br>
 		</div>
@@ -19,7 +20,9 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"
 		th:id='Nav_Bar' th:fragment="nav">
-		<a th:href="@{/}" class='navbar-brand'><img src="img/favicon_w.png" width="60" height="50" alt="Yourparty" id='trans'></a>
+		<a th:href="@{/}" class='navbar-brand'><img
+			src="img/favicon_w.png" width="60" height="50" alt="Yourparty"
+			id='trans'></a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -36,7 +39,7 @@
 				<li class="nav-item active"><a th:class="nav-link"
 					th:href="@{Profil}">Profil <span class="sr-only">(current)</span>
 				</a></li>
-				
+
 
 				<!-- li class="nav-item"><a class="nav-link disabled" href="#"
 					tabindex="-1" aria-disabled="true">Disabled</a></li-->
@@ -53,9 +56,9 @@
 						<div class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" th:href="@{registration}">Registrieren</a>
 
-<!-- 							<a class="dropdown-item" th:href="@{Impressum}">Impressum</a> -->
-<!-- 							<a class="dropdown-item" th:href="@{Crew}">The Crew</a> -->
-<!-- 							<a class="dropdown-item" th:href="@{Help}">Hilfe</a> -->
+							<!-- 							<a class="dropdown-item" th:href="@{Impressum}">Impressum</a> -->
+							<!-- 							<a class="dropdown-item" th:href="@{Crew}">The Crew</a> -->
+							<!-- 							<a class="dropdown-item" th:href="@{Help}">Hilfe</a> -->
 
 						</div>
 					</div>
@@ -68,12 +71,12 @@
 		<div class="main-footer" id='footer'>
 			<div class="Links">
 				<div id="footer" style="text-align: center">
-				<a th:href="@{Help}" class style="color:white">Hilfe - <a/>
-				<a th:href="@{Impressum}" class style="color:white">Impressum - <a/>
-				<a th:href="@{Crew}" class style="color:white">The Crew<a/>
-				
+					<a th:href="@{Help}" class style="color: white">Hilfe - <a />
+						<a th:href="@{Impressum}" class style="color: white">Impressum
+							- <a /> <a th:href="@{Crew}" class style="color: white">The
+								Crew<a />
+				</div>
 			</div>
-		</div>
 	</footer>
 
 </body>
