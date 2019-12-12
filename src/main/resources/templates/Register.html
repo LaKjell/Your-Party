@@ -79,7 +79,7 @@
 								</div>
 								<div class="form-group col-md-6">
 									<label for="">Geburtsdatum</label> <input type="date"
-										class="form-control" name="birthday" id="geburtsdatum"
+										class="form-control" name="birthdate" id="geburtsdatum"
 										placeholder="Dein Geburtsdatum"
 										title="Gebe dein Geburtsdatum ein" required>
 								</div>
@@ -379,7 +379,7 @@
 									<label for="">Straße</label> <input type="text"
 										class="form-control" name="street" id="straße"
 										placeholder="Straße"
-										pattern="^[A-Z]{1}[A-Za-zäöüÄÖÜß \-]{1,20}$"
+										pattern="[A-Z]{1}[A-Za-zäöüÄÖÜß \-.]{1,20}$"
 										title="Beginn mit Großbuchstabe" required>
 								</div>
 								<div class="form-group col-md-3">
@@ -433,17 +433,17 @@
 								<div class="form-group col-md-6">
 									<label for="password">Passwort</label> <input type="password"
 										class="form-control" name="password" placeholder="Passwort"
-										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 										title="Muss beinhalten: eine Zahl, ein Großbuchstabe, ein Kleinbuchstabe und 8 oder mehr Eingaben"
 										required id="password">
+										<!-- 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
 								</div>
 								<div class="form-group col-md-6">
 									<label for="passwordConfirm">Passwort bestätigen</label> <input
 										type="password" class="form-control" name="passwordConfirm"
 										placeholder="Passwort"
-										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 										title="Muss beinhalten: eine Zahl, ein Großbuchstabe, ein Kleinbuchstabe und 8 oder mehr Eingaben"
 										required id="passwordConfirm">
+										<!-- 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
 								</div>
 								<div class="form-group col-md-6"></div>
 							</div>

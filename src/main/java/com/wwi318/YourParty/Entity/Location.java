@@ -66,6 +66,11 @@ public class Location {
 	@NotNull(message = "Pflichtfeld")
 	@Column(name = "description", length = 100000)
 	private String description;
+	
+	@NotNull(message = "Pflichtfeld")
+	@Size(min = 1, max = 50, message = "Die E-Mail darf nicht länger als 50 Zeichen sein.")
+	@Pattern(regexp = "[a-zA-Z0-9.@-]+", message = "Die E-Mail darf nur Alphanumerisch sein.")
+	private String email;
 
 	public String getOwner() {
 		return owner;
@@ -157,6 +162,14 @@ public class Location {
 
 	public void setHousenumber(String housenumber) {
 		this.housenumber = housenumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
