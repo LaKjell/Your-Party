@@ -28,9 +28,8 @@
 					</div>
 
 					<div class="col-md-12 jumbotron" style="margin-top: 10px;">
-						<!--<form class="was-validated" name="register" action="/Location"
-							method="post" onsubmit="return validateForm()">-->
-						<form>
+						<form class="was-validated" name="register" action="/Location"
+							method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
 							<div>
 								<h1>Neue Location anlegen</h1>
 							</div>
@@ -391,7 +390,8 @@
 							<div class="form-row">
 								<div class="form-group col-md-12">
 									<label for="pic">Bild</label> <input type="file"
-										class="form-control-file" name="picture" id="picture" required>
+										class="form-control-file" name="picture" id="locationPicture"  formmethod="post"
+										formaction="submit" onsubmit="/uploadLocationPicture">
 								</div>
 							</div>
 							<button type="submit" class="btn btn-primary">Jetzt
