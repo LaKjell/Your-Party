@@ -8,8 +8,8 @@ public class Mailer {
 
 	public static void registrationMail(String to, String name) {
 
-		send(to,"Wilkommen bei YourParty" ,"Hallo" + name + ", \n Wir freuen uns dich in unserer YourParty-Familie willkommen zu heißen. Von nun an kannst du innerhalb weniger Mausklicke deine Traumlocation für dein Event buchen. Ebenso bietet sich die Möglichkeit Locations  anzubieten. \n"
-				+ " Viel Vergnügen auf unserer Seite. Wir hoffen, du wirst auf dieser Seite fündig! \n YourParty must go on! \n"
+		send(to,"Wilkommen bei YourParty" ,"Hallo " + name + ", \n \n Wir freuen uns dich in unserer YourParty-Familie willkommen zu heißen. Von nun an kannst du innerhalb weniger Mausklicke deine Traumlocation für dein Event buchen. Ebenso bietet sich die Möglichkeit Locations  anzubieten. \n \n"
+				+ " Viel Vergnügen auf unserer Seite. Wir hoffen, du wirst auf dieser Seite fündig! \n \n YourParty must go on! \n \n"
 				+ " Für weitere Hilfe wende dich an folgende Nummer: 01234/23456");
 	}
 
@@ -31,7 +31,7 @@ public class Mailer {
 		// get Session
 		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("yourpartylocations@gmail.com", "Your99Party!");
+				return new PasswordAuthentication("yourpartylocations@gmail.com", "-------");
 			}
 		});
 		// compose message

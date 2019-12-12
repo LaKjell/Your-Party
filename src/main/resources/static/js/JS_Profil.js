@@ -8,19 +8,19 @@ function My_Profil() {
 		
 		var boxes = document.getElementById('flex');
 		
-		var col4l = document.createElement('div');
+		var col3l = document.createElement('div');
 		var col12l = document.createElement('div');
-		var col8 = document.createElement('div');
+		var col6 = document.createElement('div');
 		var col12m = document.createElement('div');
 		var col3r = document.createElement('div');
 		var col12r = document.createElement('div');
 		
-		col4l.setAttribute('class','col-md-4 bord');
+		col3l.setAttribute('class','col-md-3 bord');
 		col12l.setAttribute('class','col-md-12 jumbotron');
-		col8.setAttribute('class','col-md-8 bord');
+		col6.setAttribute('class','col-md-9 bord');
 		col12m.setAttribute('class','col-md-12 jumbotron');
-//		col3r.setAttribute('class','col-md-3 bord');
-//		col12r.setAttribute('class','col-md-12 jumbotron');
+		col3r.setAttribute('class','col-md-3 bord');
+		col12r.setAttribute('class','col-md-12 jumbotron');
 		
 		col12l.innerHTML = '<img class="d-block w-100" alt="picture" src="/downloadFile/' + user.username + '.jpg">';
 		
@@ -63,12 +63,12 @@ function My_Profil() {
 		col12m.appendChild(h2m4);
 		col12m.appendChild(pm4);
 		
-		col4l.appendChild(col12l);
-		col8.appendChild(col12m);
-//		col3r.appendChild(col12r);
+		col3l.appendChild(col12l);
+		col6.appendChild(col12m);
+		col3r.appendChild(col12r);
 		
-		boxes.appendChild(col4l);
-		boxes.appendChild(col8);
+		boxes.appendChild(col3l);
+		boxes.appendChild(col6);
 //		boxes.appendChild(col3r);
 	});
 }
