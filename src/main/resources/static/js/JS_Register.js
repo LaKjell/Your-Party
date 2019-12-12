@@ -121,4 +121,4 @@ passwordConfirm.addEventListener('change', checkPasswordValidity);
 
 	    xhr.send(formData);
 	}
-}
+
