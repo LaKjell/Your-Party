@@ -16,7 +16,7 @@ public interface LocationRepository extends JpaRepository<Location, Integer> {
 //	
 //	 <S extends Location> S save(S entity);      
 
-	  Optional<Location> findById(ID primaryKey); 
+	  Optional<Location> findById(Integer id);
 	  
 	  Optional<Location> findByName(String name);
 	  
