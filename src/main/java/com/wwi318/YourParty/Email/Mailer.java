@@ -8,18 +8,20 @@ public class Mailer {
 
 	public static void registrationMail(String to, String name) {
 
-		send(to,"Wilkommen bei YourParty" ,"Hallo " + name + ", \n \n Wir freuen uns dich in unserer YourParty-Familie willkommen zu heißen. Von nun an kannst du innerhalb weniger Mausklicke deine Traumlocation für dein Event buchen. Ebenso bietet sich die Möglichkeit Locations  anzubieten. \n \n"
-				+ " Viel Vergnügen auf unserer Seite. Wir hoffen, du wirst auf dieser Seite fündig! \n \n YourParty must go on! \n \n"
-				+ " Für weitere Hilfe wende dich an folgende Nummer: 01234/23456");
+		send(to,"Wilkommen bei YourParty" ,"Hallo " + name + ", \n \n Wir freuen uns dich in unserer YourParty-Familie willkommen zu heiÃŸen. Von nun an kannst du innerhalb weniger Mausklicke deine Traumlocation fÃ¼r dein Event buchen. Ebenso bietet sich die MÃ¶glichkeit Locations  anzubieten. \n \n"
+				+ " Viel VergnÃ¼gen auf unserer Seite. Wir hoffen, du wirst auf dieser Seite fÃ¼ndig! \n \n YourParty must go on! \n \n"
+				+ " FÃ¼r weitere Hilfe wende dich an folgende Nummer: 01234/23456");
+
 	}
 
 	public static void bookingMail(String to, String owner, String location, String date, String msg, String from) {
-		
+
 		send(to, "Neue Buchungsanfrage",
-				"Hallo " + owner + ", <br> Ihr Location" + location + "hat eine neue Buchungsanfrage für den" + date + 
-				". <br> Der Mieter hat folgende Nachricht hinterlassen:" + msg + "<br> Sie können die Anfrage an " + to + "beantworten");
+				"Hallo " + owner + ", <br> Ihr Location" + location + "hat eine neue Buchungsanfrage fÃ¯Â¿Â½r den" + date
+						+ ". <br> Der Mieter hat folgende Nachricht hinterlassen:" + msg
+						+ "<br> Sie kÃ¯Â¿Â½nnen die Anfrage an " + to + "beantworten");
 	}
-	
+
 	private static void send(String to, String sub, String msg) {
 		// Get properties object
 		Properties props = new Properties();

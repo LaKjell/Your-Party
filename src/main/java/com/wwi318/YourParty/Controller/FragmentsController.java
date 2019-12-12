@@ -5,11 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class FragmentsController {
-	
-	
-	 
-	    @GetMapping("/Head_Nav_Footer")
-	    public String getHome() {
-	        return "fragments/Head_Nav_Footer.html";
-	    }
+
+	@GetMapping("/Head_Nav_Footer")
+	public String getHome() {
+		return "fragments/Head_Nav_Footer.html";
+	}
 }
