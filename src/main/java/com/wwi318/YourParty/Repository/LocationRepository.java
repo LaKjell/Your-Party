@@ -4,16 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.sun.xml.bind.v2.model.core.ID;
 import com.wwi318.YourParty.Entity.Location;
 
 @Repository
 public interface LocationRepository extends JpaRepository<Location, Integer> {
-//	
+	
 //	 <S extends Location> S save(S entity);      
 
 	  Optional<Location> findById(Integer id);
@@ -42,7 +39,7 @@ public interface LocationRepository extends JpaRepository<Location, Integer> {
 //	  long count();                        
 //
 //	  void delete(Location entity);               
-//
+
 //	  boolean existsById(ID primaryKey);
 	  
 }
